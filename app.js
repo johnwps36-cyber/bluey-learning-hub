@@ -43,6 +43,7 @@ let audioCtx = null, isSlowMode = true, currentQuizTarget = null, clipStopTime =
     status.textContent = english ? '電腦讀音優先使用澳洲英語聲線。' : '裝置暫未列出英文聲線，會嘗試系統讀音；如無聲，請在裝置設定下載英文聲線。';
   }
   function speakEnglish(text) {
+    clipRequest++;
     player.pause(); clipStopTime = null;
     const rate = isSlowMode ? 0.68 : 0.98;
     showToast(`${isSlowMode ? '🐢 慢速' : '🐰 原速'}: "${text}"`);
@@ -103,7 +104,7 @@ const player = document.getElementById('mainPlayer');
 const epSelect = document.getElementById('epSelect');
 let episode = null, vocabList = [], phrases = [], requestId = 0, controller = null;
 let quizTimer = null, quizAnswered = false, selectedRate = 0.8, activeVoices = [];
-let gameSession = null, currentUtterance = null;
+let gameSession = null, currentUtterance = null, clipRequest = 0;
 const progress = BlueyProgress.create(() => window.localStorage);
 function updateProgress() {
   const id = epSelect.value, record = progress.get(id);
@@ -140,6 +141,7 @@ for (let i = 1; i <= 52; i++) {
 }
 epSelect.setAttribute('aria-label', '選擇集數');
 function resetEpisodeState() {
+  clipRequest++;
   player.pause(); clipStopTime = null;
   if (gameSession) { gameSession.destroy(); gameSession = null; }
   currentUtterance = null;
@@ -220,6 +222,7 @@ function rewindPlayer(sec) {
   showToast(`⏪ 退後 ${sec} 秒`);
 }
 function playClip(start, end) {
+  const attempt = ++clipRequest;
   player.pause(); clipStopTime = null;
   if (window.speechSynthesis) speechSynthesis.cancel();
   ensureAudioContext();
@@ -235,7 +238,7 @@ function playClip(start, end) {
     clipStopTime = end; player.currentTime = start;
     changePlayerSpeed(0.8, document.getElementById('defaultSpdBtn'));
     player.play().catch(() => {
-      if (token === requestId) { clipStopTime = null; document.getElementById('mediaNotice').textContent = '原音播放未能開始。請撳播放器 ▶，或改用生字／句子的電腦讀音。'; }
+      if (token === requestId && attempt === clipRequest) { clipStopTime = null; document.getElementById('mediaNotice').textContent = '原音播放未能開始。請撳播放器 ▶，或改用生字／句子的電腦讀音。'; }
     });
   } catch {
     clipStopTime = null; document.getElementById('mediaNotice').textContent = '未能跳到片段；可改用電腦讀音，並檢查音檔版本。';

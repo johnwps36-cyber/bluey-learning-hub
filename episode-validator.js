@@ -12,9 +12,9 @@
       if (type === 'number' && (!Number.isFinite(value) || (rule.minimum !== undefined && value < rule.minimum) || (rule.exclusiveMinimum !== undefined && value <= rule.exclusiveMinimum))) errors.push(`${path}: out of range`);
       if (type === 'string' && rule.pattern && !new RegExp(rule.pattern).test(value)) errors.push(`${path}: invalid pattern`);
       if (type === 'object') {
-        for (const key of rule.required || []) if (!Object.hasOwn(value, key)) errors.push(`${path}.${key}: required`);
+        for (const key of rule.required || []) if (!Object.prototype.hasOwnProperty.call(value, key)) errors.push(`${path}.${key}: required`);
         for (const key of Object.keys(value)) {
-          if (rule.properties && Object.hasOwn(rule.properties, key)) check(value[key], rule.properties[key], `${path}.${key}`);
+          if (rule.properties && Object.prototype.hasOwnProperty.call(rule.properties, key)) check(value[key], rule.properties[key], `${path}.${key}`);
           else if (rule.additionalProperties === false) errors.push(`${path}.${key}: unexpected field`);
         }
       }
