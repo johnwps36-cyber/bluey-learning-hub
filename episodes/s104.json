@@ -1,0 +1,271 @@
+{
+  "id": "s104",
+  "titleEn": "Daddy Robot",
+  "titleZh": "機械人爸爸",
+  "audio": "audio/s104.mp3",
+  "durationSec": 438,
+  "reviewStatus": "draft",
+  "scenes": [
+    {
+      "icon": "🤖",
+      "labelZh": "召喚機械人爸爸執玩具",
+      "summaryZh": "兩姊妹唔想執玩具房（Playroom），於是命令「機械人爸爸」孭佢哋入房兼代勞執屋。",
+      "startSec": 0,
+      "endSec": 90
+    },
+    {
+      "icon": "🗑️",
+      "labelZh": "機械人失控掉人落垃圾桶",
+      "summaryZh": "Bluey 命令以後都唔想再執房，機械人計算出「只要將兩個女掉入大垃圾桶（Wheelie bin）就永遠唔會亂」！",
+      "startSec": 90,
+      "endSec": 168
+    },
+    {
+      "icon": "🧺",
+      "labelZh": "故障當小朋友係吸塵機同衫",
+      "summaryZh": "媽媽用水槍射停機械人，但佢故障將兩姊妹當成吸塵機、班卓琴、污糟衫同天竺鼠！",
+      "startSec": 168,
+      "endSec": 245
+    },
+    {
+      "icon": "💘",
+      "labelZh": "遇見機械人媽媽同熄機",
+      "summaryZh": "媽媽扮成「機械人媽媽」吸引爸爸注意，兩姊妹趁機偷偷撳爸爸個鼻哥掣熄機（Powering down）。",
+      "startSec": 245,
+      "endSec": 335
+    },
+    {
+      "icon": "🛠️",
+      "labelZh": "螺絲批修理與乖乖執房",
+      "summaryZh": "媽媽用螺絲批修好機械人爸爸，兩姊妹命令兩個機械人去抖下，自己乖乖親手執好玩具房。",
+      "startSec": 335,
+      "endSec": 438
+    }
+  ],
+  "vocab": [
+    {
+      "cat": "actions",
+      "tag": "家務動作",
+      "emoji": "🧹",
+      "word": "tidy up",
+      "zh": "執拾好 / 執屋",
+      "ex": "All right kids, time to tidy up.",
+      "source": "heard",
+      "audioStartSec": 1,
+      "audioEndSec": 4
+    },
+    {
+      "cat": "toys",
+      "tag": "角色扮演",
+      "emoji": "🤖",
+      "word": "robot",
+      "zh": "機械人",
+      "ex": "Let's get Daddy Robot to do it.",
+      "source": "heard",
+      "audioStartSec": 15,
+      "audioEndSec": 18
+    },
+    {
+      "cat": "daily",
+      "tag": "房間名稱",
+      "emoji": "🧸",
+      "word": "playroom",
+      "zh": "玩具房 / 遊戲室",
+      "ex": "Come with us to the playroom.",
+      "source": "heard",
+      "audioStartSec": 35,
+      "audioEndSec": 38
+    },
+    {
+      "cat": "actions",
+      "tag": "身體動作",
+      "emoji": "🎒",
+      "word": "carry",
+      "zh": "抱起 / 孭起",
+      "ex": "Actually, carry us to the playroom.",
+      "source": "heard",
+      "audioStartSec": 40,
+      "audioEndSec": 44
+    },
+    {
+      "cat": "daily",
+      "tag": "戶外物品",
+      "emoji": "🗑️",
+      "word": "wheelie bin",
+      "zh": "有轆大垃圾桶",
+      "ex": "To the wheelie bin!",
+      "source": "heard",
+      "audioStartSec": 115,
+      "audioEndSec": 118
+    },
+    {
+      "cat": "daily",
+      "tag": "家電用品",
+      "emoji": "🧹",
+      "word": "vacuum cleaner",
+      "zh": "吸塵機",
+      "ex": "Come here, vacuum cleaner.",
+      "source": "heard",
+      "audioStartSec": 173,
+      "audioEndSec": 176
+    },
+    {
+      "cat": "daily",
+      "tag": "家務用品",
+      "emoji": "🧺",
+      "word": "laundry",
+      "zh": "要洗或要摺嘅衫",
+      "ex": "Yes, you are laundry.",
+      "source": "heard",
+      "audioStartSec": 199,
+      "audioEndSec": 202
+    },
+    {
+      "cat": "actions",
+      "tag": "家務動作",
+      "emoji": "👕",
+      "word": "fold",
+      "zh": "摺（衫）",
+      "ex": "Fold, fold, fold!",
+      "source": "heard",
+      "audioStartSec": 205,
+      "audioEndSec": 209
+    },
+    {
+      "cat": "animals",
+      "tag": "動物",
+      "emoji": "🐹",
+      "word": "guinea pig",
+      "zh": "天竺鼠",
+      "ex": "Oh no, a guinea pig has escaped.",
+      "source": "heard",
+      "audioStartSec": 213,
+      "audioEndSec": 217
+    },
+    {
+      "cat": "actions",
+      "tag": "機械指令",
+      "emoji": "🔌",
+      "word": "turn off / power down",
+      "zh": "熄機 / 關機",
+      "ex": "You have to push his nose to turn him off!",
+      "source": "heard",
+      "audioStartSec": 227,
+      "audioEndSec": 230
+    },
+    {
+      "cat": "daily",
+      "tag": "工具",
+      "emoji": "🪛",
+      "word": "screwdriver",
+      "zh": "螺絲批",
+      "ex": "Screwdriver! Please fix him.",
+      "source": "heard",
+      "audioStartSec": 308,
+      "audioEndSec": 313
+    },
+    {
+      "cat": "actions",
+      "tag": "日常狀態",
+      "emoji": "🛋️",
+      "word": "relax",
+      "zh": "休息放鬆",
+      "ex": "We order you to relax, Daddy Robot.",
+      "source": "heard",
+      "audioStartSec": 391,
+      "audioEndSec": 395
+    }
+  ],
+  "phrases": [
+    {
+      "icon": "🧹",
+      "en": "All right kids, time to tidy up.",
+      "zh": "好啦小朋友，係時候執好啲玩具喇。",
+      "source": "heard",
+      "audioStartSec": 1,
+      "audioEndSec": 4
+    },
+    {
+      "icon": "🤖",
+      "en": "Yes, master.",
+      "zh": "遵命，小主人。",
+      "source": "heard",
+      "audioStartSec": 28,
+      "audioEndSec": 31
+    },
+    {
+      "icon": "🧸",
+      "en": "We order you to tidy up the playroom.",
+      "zh": "我哋命令你去執好間玩具房。",
+      "source": "heard",
+      "audioStartSec": 58,
+      "audioEndSec": 62
+    },
+    {
+      "icon": "🗑️",
+      "en": "If I throw you in wheelie bin, playroom will always be tidy.",
+      "zh": "如果我將你哋掉入大垃圾桶，玩具房就會永遠都咁整齊。",
+      "source": "heard",
+      "audioStartSec": 122,
+      "audioEndSec": 128
+    },
+    {
+      "icon": "⚙️",
+      "en": "He's malfunctioning!",
+      "zh": "佢發生故障失控呀！",
+      "source": "heard",
+      "audioStartSec": 160,
+      "audioEndSec": 163
+    },
+    {
+      "icon": "👃",
+      "en": "You have to push his nose to turn him off!",
+      "zh": "你要撳佢個鼻哥先可以熄咗佢部機㗎！",
+      "source": "heard",
+      "audioStartSec": 227,
+      "audioEndSec": 230
+    },
+    {
+      "icon": "🧀",
+      "en": "Cheese and crackers!",
+      "zh": "芝士同餅乾！（天呀！）",
+      "source": "heard",
+      "audioStartSec": 248,
+      "audioEndSec": 251
+    },
+    {
+      "icon": "🛋️",
+      "en": "We order you to relax, Daddy Robot.",
+      "zh": "機械人爸爸，我哋命令你好好休息放鬆下。",
+      "source": "heard",
+      "audioStartSec": 391,
+      "audioEndSec": 395
+    },
+    {
+      "icon": "🧹",
+      "en": "Let's tidy up together.",
+      "zh": "我哋一齊執好啲玩具啦。",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    }
+  ],
+  "game": {
+    "type": "robot",
+    "instructionsZh": "向機械人爸爸發出指令幫手執玩具！如果機械人失控想掉你落垃圾桶，快啲撳佢個紅鼻哥掣熄機啦！",
+    "config": {
+      "offSwitch": "nose",
+      "commands": [
+        "carry",
+        "boogie",
+        "tidy",
+        "relax"
+      ],
+      "malfunctionMode": true
+    }
+  },
+  "qaNotes": [
+    "已根據實際上傳之 s104_2.mp3 核對時間戳。",
+    "02:48 及 04:08 處 Bandit 說了經典澳洲家庭感嘆詞 'Cheese and crackers!'。"
+  ]
+}

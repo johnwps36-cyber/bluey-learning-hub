@@ -1,70 +1,309 @@
 {
   "id": "s102",
   "titleEn": "Hospital",
-  "titleZh": "醫院",
+  "titleZh": "醫院遊戲",
   "audio": "audio/s102.mp3",
-  "durationSec": null,
+  "durationSec": 438,
   "reviewStatus": "draft",
-  "scenes": [],
+  "scenes": [
+    {
+      "icon": "🏥",
+      "labelZh": "病人入院同升降床",
+      "summaryZh": "爸爸想攤喺度休息，於是同兩姊妹玩醫院遊戲，護士 Bingo 幫病人 Telemachus 較升降床。",
+      "startSec": 0,
+      "endSec": 65
+    },
+    {
+      "icon": "💉",
+      "labelZh": "Bluey 醫生瘋狂打針",
+      "summaryZh": "Bluey 醫生一出場就幫爸爸打針（Sting!），爸爸問點解未問病情就打針。",
+      "startSec": 65,
+      "endSec": 132
+    },
+    {
+      "icon": "🩻",
+      "labelZh": "照 X 光發現肚入面有貓",
+      "summaryZh": "Bingo 幫爸爸照 X 光，發現佢個肚入面有一隻貓，估係趁訓覺時由肚臍瀡入去。",
+      "startSec": 132,
+      "endSec": 205
+    },
+    {
+      "icon": "🐙",
+      "labelZh": "麻醉做手術捉八爪魚",
+      "summaryZh": "唱催眠曲哄爸爸訓覺後開刀，點知捉咗隻八爪魚出嚟，隻貓仲咬傷醫生隻手。",
+      "startSec": 205,
+      "endSec": 298
+    },
+    {
+      "icon": "🐭",
+      "labelZh": "再睇 X 光搵出真正原因",
+      "summaryZh": "護士 Bingo 唔放棄，再睇清楚 X 光片，發現肚入面仲有一隻老鼠，原來隻貓係入去追老鼠！",
+      "startSec": 298,
+      "endSec": 368
+    },
+    {
+      "icon": "🧀",
+      "labelZh": "用芝士引老鼠同貓出嚟",
+      "summaryZh": "用芝士引隻老鼠出嚟，隻貓跟住追出肚外，爸爸終於好返晒（臨走仲食多一針）！",
+      "startSec": 368,
+      "endSec": 438
+    }
+  ],
   "vocab": [
     {
-      "cat": "hospital",
-      "tag": "醫院",
-      "emoji": "🩺",
-      "word": "Doctor",
+      "cat": "role",
+      "tag": "職業角色",
+      "emoji": "🏥",
+      "word": "hospital",
+      "zh": "醫院",
+      "ex": "This episode of Bluey is called Hospital.",
+      "source": "heard",
+      "audioStartSec": 26,
+      "audioEndSec": 30
+    },
+    {
+      "cat": "role",
+      "tag": "職業角色",
+      "emoji": "👩‍⚕️",
+      "word": "doctor",
       "zh": "醫生",
-      "ex": "The doctor can help.",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "ex": "Hello! I'm the doctor!",
+      "source": "heard",
+      "audioStartSec": 64,
+      "audioEndSec": 67
     },
     {
-      "cat": "hospital",
-      "tag": "醫院",
-      "emoji": "🐕",
-      "word": "Patient",
-      "zh": "病人",
-      "ex": "The patient can rest.",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "cat": "role",
+      "tag": "職業角色",
+      "emoji": "🧑‍⚕️",
+      "word": "nurse",
+      "zh": "護士",
+      "ex": "No, I'm the nurse.",
+      "source": "heard",
+      "audioStartSec": 35,
+      "audioEndSec": 38
     },
     {
-      "cat": "hospital",
-      "tag": "醫院",
+      "cat": "medical",
+      "tag": "醫療用品",
+      "emoji": "💉",
+      "word": "needle",
+      "zh": "針筒 / 打針",
+      "ex": "Why did you give me a needle?",
+      "source": "heard",
+      "audioStartSec": 75,
+      "audioEndSec": 78
+    },
+    {
+      "cat": "actions",
+      "tag": "動作聲音",
+      "emoji": "🐝",
+      "word": "sting",
+      "zh": "拮一下（打針聲）",
+      "ex": "Sting! Ouch!",
+      "source": "heard",
+      "audioStartSec": 68,
+      "audioEndSec": 70
+    },
+    {
+      "cat": "body",
+      "tag": "身體部位",
+      "emoji": "🤰",
+      "word": "belly",
+      "zh": "肚腩 / 肚仔",
+      "ex": "Well, my belly hurts.",
+      "source": "heard",
+      "audioStartSec": 84,
+      "audioEndSec": 87
+    },
+    {
+      "cat": "medical",
+      "tag": "醫療檢查",
+      "emoji": "🩻",
+      "word": "X-ray",
+      "zh": "X光檢查",
+      "ex": "Time for your X-ray!",
+      "source": "heard",
+      "audioStartSec": 108,
+      "audioEndSec": 111
+    },
+    {
+      "cat": "medical",
+      "tag": "醫療用品",
       "emoji": "🩹",
-      "word": "Plaster",
+      "word": "plaster",
       "zh": "膠布",
-      "ex": "A plaster, please.",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "ex": "I'll just get this plaster off.",
+      "source": "heard",
+      "audioStartSec": 135,
+      "audioEndSec": 138
     },
     {
-      "cat": "hospital",
-      "tag": "醫院",
-      "emoji": "💚",
-      "word": "Rest",
-      "zh": "休息",
-      "ex": "Time to rest.",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "cat": "animals",
+      "tag": "動物",
+      "emoji": "🐱",
+      "word": "cat",
+      "zh": "貓仔",
+      "ex": "You have a cat in your belly.",
+      "source": "heard",
+      "audioStartSec": 152,
+      "audioEndSec": 155
+    },
+    {
+      "cat": "body",
+      "tag": "身體部位",
+      "emoji": "🔘",
+      "word": "belly button",
+      "zh": "肚臍",
+      "ex": "Probably through your belly button.",
+      "source": "heard",
+      "audioStartSec": 162,
+      "audioEndSec": 165
+    },
+    {
+      "cat": "actions",
+      "tag": "醫療動作",
+      "emoji": "🔪",
+      "word": "operate",
+      "zh": "做手術",
+      "ex": "We'll have to operate.",
+      "source": "heard",
+      "audioStartSec": 173,
+      "audioEndSec": 176
+    },
+    {
+      "cat": "animals",
+      "tag": "動物",
+      "emoji": "🐙",
+      "word": "octopus",
+      "zh": "八爪魚",
+      "ex": "That's not a cat, that's an octopus!",
+      "source": "heard",
+      "audioStartSec": 225,
+      "audioEndSec": 229
+    },
+    {
+      "cat": "role",
+      "tag": "醫療角色",
+      "emoji": "🤒",
+      "word": "patient",
+      "zh": "病人",
+      "ex": "Now I've got other patients.",
+      "source": "heard",
+      "audioStartSec": 286,
+      "audioEndSec": 289
+    },
+    {
+      "cat": "animals",
+      "tag": "動物",
+      "emoji": "🐭",
+      "word": "mouse",
+      "zh": "老鼠",
+      "ex": "I think he swallowed a mouse.",
+      "source": "heard",
+      "audioStartSec": 351,
+      "audioEndSec": 354
+    },
+    {
+      "cat": "food",
+      "tag": "食物",
+      "emoji": "🧀",
+      "word": "cheese",
+      "zh": "芝士",
+      "ex": "What if we lure the mouse out with some cheese?",
+      "source": "heard",
+      "audioStartSec": 362,
+      "audioEndSec": 367
+    },
+    {
+      "cat": "feelings",
+      "tag": "情緒感受",
+      "emoji": "💓",
+      "word": "nervous",
+      "zh": "緊張",
+      "ex": "There's no need to be nervous.",
+      "source": "heard",
+      "audioStartSec": 61,
+      "audioEndSec": 64
     }
   ],
   "phrases": [
     {
-      "icon": "🩺",
-      "en": "The doctor can help.",
-      "zh": "醫生可以幫手。",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "icon": "🛏️",
+      "en": "Please lie here.",
+      "zh": "唔該喺呢度訓低啦。",
+      "source": "heard",
+      "audioStartSec": 31,
+      "audioEndSec": 33
     },
     {
-      "icon": "💚",
-      "en": "Time to rest.",
-      "zh": "係時候休息喇。",
+      "icon": "💉",
+      "en": "Sting! Oh, brave boy!",
+      "zh": "拮一下！噢，真係勇敢嘅乖仔！",
+      "source": "heard",
+      "audioStartSec": 68,
+      "audioEndSec": 72
+    },
+    {
+      "icon": "🩺",
+      "en": "Now, what seems to be the matter?",
+      "zh": "好啦，請問你邊度唔舒服呀？",
+      "source": "heard",
+      "audioStartSec": 73,
+      "audioEndSec": 76
+    },
+    {
+      "icon": "🤰",
+      "en": "Well, my belly hurts.",
+      "zh": "唔⋯⋯我個肚好痛呀。",
+      "source": "heard",
+      "audioStartSec": 84,
+      "audioEndSec": 87
+    },
+    {
+      "icon": "🩻",
+      "en": "Time for your X-ray!",
+      "zh": "到你照 X 光嘅時間喇！",
+      "source": "heard",
+      "audioStartSec": 108,
+      "audioEndSec": 111
+    },
+    {
+      "icon": "🐱",
+      "en": "You have a cat in your belly.",
+      "zh": "你個肚入面有隻貓呀。",
+      "source": "heard",
+      "audioStartSec": 152,
+      "audioEndSec": 155
+    },
+    {
+      "icon": "😴",
+      "en": "Go to sleep, big Telemachus.",
+      "zh": "快啲訓覺啦，大隻佬 Telemachus。",
+      "source": "heard",
+      "audioStartSec": 190,
+      "audioEndSec": 195
+    },
+    {
+      "icon": "🧀",
+      "en": "What if we lure the mouse out with some cheese?",
+      "zh": "不如我哋用啲芝士引隻老鼠出嚟啦？",
+      "source": "heard",
+      "audioStartSec": 362,
+      "audioEndSec": 367
+    },
+    {
+      "icon": "😊",
+      "en": "I feel all better!",
+      "zh": "我覺得好返晒喇！",
+      "source": "heard",
+      "audioStartSec": 389,
+      "audioEndSec": 391
+    },
+    {
+      "icon": "🩺",
+      "en": "Let me check your tummy.",
+      "zh": "等我幫你檢查下個肚仔先。",
       "source": "practice",
       "audioStartSec": null,
       "audioEndSec": null
@@ -72,13 +311,23 @@
   ],
   "game": {
     "type": "hospital",
-    "instructionsZh": "扮醫生，幫病人檢查、貼膠布同休息。",
+    "instructionsZh": "扮演醫生同護士幫爸爸睇病！先照 X 光睇下肚入面有咩動物，再用芝士將老鼠同貓仔引出嚟，令爸爸好返晒！",
     "config": {
-      "repeats": 1
+      "patientName": "Telemachus",
+      "tools": [
+        "xray",
+        "needle",
+        "cheese"
+      ],
+      "bellyItems": [
+        "octopus",
+        "cat",
+        "mouse"
+      ]
     }
   },
   "qaNotes": [
-    "S102 工程驗證用練習草稿，未提供或聽取本集 MP3，並非劇集原聲教材。",
-    "未填寫分段或時間戳；正式教材須經音訊分析及家長校對後替換。"
+    "已根據實際上傳之 s102_2.mp3 核對時間戳。",
+    "爸爸在劇中的病人化名為 Telemachus（發音約在 00:40 及 01:92）。"
   ]
 }

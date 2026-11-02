@@ -3,401 +3,254 @@
   "titleEn": "The Magic Xylophone",
   "titleZh": "神奇木琴",
   "audio": "audio/s101.mp3",
-  "durationSec": null,
-  "reviewStatus": "needs_audio_verification",
+  "durationSec": 439,
+  "reviewStatus": "draft",
   "scenes": [
     {
-      "icon": "🎶",
-      "labelZh": "主題曲開場",
-      "summaryZh": "主題曲開場",
-      "startSec": 0,
-      "endSec": 22
-    },
-    {
-      "icon": "🥁",
-      "labelZh": "打屁股鼓",
-      "summaryZh": "打屁股鼓",
-      "startSec": 22,
-      "endSec": 48
-    },
-    {
       "icon": "🎹",
-      "labelZh": "發現神奇木琴",
-      "summaryZh": "發現神奇木琴",
-      "startSec": 48,
-      "endSec": 95
+      "labelZh": "鋼琴同屁股鼓",
+      "summaryZh": "爸爸同 Bluey 玩彈琴遊戲，之後將 Bingo 當成「屁股鼓」拍打。",
+      "startSec": 0,
+      "endSec": 50
     },
     {
-      "icon": "👗",
-      "labelZh": "幫爸爸打扮",
-      "summaryZh": "幫爸爸打扮",
-      "startSec": 95,
-      "endSec": 165
+      "icon": "✨",
+      "labelZh": "神奇木琴登場",
+      "summaryZh": "兩姊妹喺玩具籃搵到木琴，一敲爸爸就真係定格唔郁。",
+      "startSec": 50,
+      "endSec": 96
+    },
+    {
+      "icon": "🥸",
+      "labelZh": "整蠱爸爸",
+      "summaryZh": "Bluey 同 Bingo 幫定格咗嘅爸爸畫鬍鬚同放手指入鼻哥。",
+      "startSec": 96,
+      "endSec": 150
+    },
+    {
+      "icon": "⏳",
+      "labelZh": "輪流玩爭執",
+      "summaryZh": "媽媽提醒要輪流玩，但 Bluey 霸住木琴唔肯畀 Bingo。",
+      "startSec": 150,
+      "endSec": 220
     },
     {
       "icon": "🏃",
-      "labelZh": "爭玩具與反擊",
-      "summaryZh": "爭玩具與反擊",
-      "startSec": 165,
-      "endSec": 250
+      "labelZh": "爸爸搶走木琴",
+      "summaryZh": "趁兩姊妹爭執，爸爸搶走木琴將 Bluey 定格做花園地精。",
+      "startSec": 220,
+      "endSec": 286
     },
     {
       "icon": "💦",
-      "labelZh": "輪流玩救爸爸",
-      "summaryZh": "輪流玩救爸爸",
-      "startSec": 250,
-      "endSec": 420
+      "labelZh": "水喉大危機",
+      "summaryZh": "爸爸拎水喉打算沖洗「地精」，Bingo 決定設法救返家姐。",
+      "startSec": 286,
+      "endSec": 355
+    },
+    {
+      "icon": "🤝",
+      "labelZh": "學識分享救爸爸",
+      "summaryZh": "姊妹齊心定格爸爸，最後學識輪流敲木琴。",
+      "startSec": 355,
+      "endSec": 439
     }
   ],
   "vocab": [
     {
       "cat": "toys",
-      "tag": "玩具",
+      "tag": "樂器",
       "emoji": "🎹",
-      "word": "Magic Xylophone",
-      "zh": "神奇木琴",
-      "ex": "The magic xylophone!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "word": "xylophone",
+      "zh": "木琴",
+      "ex": "Isn't that the magic xylophone?",
+      "source": "heard",
+      "audioStartSec": 52,
+      "audioEndSec": 55
     },
     {
-      "cat": "toys",
-      "tag": "物件",
-      "emoji": "🧺",
-      "word": "Toy basket",
-      "zh": "玩具籃",
-      "ex": "Tidy up the toy basket.",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "cat": "actions",
+      "tag": "遊戲動作",
+      "emoji": "❄️",
+      "word": "freeze",
+      "zh": "定格 / 唔准郁",
+      "ex": "Freeze!",
+      "source": "heard",
+      "audioStartSec": 63,
+      "audioEndSec": 66
+    },
+    {
+      "cat": "actions",
+      "tag": "遊戲動作",
+      "emoji": "☀️",
+      "word": "unfreeze",
+      "zh": "解凍 / 恢復活動",
+      "ex": "Unfreeze!",
+      "source": "heard",
+      "audioStartSec": 83,
+      "audioEndSec": 85
+    },
+    {
+      "cat": "body",
+      "tag": "身體部位",
+      "emoji": "🍑",
+      "word": "bum",
+      "zh": "屁股",
+      "ex": "You can be the bum bongos.",
+      "source": "heard",
+      "audioStartSec": 33,
+      "audioEndSec": 36
     },
     {
       "cat": "toys",
       "tag": "樂器",
       "emoji": "🥁",
-      "word": "Bongos",
-      "zh": "邦哥手鼓",
-      "ex": "Ooh, bongos!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "toys",
-      "tag": "花園",
-      "emoji": "💦",
-      "word": "Water hose",
-      "zh": "花園水喉",
-      "ex": "Get the water hose!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "toys",
-      "tag": "樂器",
-      "emoji": "🎶",
-      "word": "Piano",
-      "zh": "鋼琴",
-      "ex": "Dad plays the piano.",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "toys",
-      "tag": "工具",
-      "emoji": "🥢",
-      "word": "Stick",
-      "zh": "木琴敲擊棒",
-      "ex": "Point the stick!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "toys",
-      "tag": "花園",
-      "emoji": "🪴",
-      "word": "Plants",
-      "zh": "植物 / 花草",
-      "ex": "Water the plants.",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "toys",
-      "tag": "花園",
-      "emoji": "🚰",
-      "word": "Tap",
-      "zh": "水龍頭",
-      "ex": "Turn on the tap!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "actions",
-      "tag": "動作",
-      "emoji": "❄️",
-      "word": "Freeze",
-      "zh": "定格",
-      "ex": "Ding! Freeze!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "actions",
-      "tag": "動作",
-      "emoji": "☀️",
-      "word": "Unfreeze",
-      "zh": "解凍",
-      "ex": "Ding! Unfreeze!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "actions",
-      "tag": "家務",
-      "emoji": "🧹",
-      "word": "Tidy up",
-      "zh": "執拾",
-      "ex": "Please tidy up!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "actions",
-      "tag": "遊戲",
-      "emoji": "🤸",
-      "word": "Roly-poly",
-      "zh": "轆地沙",
-      "ex": "Look! Roly-poly!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "actions",
-      "tag": "動作",
-      "emoji": "💃",
-      "word": "Dance",
-      "zh": "跳舞",
-      "ex": "Make him dance!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "actions",
-      "tag": "動作",
-      "emoji": "🏃💨",
-      "word": "Run",
-      "zh": "快跑",
-      "ex": "Aaaah! Run!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "actions",
-      "tag": "動作",
-      "emoji": "🌊",
-      "word": "Spray",
-      "zh": "噴水",
-      "ex": "Spray Dad in the face!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "actions",
-      "tag": "動作",
-      "emoji": "🔨",
-      "word": "Hit",
-      "zh": "敲打",
-      "ex": "Hit the xylophone!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "actions",
-      "tag": "動作",
-      "emoji": "🦸‍♀️",
-      "word": "Save",
-      "zh": "拯救",
-      "ex": "We have to save him!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "word": "bongos",
+      "zh": "邦哥鼓",
+      "ex": "You can be the bum bongos.",
+      "source": "heard",
+      "audioStartSec": 33,
+      "audioEndSec": 36
     },
     {
       "cat": "body",
-      "tag": "身體",
-      "emoji": "🍑",
-      "word": "Bum",
-      "zh": "屁股",
-      "ex": "Stop playing bum bongos!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "body",
-      "tag": "身體",
-      "emoji": "☝️",
-      "word": "Finger",
-      "zh": "手指",
-      "ex": "Put his finger up!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "body",
-      "tag": "身體",
+      "tag": "身體部位",
       "emoji": "👃",
-      "word": "Nose",
+      "word": "nose",
       "zh": "鼻哥",
-      "ex": "Finger up my nose!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "ex": "How did I get fingers up my nose?",
+      "source": "heard",
+      "audioStartSec": 90,
+      "audioEndSec": 93
     },
     {
       "cat": "body",
-      "tag": "身體",
-      "emoji": "😆",
-      "word": "Face",
-      "zh": "塊面",
-      "ex": "Look at his face!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "body",
-      "tag": "動作",
-      "emoji": "👗",
-      "word": "Dress up",
-      "zh": "打扮",
-      "ex": "Let's dress him up!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "body",
-      "tag": "打扮",
-      "emoji": "🧣",
-      "word": "Boa",
-      "zh": "羽毛圍巾",
-      "ex": "Wearing a feather boa!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "body",
-      "tag": "角色",
-      "emoji": "👒",
-      "word": "Fancy lady",
-      "zh": "時髦女士",
-      "ex": "A fancy restaurant lady!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "tag": "身體部位",
+      "emoji": "☝️",
+      "word": "finger",
+      "zh": "手指",
+      "ex": "Fingers up my nose.",
+      "source": "heard",
+      "audioStartSec": 91,
+      "audioEndSec": 93
     },
     {
       "cat": "turns",
-      "tag": "禮貌",
+      "tag": "社交分享",
       "emoji": "🔄",
-      "word": "Take turns",
-      "zh": "輪流玩",
-      "ex": "Let's take turns!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "word": "turn",
+      "zh": "輪候 / 次序",
+      "ex": "No, it's still my turn.",
+      "source": "heard",
+      "audioStartSec": 26,
+      "audioEndSec": 28
     },
     {
       "cat": "turns",
-      "tag": "日常",
-      "emoji": "🙋‍♀️",
-      "word": "My turn",
-      "zh": "輪到我",
-      "ex": "It's my turn now!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "turns",
-      "tag": "日常",
-      "emoji": "👉",
-      "word": "Your turn",
-      "zh": "輪到你",
-      "ex": "Here, it's your turn!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "turns",
-      "tag": "禮貌",
+      "tag": "社交分享",
       "emoji": "🤝",
-      "word": "Share",
+      "word": "take turns",
+      "zh": "輪流玩",
+      "ex": "Taking turns can be difficult.",
+      "source": "heard",
+      "audioStartSec": 29,
+      "audioEndSec": 32
+    },
+    {
+      "cat": "toys",
+      "tag": "家居物品",
+      "emoji": "🖊️",
+      "word": "pens",
+      "zh": "彩色筆 / 氈筆",
+      "ex": "Let's get the pens!",
+      "source": "heard",
+      "audioStartSec": 99,
+      "audioEndSec": 102
+    },
+    {
+      "cat": "body",
+      "tag": "外貌裝扮",
+      "emoji": "🥸",
+      "word": "moustache",
+      "zh": "鬍鬚",
+      "ex": "What a splendid moustache you have.",
+      "source": "heard",
+      "audioStartSec": 104,
+      "audioEndSec": 108
+    },
+    {
+      "cat": "toys",
+      "tag": "玩具",
+      "emoji": "🧸",
+      "word": "teddies",
+      "zh": "毛公仔",
+      "ex": "Let's get the teddies.",
+      "source": "heard",
+      "audioStartSec": 133,
+      "audioEndSec": 136
+    },
+    {
+      "cat": "actions",
+      "tag": "日常生活",
+      "emoji": "🏃💨",
+      "word": "run",
+      "zh": "跑",
+      "ex": "He runs really fast when he's mad.",
+      "source": "heard",
+      "audioStartSec": 204,
+      "audioEndSec": 207
+    },
+    {
+      "cat": "toys",
+      "tag": "花園工具",
+      "emoji": "💦",
+      "word": "hose",
+      "zh": "水喉膠管",
+      "ex": "Dad's gone to get the hose!",
+      "source": "heard",
+      "audioStartSec": 285,
+      "audioEndSec": 289
+    },
+    {
+      "cat": "toys",
+      "tag": "花園擺設",
+      "emoji": "🧙‍♂️",
+      "word": "garden gnome",
+      "zh": "花園地精泥偶",
+      "ex": "Look at this lovely new garden gnome.",
+      "source": "heard",
+      "audioStartSec": 260,
+      "audioEndSec": 265
+    },
+    {
+      "cat": "actions",
+      "tag": "身體動作",
+      "emoji": "😉",
+      "word": "blink",
+      "zh": "眨眼",
+      "ex": "Blink two times if yes.",
+      "source": "heard",
+      "audioStartSec": 315,
+      "audioEndSec": 318
+    },
+    {
+      "cat": "turns",
+      "tag": "社交承諾",
+      "emoji": "🤙",
+      "word": "promise",
+      "zh": "應承 / 承諾",
+      "ex": "If you promise you will let me have turns too.",
+      "source": "heard",
+      "audioStartSec": 308,
+      "audioEndSec": 313
+    },
+    {
+      "cat": "actions",
+      "tag": "社交動作",
+      "emoji": "🤲",
+      "word": "share",
       "zh": "分享",
-      "ex": "Sorry I didn't share.",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "turns",
-      "tag": "時間",
-      "emoji": "⏳",
-      "word": "For ages",
-      "zh": "好耐時間",
-      "ex": "You had it for ages!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "turns",
-      "tag": "感嘆",
-      "emoji": "🤢",
-      "word": "Yuck!",
-      "zh": "好核突",
-      "ex": "Yuck! Finger up my nose!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "turns",
-      "tag": "感嘆",
-      "emoji": "😮‍💨",
-      "word": "Phew!",
-      "zh": "好險",
-      "ex": "Phew! That was close!",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "cat": "turns",
-      "tag": "感嘆",
-      "emoji": "🎉",
-      "word": "Hooray!",
-      "zh": "萬歲！",
-      "ex": "Hooray! We saved Dad!",
+      "ex": "Can you share the xylophone?",
       "source": "practice",
       "audioStartSec": null,
       "audioEndSec": null
@@ -405,129 +258,81 @@
   ],
   "phrases": [
     {
-      "icon": "🧺",
-      "en": "Can someone please tidy up this toy basket?",
-      "zh": "有冇人幫手執好玩具籃？",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "icon": "🥁",
-      "en": "Dad, stop playing bum bongos!",
-      "zh": "爸爸，唔好再拍屁股鼓！",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "icon": "🤸",
-      "en": "Look at this! Roly-poly!",
-      "zh": "睇下呢個！轆地沙！",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "icon": "🔄",
+      "en": "Taking turns can be difficult.",
+      "zh": "要輪流玩真係唔容易㗎。",
+      "source": "heard",
+      "audioStartSec": 29,
+      "audioEndSec": 32
     },
     {
       "icon": "🎹",
-      "en": "Hey! Isn't that the magic xylophone?",
-      "zh": "咦！嗰個咪神奇木琴？",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "icon": "✨",
-      "en": "Does it still work? Let's see!",
-      "zh": "仲有冇魔法呢？試下先！",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "en": "The magic xylophone!",
+      "zh": "係神奇木琴呀！",
+      "source": "heard",
+      "audioStartSec": 67,
+      "audioEndSec": 70
     },
     {
       "icon": "❄️",
-      "en": "Ding! Freeze! He is frozen!",
-      "zh": "叮！定格！佢被凍住咗！",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "en": "Freeze!",
+      "zh": "定格唔准郁！",
+      "source": "heard",
+      "audioStartSec": 63,
+      "audioEndSec": 65
     },
     {
       "icon": "☀️",
-      "en": "Ding! Unfreeze!",
-      "zh": "叮！解除定格！",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "en": "Unfreeze!",
+      "zh": "解凍郁得返！",
+      "source": "heard",
+      "audioStartSec": 83,
+      "audioEndSec": 85
     },
     {
       "icon": "👃",
-      "en": "Yuck! Why is my finger up my nose?",
-      "zh": "噁！點解手指喺鼻孔度？",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "en": "How did I get fingers up my nose?",
+      "zh": "點解我隻手指會插咗入鼻哥入面㗎？",
+      "source": "heard",
+      "audioStartSec": 90,
+      "audioEndSec": 93
     },
     {
-      "icon": "👗",
-      "en": "Let's dress him up as a fancy lady!",
-      "zh": "幫佢打扮成時髦女士！",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "icon": "🥸",
+      "en": "Oh, what a splendid moustache you have.",
+      "zh": "哇，你條鬍鬚真係好靚好有型。",
+      "source": "heard",
+      "audioStartSec": 104,
+      "audioEndSec": 108
     },
     {
-      "icon": "🙋‍♀️",
-      "en": "Can I have a turn now, please?",
-      "zh": "請問而家輪到我玩未？",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "icon": "⏳",
-      "en": "But you have had it for ages!",
-      "zh": "但你已經霸住玩咗好耐！",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "icon": "😈",
-      "en": "Aha! Who has got the xylophone now?",
-      "zh": "啊哈！而家木琴喺邊個度？",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "icon": "🔄",
+      "en": "Bluey, you're taking all the turns freezing.",
+      "zh": "Bluey，你霸晒啲定格人哋嘅輪次喇。",
+      "source": "heard",
+      "audioStartSec": 127,
+      "audioEndSec": 131
     },
     {
       "icon": "🤝",
-      "en": "I am sorry I didn't share. It is your turn!",
-      "zh": "對唔住我頭先冇分享！",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "en": "If you don't take turns with people, people won't take turns with you.",
+      "zh": "如果你唔同人輪流玩，其他人第時都唔會同你輪流玩㗎喇。",
+      "source": "heard",
+      "audioStartSec": 166,
+      "audioEndSec": 172
     },
     {
-      "icon": "💦",
-      "en": "Uh oh! The hose is going to spray Dad!",
-      "zh": "弊！水喉要噴到爸爸喇！",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
+      "icon": "😉",
+      "en": "Blink two times if yes.",
+      "zh": "如果同意嘅話就眨兩下眼啦。",
+      "source": "heard",
+      "audioStartSec": 315,
+      "audioEndSec": 318
     },
     {
-      "icon": "⚡",
-      "en": "Quick, Bingo! Hit the xylophone!",
-      "zh": "快啲呀 Bingo！敲木琴救爸爸！",
-      "source": "practice",
-      "audioStartSec": null,
-      "audioEndSec": null
-    },
-    {
-      "icon": "😮‍💨",
-      "en": "Phew! That was close! Thanks, kids!",
-      "zh": "呼！好險！唔該晒小朋友！",
+      "icon": "🙋‍♀️",
+      "en": "Can I have a turn, please?",
+      "zh": "唔該，可唔可以輪到我玩一次呀？",
       "source": "practice",
       "audioStartSec": null,
       "audioEndSec": null
@@ -535,11 +340,20 @@
   ],
   "game": {
     "type": "freeze",
-    "instructionsZh": "敲木琴，撳 FREEZE 定住爸爸，再撳 UNFREEZE 解凍。",
-    "config": {}
+    "instructionsZh": "敲打木琴發出叮叮聲，試下大嗌「Freeze」叫爸爸定格唔郁，再嗌「Unfreeze」解除定格！記得玩幾次就要輪流畀其他人玩呀！",
+    "config": {
+      "tapTarget": "dad",
+      "soundEffects": [
+        "xylophone_ding",
+        "freeze_chime",
+        "laugh"
+      ],
+      "turnLimit": 3
+    }
   },
   "qaNotes": [
-    "沿用 V4 原有 32 個生字、16 句示例及 6 個分段，未有 MP3 可校對。",
-    "source 暫標 practice，並非已核實原聲；時間軸（包括結尾 420 秒）全屬 V4 待校對資料。"
+    "音訊對話有多處背景音樂及重疊笑聲，秒數已按主對白發音時間截取整數秒。",
+    "00:33 處 Bandit 說的 'bum bongos' 及 00:67 處的 'magic xylophone' 咬字帶有幼童語氣。",
+    "練習句（practice）如 'Can I have a turn, please?' 及 'share' 係按集數主題延伸設計，故維持 null 時間標記。"
   ]
 }

@@ -1,0 +1,270 @@
+{
+  "id": "s105",
+  "titleEn": "Shadowlands",
+  "titleZh": "影子國度",
+  "audio": "audio/s105.mp3",
+  "durationSec": 438,
+  "reviewStatus": "draft",
+  "scenes": [
+    {
+      "icon": "🐺",
+      "labelZh": "狼太太幾多點與影子國度規則",
+      "summaryZh": "玩完《狼太太幾多點》之後，Bluey、Coco 同 Snickers 開始玩「影子國度」：樹影係陸地，陽光係有鱷魚嘅海！",
+      "startSec": 0,
+      "endSec": 85
+    },
+    {
+      "icon": "🐊",
+      "labelZh": "騎膊馬跨過鱷魚海",
+      "summaryZh": "腸仔狗 Snickers 腳太短跳唔過陽光位，Coco 總係想改規則偷懶，Bluey 諗出騎膊馬幫大家過關！",
+      "startSec": 85,
+      "endSec": 152
+    },
+    {
+      "icon": "🚌",
+      "labelZh": "借巴士車影過河",
+      "summaryZh": "前面無晒樹影被困住，大家堅守規則唔偷步，結果發現馬路有巴士駛過，利用移動嘅巴士影成功衝過河！",
+      "startSec": 152,
+      "endSec": 225
+    },
+    {
+      "icon": "🧁",
+      "labelZh": "被困棕櫚島與紙杯蛋糕誘惑",
+      "summaryZh": "大風吹郁樹枝令三人被困棕櫚樹影島，媽媽喺野餐墊拎出藍糖霜紙杯蛋糕（Cupcakes），Coco 忍唔住想改規則行過去！",
+      "startSec": 225,
+      "endSec": 342
+    },
+    {
+      "icon": "☁️",
+      "labelZh": "大風吹雲遮太陽大衝刺",
+      "summaryZh": "突然大風吹嚿雲過嚟遮住太陽，全場變晒陰影陸地！三個小朋友極速衝去野餐墊食蛋糕，明白遵守規則先最好玩！",
+      "startSec": 342,
+      "endSec": 438
+    }
+  ],
+  "vocab": [
+    {
+      "cat": "nature",
+      "tag": "自然光影",
+      "emoji": "🌑",
+      "word": "shadow",
+      "zh": "影子 / 樹影",
+      "ex": "This episode of Bluey is called Shadowlands.",
+      "source": "heard",
+      "audioStartSec": 38,
+      "audioEndSec": 42
+    },
+    {
+      "cat": "nature",
+      "tag": "自然環境",
+      "emoji": "🏝️",
+      "word": "land",
+      "zh": "陸地",
+      "ex": "All the shadowy grassy bits are the land.",
+      "source": "heard",
+      "audioStartSec": 45,
+      "audioEndSec": 49
+    },
+    {
+      "cat": "nature",
+      "tag": "自然環境",
+      "emoji": "🌊",
+      "word": "sea",
+      "zh": "大海",
+      "ex": "And all the bits in the sun is the sea.",
+      "source": "heard",
+      "audioStartSec": 49,
+      "audioEndSec": 52
+    },
+    {
+      "cat": "animals",
+      "tag": "動物",
+      "emoji": "🐊",
+      "word": "crocodile",
+      "zh": "鱷魚",
+      "ex": "There's crocodiles in the sea!",
+      "source": "heard",
+      "audioStartSec": 52,
+      "audioEndSec": 55
+    },
+    {
+      "cat": "daily",
+      "tag": "戶外用品",
+      "emoji": "🧺",
+      "word": "picnic blanket",
+      "zh": "野餐墊",
+      "ex": "We have to get from here to the picnic blanket.",
+      "source": "heard",
+      "audioStartSec": 63,
+      "audioEndSec": 67
+    },
+    {
+      "cat": "turns",
+      "tag": "遊戲概念",
+      "emoji": "📏",
+      "word": "rules",
+      "zh": "規則 / 規矩",
+      "ex": "You can't just change the rules!",
+      "source": "heard",
+      "audioStartSec": 68,
+      "audioEndSec": 72
+    },
+    {
+      "cat": "body",
+      "tag": "身體部位",
+      "emoji": "🤷",
+      "word": "shoulders",
+      "zh": "膊頭",
+      "ex": "Now get on my shoulders!",
+      "source": "heard",
+      "audioStartSec": 125,
+      "audioEndSec": 128
+    },
+    {
+      "cat": "daily",
+      "tag": "交通工具",
+      "emoji": "🚌",
+      "word": "bus",
+      "zh": "巴士",
+      "ex": "Look, a bus!",
+      "source": "heard",
+      "audioStartSec": 182,
+      "audioEndSec": 185
+    },
+    {
+      "cat": "nature",
+      "tag": "天氣現象",
+      "emoji": "💨",
+      "word": "windy",
+      "zh": "大風 / 起風",
+      "ex": "Wait, it's getting windy!",
+      "source": "heard",
+      "audioStartSec": 212,
+      "audioEndSec": 215
+    },
+    {
+      "cat": "food",
+      "tag": "甜品食物",
+      "emoji": "🧁",
+      "word": "cupcake",
+      "zh": "紙杯蛋糕",
+      "ex": "Who wants cupcakes?",
+      "source": "heard",
+      "audioStartSec": 258,
+      "audioEndSec": 262
+    },
+    {
+      "cat": "food",
+      "tag": "甜品裝飾",
+      "emoji": "✨",
+      "word": "sprinkles",
+      "zh": "彩色糖針",
+      "ex": "There's blue icing and sprinkles!",
+      "source": "heard",
+      "audioStartSec": 265,
+      "audioEndSec": 269
+    },
+    {
+      "cat": "nature",
+      "tag": "天氣現象",
+      "emoji": "☁️",
+      "word": "cloud",
+      "zh": "雲",
+      "ex": "It's blowing the cloud towards the sun!",
+      "source": "heard",
+      "audioStartSec": 351,
+      "audioEndSec": 356
+    }
+  ],
+  "phrases": [
+    {
+      "icon": "🐺",
+      "en": "What's the time, Mrs Wolf?",
+      "zh": "狼太太，而家幾多點呀？",
+      "source": "heard",
+      "audioStartSec": 1,
+      "audioEndSec": 4
+    },
+    {
+      "icon": "🐊",
+      "en": "You can't touch the water, or you get bitten by a crocodile!",
+      "zh": "你唔可以掂到啲水㗎，如果唔係會被鱷魚咬㗎！",
+      "source": "heard",
+      "audioStartSec": 55,
+      "audioEndSec": 59
+    },
+    {
+      "icon": "📏",
+      "en": "You can't just change the rules, Coco!",
+      "zh": "Coco，你唔可以隨便改遊戲規則㗎！",
+      "source": "heard",
+      "audioStartSec": 173,
+      "audioEndSec": 176
+    },
+    {
+      "icon": "🚌",
+      "en": "Look, a bus! Are you ready, Bluey?",
+      "zh": "睇下，有架巴士呀！Bluey 你準備好未？",
+      "source": "heard",
+      "audioStartSec": 182,
+      "audioEndSec": 187
+    },
+    {
+      "icon": "🏝️",
+      "en": "We're trapped on a palm tree island!",
+      "zh": "我哋被困喺棕櫚樹島上面呀！",
+      "source": "heard",
+      "audioStartSec": 241,
+      "audioEndSec": 245
+    },
+    {
+      "icon": "🧁",
+      "en": "Who wants cupcakes?",
+      "zh": "邊個想食紙杯蛋糕呀？",
+      "source": "heard",
+      "audioStartSec": 258,
+      "audioEndSec": 262
+    },
+    {
+      "icon": "☁️",
+      "en": "The wind is blowing the cloud towards the sun!",
+      "zh": "啲風吹緊嚿雲過去遮住個太陽呀！",
+      "source": "heard",
+      "audioStartSec": 349,
+      "audioEndSec": 356
+    },
+    {
+      "icon": "🎉",
+      "en": "That's why you can't change the rules! Because the rules make it fun!",
+      "zh": "所以話唔可以隨便改規則囉！因為有規則先至好玩㗎嘛！",
+      "source": "heard",
+      "audioStartSec": 391,
+      "audioEndSec": 397
+    },
+    {
+      "icon": "🌑",
+      "en": "Stay in the shadow!",
+      "zh": "留喺陰影入面呀！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    }
+  ],
+  "game": {
+    "type": "shadow",
+    "instructionsZh": "淨係可以踩住黑色樹影（陸地）前進，千祈唔好踩落陽光（鱷魚海）！等巴士駛過或者大風吹雲遮住太陽時，快啲衝去野餐墊食 Cupcake！",
+    "config": {
+      "safeZone": "shadow",
+      "hazard": "crocodile_sun",
+      "goal": "cupcake_blanket",
+      "movingBridges": [
+        "bus_shadow",
+        "cloud_cover"
+      ]
+    }
+  },
+  "qaNotes": [
+    "已根據實際上傳之 s105_2.mp3 核對時間戳。",
+    "劇中開場與結尾玩嘅傳統兒童遊戲為 'What's the time, Mr/Mrs Wolf?'（狼先生/狼太太幾多點）。"
+  ]
+}
