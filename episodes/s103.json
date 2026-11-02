@@ -1,0 +1,266 @@
+{
+  "id": "s103",
+  "titleEn": "Keepy Uppy",
+  "titleZh": "顛氣球",
+  "audio": "audio/s103.mp3",
+  "durationSec": 438,
+  "reviewStatus": "draft",
+  "scenes": [
+    {
+      "icon": "🎈",
+      "labelZh": "最後一個氣球開局",
+      "summaryZh": "Bluey 吹起最後一個紅氣球整蠱 Bingo，媽媽提議一齊玩顛氣球（Keepy Uppy），唔准氣球掂地。",
+      "startSec": 0,
+      "endSec": 82
+    },
+    {
+      "icon": "🥣",
+      "labelZh": "細力拍氣球秘技",
+      "summaryZh": "媽媽去煮早餐，兩姊妹發現細細力向上托（Small ones）好容易控制，變身顛氣球專家！",
+      "startSec": 82,
+      "endSec": 135
+    },
+    {
+      "icon": "📰",
+      "labelZh": "爸爸加入增加難度",
+      "summaryZh": "爸爸出場扮睇報紙、飲橙汁同攬實 Bluey，仲開大風扇將氣球吹出花園！",
+      "startSec": 135,
+      "endSec": 265
+    },
+    {
+      "icon": "🌿",
+      "labelZh": "草地爆氣球危機",
+      "summaryZh": "氣球飛咗去草地上面，媽媽大嗌氣球一掂到草就會爆（Pop），仲飛埋去隔離屋 Lucky 個花園！",
+      "startSec": 265,
+      "endSec": 330
+    },
+    {
+      "icon": "💥",
+      "labelZh": "氣球爆咗與藍色爸爸氣球",
+      "summaryZh": "最後一個紅氣球唔小心掂到草地爆咗，爸爸決定自己扮做「大藍色氣球」畀兩姊妹放氣追逐！",
+      "startSec": 330,
+      "endSec": 438
+    }
+  ],
+  "vocab": [
+    {
+      "cat": "toys",
+      "tag": "玩具",
+      "emoji": "🎈",
+      "word": "balloon",
+      "zh": "氣球",
+      "ex": "Morning, last balloon!",
+      "source": "heard",
+      "audioStartSec": 12,
+      "audioEndSec": 15
+    },
+    {
+      "cat": "actions",
+      "tag": "遊戲名稱",
+      "emoji": "🙌",
+      "word": "Keepy Uppy",
+      "zh": "顛氣球遊戲",
+      "ex": "This episode of Bluey is called Keepy Uppy.",
+      "source": "heard",
+      "audioStartSec": 49,
+      "audioEndSec": 53
+    },
+    {
+      "cat": "nature",
+      "tag": "環境位置",
+      "emoji": "⬇️",
+      "word": "ground",
+      "zh": "地面 / 地下",
+      "ex": "Can't let it touch the ground!",
+      "source": "heard",
+      "audioStartSec": 57,
+      "audioEndSec": 60
+    },
+    {
+      "cat": "daily",
+      "tag": "日常飲食",
+      "emoji": "🍳",
+      "word": "brekkie",
+      "zh": "早餐（澳洲口語）",
+      "ex": "I'm gonna cook brekkie, kids.",
+      "source": "heard",
+      "audioStartSec": 94,
+      "audioEndSec": 97
+    },
+    {
+      "cat": "role",
+      "tag": "稱讚用詞",
+      "emoji": "🏆",
+      "word": "expert",
+      "zh": "專家 / 高手",
+      "ex": "I'm a Keepy Uppy expert!",
+      "source": "heard",
+      "audioStartSec": 115,
+      "audioEndSec": 118
+    },
+    {
+      "cat": "daily",
+      "tag": "家居物品",
+      "emoji": "📰",
+      "word": "newspaper",
+      "zh": "報紙",
+      "ex": "I can't, I'm a newspaper!",
+      "source": "heard",
+      "audioStartSec": 145,
+      "audioEndSec": 148
+    },
+    {
+      "cat": "daily",
+      "tag": "家電用品",
+      "emoji": "🪭",
+      "word": "fan",
+      "zh": "風扇",
+      "ex": "I'll just turn on this fan.",
+      "source": "heard",
+      "audioStartSec": 195,
+      "audioEndSec": 198
+    },
+    {
+      "cat": "nature",
+      "tag": "植物環境",
+      "emoji": "🍃",
+      "word": "leaves",
+      "zh": "樹葉",
+      "ex": "There's leaves everywhere!",
+      "source": "heard",
+      "audioStartSec": 203,
+      "audioEndSec": 206
+    },
+    {
+      "cat": "actions",
+      "tag": "家務動作",
+      "emoji": "🧹",
+      "word": "tidy away",
+      "zh": "執好收埋",
+      "ex": "If you tidied them all away.",
+      "source": "heard",
+      "audioStartSec": 227,
+      "audioEndSec": 230
+    },
+    {
+      "cat": "nature",
+      "tag": "植物環境",
+      "emoji": "🌱",
+      "word": "grass",
+      "zh": "草地",
+      "ex": "Balloons pop if they touch grass!",
+      "source": "heard",
+      "audioStartSec": 270,
+      "audioEndSec": 274
+    },
+    {
+      "cat": "actions",
+      "tag": "動作聲音",
+      "emoji": "💥",
+      "word": "pop",
+      "zh": "爆開 / 啪一聲爆咗",
+      "ex": "Oh, my balloon! It's popped.",
+      "source": "heard",
+      "audioStartSec": 337,
+      "audioEndSec": 342
+    },
+    {
+      "cat": "actions",
+      "tag": "遊戲動作",
+      "emoji": "💨",
+      "word": "blow up",
+      "zh": "吹脹（氣球）",
+      "ex": "Blow up the Daddy balloon!",
+      "source": "heard",
+      "audioStartSec": 389,
+      "audioEndSec": 392
+    }
+  ],
+  "phrases": [
+    {
+      "icon": "🎈",
+      "en": "You have to keep the balloon in the air and can't let it touch the ground.",
+      "zh": "你要將個氣球拍喺半空，唔可以畀佢掂到地下㗎。",
+      "source": "heard",
+      "audioStartSec": 55,
+      "audioEndSec": 60
+    },
+    {
+      "icon": "🍳",
+      "en": "I'm gonna cook brekkie, kids.",
+      "zh": "小朋友，我去煮早餐喇。",
+      "source": "heard",
+      "audioStartSec": 94,
+      "audioEndSec": 97
+    },
+    {
+      "icon": "🏆",
+      "en": "I'm a Keepy Uppy expert!",
+      "zh": "我係顛氣球專家呀！",
+      "source": "heard",
+      "audioStartSec": 115,
+      "audioEndSec": 118
+    },
+    {
+      "icon": "🔥",
+      "en": "Can you make it hard again?",
+      "zh": "你可唔可以整到個遊戲難玩返啲呀？",
+      "source": "heard",
+      "audioStartSec": 120,
+      "audioEndSec": 123
+    },
+    {
+      "icon": "🪭",
+      "en": "I'll just turn on this fan.",
+      "zh": "等我開著呢把風扇先。",
+      "source": "heard",
+      "audioStartSec": 195,
+      "audioEndSec": 198
+    },
+    {
+      "icon": "🌱",
+      "en": "Balloons pop if they touch grass!",
+      "zh": "氣球一掂到草地就會爆㗎！",
+      "source": "heard",
+      "audioStartSec": 270,
+      "audioEndSec": 274
+    },
+    {
+      "icon": "🎈",
+      "en": "That was my last balloon.",
+      "zh": "嗰個係我最後一個氣球嚟㗎。",
+      "source": "heard",
+      "audioStartSec": 345,
+      "audioEndSec": 348
+    },
+    {
+      "icon": "💨",
+      "en": "Blow up the Daddy balloon!",
+      "zh": "快啲吹脹個爸爸大氣球啦！",
+      "source": "heard",
+      "audioStartSec": 389,
+      "audioEndSec": 392
+    },
+    {
+      "icon": "🙌",
+      "en": "Keep it up in the air!",
+      "zh": "繼續將佢托喺半空啦！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    }
+  ],
+  "game": {
+    "type": "balloon",
+    "instructionsZh": "撳個紅氣球向上彈，千祈唔好畀佢跌落地下或者掂到草地！仲可以開風扇增加難度！",
+    "config": {
+      "balloonColor": "red",
+      "gravity": 0.6,
+      "windEnabled": true
+    }
+  },
+  "qaNotes": [
+    "已根據實際上傳之 s103_2.mp3 核對時間戳。",
+    "00:94 處媽媽使用了典型澳洲口語 'brekkie'（即 breakfast 早餐）。"
+  ]
+}

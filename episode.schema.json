@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bluey Learning Hub episode data",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "titleEn", "titleZh", "audio", "durationSec", "reviewStatus", "scenes", "vocab", "phrases", "game", "qaNotes"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^s1(0[1-9]|[1-4][0-9]|5[0-2])$"},
+    "titleEn": {"type": "string"},
+    "titleZh": {"type": "string"},
+    "audio": {"type": "string", "pattern": "^audio/s1(0[1-9]|[1-4][0-9]|5[0-2])\\.mp3$"},
+    "durationSec": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "reviewStatus": {"type": "string", "enum": ["needs_audio_verification", "draft", "reviewed"]},
+    "scenes": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["icon", "labelZh", "summaryZh", "startSec", "endSec"], "properties": {"icon": {"type": "string"}, "labelZh": {"type": "string"}, "summaryZh": {"type": "string"}, "startSec": {"type": "number", "minimum": 0}, "endSec": {"type": "number", "exclusiveMinimum": 0}}}},
+    "vocab": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["cat", "tag", "emoji", "word", "zh", "ex", "source", "audioStartSec", "audioEndSec"], "properties": {"cat": {"type": "string"}, "tag": {"type": "string"}, "emoji": {"type": "string"}, "word": {"type": "string"}, "zh": {"type": "string"}, "ex": {"type": "string"}, "source": {"type": "string", "enum": ["heard", "practice"]}, "audioStartSec": {"type": ["number", "null"], "minimum": 0}, "audioEndSec": {"type": ["number", "null"], "minimum": 0}}}},
+    "phrases": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["icon", "en", "zh", "source", "audioStartSec", "audioEndSec"], "properties": {"icon": {"type": "string"}, "en": {"type": "string"}, "zh": {"type": "string"}, "source": {"type": "string", "enum": ["heard", "practice"]}, "audioStartSec": {"type": ["number", "null"], "minimum": 0}, "audioEndSec": {"type": ["number", "null"], "minimum": 0}}}},
+    "game": {"type": "object", "additionalProperties": false, "required": ["type", "instructionsZh", "config"], "properties": {"type": {"type": "string", "enum": ["freeze", "hospital", "balloon", "robot", "shadow", "generic"]}, "instructionsZh": {"type": "string"}, "config": {"type": "object"}}},
+    "qaNotes": {"type": "array", "items": {"type": "string"}}
+  }
+}

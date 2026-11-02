@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bluey 神奇木琴互動學習機 V5 多集數學習機</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <button type="button" id="unlockBanner" class="audio-unlock-banner" onclick="unlockAllAudio()">
+    🔊 第一步：請先撳呢度啟動 iPad / 手機聲音！
+  </button>
+
+  <div class="header-bar">
+    <div class="header-title">🐾 Bluey Learning Hub V5</div>
+    <div class="stars-box" id="starsDisplay" aria-label="學習星星">☆☆☆</div>
+  </div>
+
+  <!-- 1. 原劇 MP3 慢速點讀主控台 (同站 audio 資料夾) -->
+  <div class="card mp3-hub">
+    <div class="section-title">
+      <span>📻 1. 原劇 MP3 慢速劇場</span>
+      <span class="badge-count" id="mp3StatusBadge" role="status">準備載入音檔</span>
+    </div>
+
+    <div class="ep-selector-row">
+      <select id="epSelect" class="ep-select" onchange="selectEpisode(this.value)"></select>
+
+    </div>
+
+    <audio id="mainPlayer" controls playsinline style="width:100%; height:40px;" preload="metadata"></audio>
+
+    <div class="speed-bar">
+      <button class="spd-btn" onclick="changePlayerSpeed(0.65, this)">🐢 0.65x 超慢</button>
+      <button class="spd-btn active" id="defaultSpdBtn" onclick="changePlayerSpeed(0.8, this)">🐢 0.8x 慢速</button>
+      <button class="spd-btn" onclick="changePlayerSpeed(1.0, this)">🐰 1.0x 原速</button>
+      <button class="spd-btn" style="background:#FDE68A;color:#92400E;" onclick="rewindPlayer(5)">⏪ -5秒</button>
+    </div>
+
+    <p id="sceneHeading">🎬 原音分段（時間待校對）</p>
+    <div class="scene-grid" id="sceneGrid"></div>
+  </div>
+
+  <p id="mediaNotice" role="status" aria-live="polite"></p>
+  <p id="voiceStatus" role="status"></p>
+  <p id="progressSummary" aria-live="polite"></p>
+  <p id="episodeStatus" role="status" aria-live="polite"></p>
+  <section id="materials">
+  <!-- 全域單字發音速度切換 -->
+  <div class="speed-toggle">
+    <button id="btnSlow" class="speed-opt active" onclick="setSpeed(true)">🐢 單字烏龜慢速 (0.7x)</button>
+    <button id="btnFast" class="speed-opt" onclick="setSpeed(false)">🐰 單字兔仔原速 (1.0x)</button>
+  </div>
+
+  <!-- 2. 32張圖案生字閃卡庫 -->
+  <div class="card">
+    <div class="section-title">
+      <span>🃏 2. 劇集生字閃卡庫</span>
+      <span class="badge-count" id="vocabCountBadge">共 0 個</span>
+    </div>
+    <div class="cat-tabs" id="catTabs"></div>
+    <div class="vocab-grid" id="vocabGrid"></div>
+  </div>
+
+  <!-- 3. 聽音搵生字小遊戲 -->
+  <div class="card">
+    <div class="section-title">
+      <span>🎯 3. 聽音搵生字小遊戲</span>
+      <button onclick="nextQuizQuestion()" style="border:none;background:#8B5CF6;color:white;padding:5px 12px;border-radius:10px;font-weight:bold;font-size:12px;">🔄 換一題</button>
+    </div>
+    <div class="quiz-box">
+      <div style="font-size:16px;font-weight:900;color:#5B21B6;cursor:pointer;" onclick="speakQuizWord()">
+        🔊 撳我聽發音搵：<span id="quizTargetWord" style="text-decoration:underline;">Xylophone</span>
+      </div>
+      <div class="quiz-options" id="quizOptions"></div>
+    </div>
+  </div>
+
+  <!-- 保留 V4 freeze 遊戲模板 -->
+  <div class="card" id="gameCard">
+    <p id="gameInstructions"></p>
+    <div id="freezeGame">
+    <div class="section-title"><span>🎵 4. 敲木琴定住爸爸</span></div>
+    <div class="stage-box">
+      <div id="dadAvatar" class="dad-avatar">🐕</div>
+      <div id="stageStatus" style="font-weight:900;font-size:17px;color:#2B5B84;">🕺 爸爸跳舞中</div>
+    </div>
+    <div class="xylophone-row">
+      <button class="xylo-key key-1" onclick="hitXylo(523.25, 'DO')">DO</button>
+      <button class="xylo-key key-2" onclick="hitXylo(659.25, 'MI')">MI</button>
+      <button class="xylo-key key-3" onclick="hitXylo(783.99, 'SOL')">SOL</button>
+      <button class="xylo-key key-4" onclick="hitXylo(1046.50, 'DO+')">DO+</button>
+    </div>
+    <div class="action-row">
+      <button class="big-btn btn-freeze" onclick="triggerFreeze(true)">❄️ FREEZE!<br><span style="font-size:12px;">定格唔郁</span></button>
+      <button class="big-btn btn-unfreeze" onclick="triggerFreeze(false)">☀️ UNFREEZE!<br><span style="font-size:12px;">解除定格</span></button>
+    </div>
+    </div>
+
+    <div id="otherGame" hidden></div>
+  </div>
+  <!-- 5. 16句重點台詞點讀 -->
+  <div class="card">
+    <div class="section-title"><span>🗣️ 5. 重點句子點讀</span></div>
+    <div class="phrase-grid" id="phraseGrid"></div>
+  </div>
+
+  </section>
+  <div id="toastMsg" class="toast-msg">🔊 發聲中...</div>
+
+<script src="./episode-validator.js" defer></script>
+<script src="./progress.js" defer></script>
+<script src="./games.js" defer></script>
+<script src="./app.js" defer></script>
+</body>
+</html>

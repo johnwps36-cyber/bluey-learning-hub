@@ -1,0 +1,359 @@
+{
+  "id": "s101",
+  "titleEn": "The Magic Xylophone",
+  "titleZh": "神奇木琴",
+  "audio": "audio/s101.mp3",
+  "durationSec": 439,
+  "reviewStatus": "draft",
+  "scenes": [
+    {
+      "icon": "🎹",
+      "labelZh": "鋼琴同屁股鼓",
+      "summaryZh": "爸爸同 Bluey 玩彈琴遊戲，之後將 Bingo 當成「屁股鼓」拍打。",
+      "startSec": 0,
+      "endSec": 50
+    },
+    {
+      "icon": "✨",
+      "labelZh": "神奇木琴登場",
+      "summaryZh": "兩姊妹喺玩具籃搵到木琴，一敲爸爸就真係定格唔郁。",
+      "startSec": 50,
+      "endSec": 96
+    },
+    {
+      "icon": "🥸",
+      "labelZh": "整蠱爸爸",
+      "summaryZh": "Bluey 同 Bingo 幫定格咗嘅爸爸畫鬍鬚同放手指入鼻哥。",
+      "startSec": 96,
+      "endSec": 150
+    },
+    {
+      "icon": "⏳",
+      "labelZh": "輪流玩爭執",
+      "summaryZh": "媽媽提醒要輪流玩，但 Bluey 霸住木琴唔肯畀 Bingo。",
+      "startSec": 150,
+      "endSec": 220
+    },
+    {
+      "icon": "🏃",
+      "labelZh": "爸爸搶走木琴",
+      "summaryZh": "趁兩姊妹爭執，爸爸搶走木琴將 Bluey 定格做花園地精。",
+      "startSec": 220,
+      "endSec": 286
+    },
+    {
+      "icon": "💦",
+      "labelZh": "水喉大危機",
+      "summaryZh": "爸爸拎水喉打算沖洗「地精」，Bingo 決定設法救返家姐。",
+      "startSec": 286,
+      "endSec": 355
+    },
+    {
+      "icon": "🤝",
+      "labelZh": "學識分享救爸爸",
+      "summaryZh": "姊妹齊心定格爸爸，最後學識輪流敲木琴。",
+      "startSec": 355,
+      "endSec": 439
+    }
+  ],
+  "vocab": [
+    {
+      "cat": "toys",
+      "tag": "樂器",
+      "emoji": "🎹",
+      "word": "xylophone",
+      "zh": "木琴",
+      "ex": "Isn't that the magic xylophone?",
+      "source": "heard",
+      "audioStartSec": 52,
+      "audioEndSec": 55
+    },
+    {
+      "cat": "actions",
+      "tag": "遊戲動作",
+      "emoji": "❄️",
+      "word": "freeze",
+      "zh": "定格 / 唔准郁",
+      "ex": "Freeze!",
+      "source": "heard",
+      "audioStartSec": 63,
+      "audioEndSec": 66
+    },
+    {
+      "cat": "actions",
+      "tag": "遊戲動作",
+      "emoji": "☀️",
+      "word": "unfreeze",
+      "zh": "解凍 / 恢復活動",
+      "ex": "Unfreeze!",
+      "source": "heard",
+      "audioStartSec": 83,
+      "audioEndSec": 85
+    },
+    {
+      "cat": "body",
+      "tag": "身體部位",
+      "emoji": "🍑",
+      "word": "bum",
+      "zh": "屁股",
+      "ex": "You can be the bum bongos.",
+      "source": "heard",
+      "audioStartSec": 33,
+      "audioEndSec": 36
+    },
+    {
+      "cat": "toys",
+      "tag": "樂器",
+      "emoji": "🥁",
+      "word": "bongos",
+      "zh": "邦哥鼓",
+      "ex": "You can be the bum bongos.",
+      "source": "heard",
+      "audioStartSec": 33,
+      "audioEndSec": 36
+    },
+    {
+      "cat": "body",
+      "tag": "身體部位",
+      "emoji": "👃",
+      "word": "nose",
+      "zh": "鼻哥",
+      "ex": "How did I get fingers up my nose?",
+      "source": "heard",
+      "audioStartSec": 90,
+      "audioEndSec": 93
+    },
+    {
+      "cat": "body",
+      "tag": "身體部位",
+      "emoji": "☝️",
+      "word": "finger",
+      "zh": "手指",
+      "ex": "Fingers up my nose.",
+      "source": "heard",
+      "audioStartSec": 91,
+      "audioEndSec": 93
+    },
+    {
+      "cat": "turns",
+      "tag": "社交分享",
+      "emoji": "🔄",
+      "word": "turn",
+      "zh": "輪候 / 次序",
+      "ex": "No, it's still my turn.",
+      "source": "heard",
+      "audioStartSec": 26,
+      "audioEndSec": 28
+    },
+    {
+      "cat": "turns",
+      "tag": "社交分享",
+      "emoji": "🤝",
+      "word": "take turns",
+      "zh": "輪流玩",
+      "ex": "Taking turns can be difficult.",
+      "source": "heard",
+      "audioStartSec": 29,
+      "audioEndSec": 32
+    },
+    {
+      "cat": "toys",
+      "tag": "家居物品",
+      "emoji": "🖊️",
+      "word": "pens",
+      "zh": "彩色筆 / 氈筆",
+      "ex": "Let's get the pens!",
+      "source": "heard",
+      "audioStartSec": 99,
+      "audioEndSec": 102
+    },
+    {
+      "cat": "body",
+      "tag": "外貌裝扮",
+      "emoji": "🥸",
+      "word": "moustache",
+      "zh": "鬍鬚",
+      "ex": "What a splendid moustache you have.",
+      "source": "heard",
+      "audioStartSec": 104,
+      "audioEndSec": 108
+    },
+    {
+      "cat": "toys",
+      "tag": "玩具",
+      "emoji": "🧸",
+      "word": "teddies",
+      "zh": "毛公仔",
+      "ex": "Let's get the teddies.",
+      "source": "heard",
+      "audioStartSec": 133,
+      "audioEndSec": 136
+    },
+    {
+      "cat": "actions",
+      "tag": "日常生活",
+      "emoji": "🏃💨",
+      "word": "run",
+      "zh": "跑",
+      "ex": "He runs really fast when he's mad.",
+      "source": "heard",
+      "audioStartSec": 204,
+      "audioEndSec": 207
+    },
+    {
+      "cat": "toys",
+      "tag": "花園工具",
+      "emoji": "💦",
+      "word": "hose",
+      "zh": "水喉膠管",
+      "ex": "Dad's gone to get the hose!",
+      "source": "heard",
+      "audioStartSec": 285,
+      "audioEndSec": 289
+    },
+    {
+      "cat": "toys",
+      "tag": "花園擺設",
+      "emoji": "🧙‍♂️",
+      "word": "garden gnome",
+      "zh": "花園地精泥偶",
+      "ex": "Look at this lovely new garden gnome.",
+      "source": "heard",
+      "audioStartSec": 260,
+      "audioEndSec": 265
+    },
+    {
+      "cat": "actions",
+      "tag": "身體動作",
+      "emoji": "😉",
+      "word": "blink",
+      "zh": "眨眼",
+      "ex": "Blink two times if yes.",
+      "source": "heard",
+      "audioStartSec": 315,
+      "audioEndSec": 318
+    },
+    {
+      "cat": "turns",
+      "tag": "社交承諾",
+      "emoji": "🤙",
+      "word": "promise",
+      "zh": "應承 / 承諾",
+      "ex": "If you promise you will let me have turns too.",
+      "source": "heard",
+      "audioStartSec": 308,
+      "audioEndSec": 313
+    },
+    {
+      "cat": "actions",
+      "tag": "社交動作",
+      "emoji": "🤲",
+      "word": "share",
+      "zh": "分享",
+      "ex": "Can you share the xylophone?",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    }
+  ],
+  "phrases": [
+    {
+      "icon": "🔄",
+      "en": "Taking turns can be difficult.",
+      "zh": "要輪流玩真係唔容易㗎。",
+      "source": "heard",
+      "audioStartSec": 29,
+      "audioEndSec": 32
+    },
+    {
+      "icon": "🎹",
+      "en": "The magic xylophone!",
+      "zh": "係神奇木琴呀！",
+      "source": "heard",
+      "audioStartSec": 67,
+      "audioEndSec": 70
+    },
+    {
+      "icon": "❄️",
+      "en": "Freeze!",
+      "zh": "定格唔准郁！",
+      "source": "heard",
+      "audioStartSec": 63,
+      "audioEndSec": 65
+    },
+    {
+      "icon": "☀️",
+      "en": "Unfreeze!",
+      "zh": "解凍郁得返！",
+      "source": "heard",
+      "audioStartSec": 83,
+      "audioEndSec": 85
+    },
+    {
+      "icon": "👃",
+      "en": "How did I get fingers up my nose?",
+      "zh": "點解我隻手指會插咗入鼻哥入面㗎？",
+      "source": "heard",
+      "audioStartSec": 90,
+      "audioEndSec": 93
+    },
+    {
+      "icon": "🥸",
+      "en": "Oh, what a splendid moustache you have.",
+      "zh": "哇，你條鬍鬚真係好靚好有型。",
+      "source": "heard",
+      "audioStartSec": 104,
+      "audioEndSec": 108
+    },
+    {
+      "icon": "🔄",
+      "en": "Bluey, you're taking all the turns freezing.",
+      "zh": "Bluey，你霸晒啲定格人哋嘅輪次喇。",
+      "source": "heard",
+      "audioStartSec": 127,
+      "audioEndSec": 131
+    },
+    {
+      "icon": "🤝",
+      "en": "If you don't take turns with people, people won't take turns with you.",
+      "zh": "如果你唔同人輪流玩，其他人第時都唔會同你輪流玩㗎喇。",
+      "source": "heard",
+      "audioStartSec": 166,
+      "audioEndSec": 172
+    },
+    {
+      "icon": "😉",
+      "en": "Blink two times if yes.",
+      "zh": "如果同意嘅話就眨兩下眼啦。",
+      "source": "heard",
+      "audioStartSec": 315,
+      "audioEndSec": 318
+    },
+    {
+      "icon": "🙋‍♀️",
+      "en": "Can I have a turn, please?",
+      "zh": "唔該，可唔可以輪到我玩一次呀？",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    }
+  ],
+  "game": {
+    "type": "freeze",
+    "instructionsZh": "敲打木琴發出叮叮聲，試下大嗌「Freeze」叫爸爸定格唔郁，再嗌「Unfreeze」解除定格！記得玩幾次就要輪流畀其他人玩呀！",
+    "config": {
+      "tapTarget": "dad",
+      "soundEffects": [
+        "xylophone_ding",
+        "freeze_chime",
+        "laugh"
+      ],
+      "turnLimit": 3
+    }
+  },
+  "qaNotes": [
+    "音訊對話有多處背景音樂及重疊笑聲，秒數已按主對白發音時間截取整數秒。",
+    "00:33 處 Bandit 說的 'bum bongos' 及 00:67 處的 'magic xylophone' 咬字帶有幼童語氣。",
+    "練習句（practice）如 'Can I have a turn, please?' 及 'share' 係按集數主題延伸設計，故維持 null 時間標記。"
+  ]
+}
