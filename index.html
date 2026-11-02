@@ -8,13 +8,13 @@
 </head>
 <body>
 
-  <div id="unlockBanner" class="audio-unlock-banner" onclick="unlockAllAudio()">
+  <button type="button" id="unlockBanner" class="audio-unlock-banner" onclick="unlockAllAudio()">
     🔊 第一步：請先撳呢度啟動 iPad / 手機聲音！
-  </div>
+  </button>
 
   <div class="header-bar">
     <div class="header-title">🐾 Bluey Learning Hub V5</div>
-    <div class="stars-box" id="starsDisplay">⭐⭐⭐</div>
+    <div class="stars-box" id="starsDisplay" aria-label="學習星星">☆☆☆</div>
   </div>
 
   <!-- 1. 原劇 MP3 慢速點讀主控台 (同站 audio 資料夾) -->
@@ -42,6 +42,9 @@
     <div class="scene-grid" id="sceneGrid"></div>
   </div>
 
+  <p id="mediaNotice" role="status" aria-live="polite"></p>
+  <p id="voiceStatus" role="status"></p>
+  <p id="progressSummary" aria-live="polite"></p>
   <p id="episodeStatus" role="status" aria-live="polite"></p>
   <section id="materials">
   <!-- 全域單字發音速度切換 -->
@@ -54,7 +57,7 @@
   <div class="card">
     <div class="section-title">
       <span>🃏 2. 劇集生字閃卡庫</span>
-      <span class="badge-count" id="vocabCountBadge">共 32 個</span>
+      <span class="badge-count" id="vocabCountBadge">共 0 個</span>
     </div>
     <div class="cat-tabs" id="catTabs"></div>
     <div class="vocab-grid" id="vocabGrid"></div>
@@ -107,6 +110,8 @@
   <div id="toastMsg" class="toast-msg">🔊 發聲中...</div>
 
 <script src="./episode-validator.js" defer></script>
+<script src="./progress.js" defer></script>
+<script src="./games.js" defer></script>
 <script src="./app.js" defer></script>
 </body>
 </html>

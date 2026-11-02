@@ -132,3 +132,34 @@ button { color: inherit; }
 .ep-select { min-width: 0; width: 100%; }
 .vocab-grid, .quiz-options, .scene-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .vocab-card, .quiz-opt, .vocab-ex { min-width: 0; overflow-wrap: anywhere; }
+
+.audio-unlock-banner { width: 100%; border: 0; font-family: inherit; }
+#mediaNotice, #voiceStatus, #progressSummary { font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+#mediaNotice:empty { display: none; }
+#progressSummary { background: #eef5fc; padding: 8px; border-radius: 12px; }
+.card-main { border: 0; background: transparent; padding: 0; width: 100%; cursor: pointer; text-align: inherit; min-width: 0; overflow-wrap: anywhere; }
+.vocab-card .card-main { display: flex; flex-direction: column; align-items: center; }
+.phrase-card { flex-wrap: wrap; gap: 6px; }
+.phrase-icon { font-size: 28px; }
+.tts-btn { border: 1px solid #b1c9e1; border-radius: 10px; background: #eef5fc; color: #2b5b84; font-size: 12px; padding: 6px; margin-top: 6px; cursor: pointer; }
+.play-caption { display: block; font-size: 12px; color: #2b5b84; margin-top: 4px; }
+.game-title { font-size: 18px; }
+.game-status { font-weight: 700; min-height: 3em; line-height: 1.5; }
+.game-action, .shadow-cell { border: 2px solid #b1c9e1; background: #eef5fc; padding: 10px; border-radius: 12px; font-weight: 700; cursor: pointer; overflow-wrap: anywhere; }
+.game-controls { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+.game-controls button { width: 100%; margin: 0 !important; }
+.game-area { margin-bottom: 12px; border-radius: 14px; background: #f0f9ff; padding: 12px; }
+.patient, .robot-avatar { font-size: 36px; text-align: center; overflow-wrap: anywhere; }
+.belly-items { font-size: 32px; text-align: center; padding: 12px; min-height: 60px; }
+.game-balloon { position: relative; height: 250px; overflow: hidden; }
+#otherGame .balloon-target { position: absolute; width: 60px; height: 60px; border: none; background: transparent; font-size: 44px; padding: 0; transform: translateX(-50%); margin: 0; touch-action: manipulation; }
+.balloon-floor { position: absolute; bottom: 0; left: 0; width: 100%; height: 28px; background: #bbf7d0; text-align: center; }
+.robot-off { background: #fee2e2; border-color: #f87171; }
+.shadow-path { display: flex; flex-direction: column-reverse; align-items: center; gap: 8px; }
+#otherGame .shadow-cell { width: 75%; background: #d1d5db; }
+#otherGame .shadow-cell.current { outline: 3px solid #5296d5; background: #dbeafe; }
+#otherGame .sun-hazard { width: 100%; background: #fef3c7; margin-top: 12px; }
+.bridge-open .shadow-cell:nth-child(3) { background: #bbf7d0 !important; }
+button:disabled { opacity: .55; cursor: default; }
+button:focus-visible { outline: 3px solid #373a5a; outline-offset: 2px; }
+.game-round { margin-top: 12px; }

@@ -1,21 +1,15 @@
 'use strict';
 let audioCtx = null, isSlowMode = true, currentQuizTarget = null, clipStopTime = null;
   function ensureAudioContext() {
-    if (!audioCtx) {
-      const AC = window.AudioContext || window.webkitAudioContext;
-      audioCtx = new AC();
-    }
-    if (audioCtx.state === 'suspended') audioCtx.resume();
-    // 播放一個極短無聲 Buffer 解鎖 iPad Safari 限制
-    const buf = audioCtx.createBuffer(1, 1, 22050);
-    const src = audioCtx.createBufferSource();
-    src.buffer = buf;
-    src.connect(audioCtx.destination);
-    src.start(0);
-
-    const b = document.getElementById('unlockBanner');
-    b.classList.add('unlocked');
-    b.textContent = "✅ 已嘗試啟動聲音；請撳播放，並檢查裝置音量。";
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) { document.getElementById('voiceStatus').textContent = '這個瀏覽器未支援木琴音效；仍可使用播放器。'; return null; }
+    if (!audioCtx) audioCtx = new AC();
+    if (audioCtx.state === 'suspended') audioCtx.resume().catch(() => showToast('請再撳一次啟動聲音。'));
+    const buf = audioCtx.createBuffer(1, 1, 22050), src = audioCtx.createBufferSource();
+    src.buffer = buf; src.connect(audioCtx.destination); src.start(0);
+    const b = document.getElementById('unlockBanner'); b.classList.add('unlocked');
+    b.textContent = '✅ 已嘗試啟動聲音；請撳播放，並檢查裝置音量。';
+    return audioCtx;
   }
 
   function unlockAllAudio() {
@@ -27,7 +21,7 @@ let audioCtx = null, isSlowMode = true, currentQuizTarget = null, clipStopTime =
   }
 
   function playXyloTone(freq, delay = 0) {
-    ensureAudioContext();
+    if (!ensureAudioContext()) return;
     const now = audioCtx.currentTime + delay;
     const osc1 = audioCtx.createOscillator(), osc2 = audioCtx.createOscillator(), gain = audioCtx.createGain();
     osc1.type = 'sine'; osc2.type = 'triangle';
@@ -41,25 +35,28 @@ let audioCtx = null, isSlowMode = true, currentQuizTarget = null, clipStopTime =
     osc1.start(now); osc2.start(now); osc1.stop(now + 0.65); osc2.stop(now + 0.65);
   }
 
-  // 優先使用 iPad / 手機原生系統語音 (零延遲、唔怕跨網域被擋)
+  // TTS is an explicit alternative to the supplied, independently unverified clip.
+  function updateVoiceStatus() {
+    const status = document.getElementById('voiceStatus');
+    if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) { status.textContent = '這個瀏覽器未提供讀音功能；可使用原劇播放器。'; return; }
+    const english = speechSynthesis.getVoices().some(v => /^en[-_]/i.test(v.lang));
+    status.textContent = english ? '電腦讀音優先使用澳洲英語聲線。' : '裝置暫未列出英文聲線，會嘗試系統讀音；如無聲，請在裝置設定下載英文聲線。';
+  }
   function speakEnglish(text) {
-    ensureAudioContext();
+    player.pause(); clipStopTime = null;
     const rate = isSlowMode ? 0.68 : 0.98;
     showToast(`${isSlowMode ? '🐢 慢速' : '🐰 原速'}: "${text}"`);
-
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = 'en-AU';
-      u.rate = rate;
-      u.pitch = 1.05;
-      const voices = window.speechSynthesis.getVoices();
-      const enVoice = voices.find(v => v.lang.includes('en-AU') || v.lang.includes('en-GB') || v.lang.includes('en-US'));
-      if (enVoice) u.voice = enVoice;
-      window.speechSynthesis.speak(u);
-    }
+    if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) { updateVoiceStatus(); return; }
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text), token = requestId;
+    currentUtterance = u; u.lang = 'en-AU'; u.rate = rate; u.pitch = 1.05;
+    const voices = speechSynthesis.getVoices();
+    const voice = ['en-AU','en-GB','en-US'].map(lang => voices.find(v => v.lang === lang)).find(Boolean) || voices.find(v => /^en[-_]/i.test(v.lang));
+    if (voice) u.voice = voice;
+    u.onerror = event => { if (token === requestId && !['canceled','interrupted'].includes(event.error)) document.getElementById('voiceStatus').textContent = '電腦讀音未能播放；請檢查英文聲線、音量及 Safari 聲音設定。'; };
+    u.onend = () => { if (currentUtterance === u) currentUtterance = null; };
+    updateVoiceStatus(); speechSynthesis.speak(u);
   }
-
 
   function hitXylo(freq, name) {
     playXyloTone(freq, 0);
@@ -79,6 +76,7 @@ let audioCtx = null, isSlowMode = true, currentQuizTarget = null, clipStopTime =
       status.textContent = "🕺 爸爸恢復跳舞！";
       speakEnglish("Unfreeze!");
     }
+    if (gameSession) gameSession.freeze(freezeNow);
   }
 
   function setSpeed(slow) {
@@ -89,8 +87,7 @@ let audioCtx = null, isSlowMode = true, currentQuizTarget = null, clipStopTime =
   }
 
   function playPhrase(idx) {
-    playXyloTone(880, 0);
-    speakEnglish(phrases[idx].en);
+    if (phrases[idx]) playItem(phrases[idx], phrases[idx].en);
   }
 
   function showToast(text) {
@@ -106,6 +103,18 @@ const player = document.getElementById('mainPlayer');
 const epSelect = document.getElementById('epSelect');
 let episode = null, vocabList = [], phrases = [], requestId = 0, controller = null;
 let quizTimer = null, quizAnswered = false, selectedRate = 0.8, activeVoices = [];
+let gameSession = null, currentUtterance = null;
+const progress = BlueyProgress.create(() => window.localStorage);
+function updateProgress() {
+  const id = epSelect.value, record = progress.get(id);
+  const validWords = new Set(vocabList.map(v => v.word));
+  const seen = record.seenWords.filter(w => validWords.has(w)).length;
+  const quiz = record.quizWords.filter(w => validWords.has(w)).length;
+  const stars = Number(seen > 0) + Number(quiz > 0) + Number(record.gameWins > 0);
+  document.getElementById('starsDisplay').textContent = '⭐'.repeat(stars) + '☆'.repeat(3-stars);
+  document.getElementById('progressSummary').textContent = `${id.toUpperCase()} · 點讀過 ${seen}/${vocabList.length} 個生字 · 答啱過 ${quiz} 個生字 · 遊戲過關 ${record.gameWins} 次${progress.isPersistent() ? '（本機儲存）' : '（只限本次使用；瀏覽器未能儲存）'}`;
+}
+function recordProgress(kind, word) { if (!episode) return; progress.record(episode.id, kind, word); updateProgress(); }
 let schemaPromise = null;
 function getSchema() {
   if (!schemaPromise) schemaPromise = fetch('./episode.schema.json').then(r => {
@@ -132,7 +141,10 @@ for (let i = 1; i <= 52; i++) {
 epSelect.setAttribute('aria-label', '選擇集數');
 function resetEpisodeState() {
   player.pause(); clipStopTime = null;
-  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  if (gameSession) { gameSession.destroy(); gameSession = null; }
+  currentUtterance = null;
+  document.getElementById('mediaNotice').textContent = '';
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
   for (const osc of activeVoices) { try { osc.stop(); } catch {} }
   activeVoices = [];
   clearTimeout(quizTimer); clearTimeout(window._toastTimer);
@@ -154,6 +166,8 @@ async function selectEpisode(id) {
   resetEpisodeState(); epSelect.value = id;
   document.querySelector('.header-title').textContent = `🐾 Bluey V5 · ${id.toUpperCase()}`;
   document.getElementById('episodeStatus').textContent = '載入教材中…';
+  document.getElementById('progressSummary').textContent = '';
+  document.getElementById('starsDisplay').textContent = '☆☆☆';
   document.getElementById('mp3StatusBadge').textContent = `${id}.mp3 · 請撳 ▶ 播放`;
   player.src = `./audio/${id}.mp3`; player.load(); player.playbackRate = selectedRate;
   try {
@@ -168,18 +182,26 @@ async function selectEpisode(id) {
     if (errors.length) throw new Error('教材格式不正確，請先校對 JSON。');
     episode = data; vocabList = data.vocab; phrases = data.phrases;
     document.querySelector('.header-title').textContent = `🐾 ${id.toUpperCase()} · ${data.titleZh || data.titleEn}`;
-    document.getElementById('episodeStatus').textContent = data.reviewStatus === 'reviewed' ? '教材已校對。' : '⚠️ 教材及時間軸待音訊校對；「練習」內容並非已核實原聲。';
+    document.getElementById('episodeStatus').textContent = data.reviewStatus === 'reviewed' ? '資料標示已校對；本程式沒有獨立核實原音。' : '⚠️ 草稿：原音及時間戳未經獨立核實。「heard」是來源資料標記；可隨時改用電腦讀音。';
     for (const note of data.qaNotes) document.getElementById('episodeStatus').append(node('small', 'qa-note', note));
     document.getElementById('materials').hidden = false;
-    renderScenes(); renderCategories(); renderVocab(); renderPhrases(); nextQuizQuestion(); renderGame();
+    renderScenes(); renderCategories(); renderVocab(); renderPhrases(); nextQuizQuestion(); renderGame(); updateProgress(); updateMediaMetadata();
   } catch (error) {
     if (token !== requestId || error.name === 'AbortError') return;
     document.getElementById('episodeStatus').textContent = `教材載入失敗：${error.message} 請重新選集再試；音檔可獨立播放。`;
   }
 }
-player.addEventListener('loadedmetadata', () => { player.playbackRate = selectedRate; });
+function updateMediaMetadata() {
+  if (!episode || !player.readyState || !Number.isFinite(player.duration)) return;
+  const declared = episode.durationSec;
+  document.getElementById('mediaNotice').textContent = declared !== null && Math.abs(declared-player.duration)>1
+    ? `音檔實際長度 ${Math.round(player.duration)} 秒，與教材標示 ${declared} 秒不同；請確認版本及時間偏移。越界片段不會播放，可改用電腦讀音。`
+    : '已讀取音檔長度；這不代表對白及時間戳已核實。';
+}
+player.addEventListener('loadedmetadata', () => { player.playbackRate = selectedRate; updateMediaMetadata(); });
+player.addEventListener('play', () => { if (window.speechSynthesis) speechSynthesis.cancel(); });
 player.addEventListener('error', () => {
-  if (player.error) document.getElementById('mp3StatusBadge').textContent = `${epSelect.value}.mp3 未能載入；請檢查 audio 資料夾及網絡。`;
+  if (player.error) { clipStopTime = null; document.getElementById('mp3StatusBadge').textContent = `${epSelect.value}.mp3 未能載入；請檢查 audio 資料夾及網絡。`; document.getElementById('mediaNotice').textContent = '原音未能載入；生字及句子可撳「電腦讀音」。'; }
 });
 player.addEventListener('timeupdate', () => {
   if (clipStopTime !== null && player.currentTime >= clipStopTime) {
@@ -198,17 +220,26 @@ function rewindPlayer(sec) {
   showToast(`⏪ 退後 ${sec} 秒`);
 }
 function playClip(start, end) {
+  player.pause(); clipStopTime = null;
+  if (window.speechSynthesis) speechSynthesis.cancel();
   ensureAudioContext();
-  if (!player.readyState || (Number.isFinite(player.duration) && start >= player.duration)) {
-    showToast('音檔未就緒或分段時間超出音檔；請先載入音檔並校對時間。'); return;
+  if (!player.readyState || !Number.isFinite(player.duration) || !Number.isFinite(start) || !Number.isFinite(end) || start < 0 || end <= start || end > player.duration) {
+    clipStopTime = null;
+    document.getElementById('mediaNotice').textContent = '片段未能播放：音檔未就緒，或起迄時間超出實際長度。請校對音檔；生字及句子可改用電腦讀音。';
+    return;
   }
   const token = requestId;
-  clipStopTime = Number.isFinite(player.duration) ? Math.min(end, player.duration) : end;
-  player.currentTime = start;
-  changePlayerSpeed(0.8, document.getElementById('defaultSpdBtn'));
-  player.play().catch(() => {
-    if (token === requestId) { clipStopTime = null; showToast('請撳播放器 ▶ 開始播放；如未能載入，請檢查本集音檔。'); }
-  });
+  if (window.speechSynthesis) speechSynthesis.cancel();
+  player.pause();
+  try {
+    clipStopTime = end; player.currentTime = start;
+    changePlayerSpeed(0.8, document.getElementById('defaultSpdBtn'));
+    player.play().catch(() => {
+      if (token === requestId) { clipStopTime = null; document.getElementById('mediaNotice').textContent = '原音播放未能開始。請撳播放器 ▶，或改用生字／句子的電腦讀音。'; }
+    });
+  } catch {
+    clipStopTime = null; document.getElementById('mediaNotice').textContent = '未能跳到片段；可改用電腦讀音，並檢查音檔版本。';
+  }
 }
 function renderScenes() {
   document.getElementById('sceneHeading').textContent = episode.reviewStatus === 'reviewed' ? '🎬 原音分段' : '🎬 原音分段（時間待校對）';
@@ -231,7 +262,7 @@ function filterVocab(category, b) {
   document.querySelectorAll('.cat-tab').forEach(x => x.classList.remove('active')); b.classList.add('active');
   playXyloTone(659.25); renderVocab(category);
 }
-function sourceLabel(item) { return item.source === 'heard' ? '原聲核實' : '練習'; }
+function sourceLabel(item) { return item.source === 'heard' ? '原聲標記 · 未獨立核實' : '練習 · 電腦讀音'; }
 function playItem(item, text) {
   if (item.source === 'heard' && item.audioStartSec !== null) playClip(item.audioStartSec, item.audioEndSec);
   else { playXyloTone(783.99); speakEnglish(text); }
@@ -241,19 +272,25 @@ function renderVocab(category = 'all') {
   document.getElementById('vocabCountBadge').textContent = `共 ${items.length} 個`;
   const grid = document.getElementById('vocabGrid'); grid.replaceChildren();
   for (const item of items) {
-    const b = button('vocab-card', '', () => playItem(item, `${item.word}. ${item.ex}`));
-    for (const [cls, text] of [['vocab-tag',item.tag],['vocab-emoji',item.emoji],['vocab-word',item.word],['vocab-zh',item.zh],['vocab-ex',item.ex],['source-label',sourceLabel(item)]]) b.append(node('span',cls,text));
-    grid.append(b);
+    const card = node('article', 'vocab-card');
+    const main = button('card-main', '', () => { recordProgress('seenWords',item.word); playItem(item, `${item.word}. ${item.ex}`); });
+    for (const [cls, text] of [['vocab-tag',item.tag],['vocab-emoji',item.emoji],['vocab-word',item.word],['vocab-zh',item.zh],['vocab-ex',item.ex],['source-label',sourceLabel(item)]]) main.append(node('span',cls,text));
+    main.append(node('span','play-caption',item.source === 'heard' ? '▶ 原音片段' : '🔊 電腦讀音')); card.append(main);
+    if(item.source === 'heard') card.append(button('tts-btn','🔊 改用電腦讀音',()=>{recordProgress('seenWords',item.word);speakEnglish(`${item.word}. ${item.ex}`);}));
+    grid.append(card);
   }
   if (!items.length) grid.append(node('p', '', '本集未有生字。'));
 }
 function renderPhrases() {
   const grid = document.getElementById('phraseGrid'); grid.replaceChildren();
   for (const item of phrases) {
-    const b = button('phrase-card', '', () => playItem(item, item.en));
-    const left = node('span','phrase-left'); const text = node('span');
-    text.append(node('strong','',item.en),node('span','qa-note',item.zh),node('small','source-label',sourceLabel(item)));
-    left.append(node('span','',item.icon),text); b.append(left,node('span','play-badge','🔊')); grid.append(b);
+    const card = node('article','phrase-card');
+    const b = button('card-main phrase-left', '', () => playItem(item, item.en));
+    const text = node('span');
+    text.append(node('strong','',item.en),node('span','qa-note',item.zh),node('small','source-label',sourceLabel(item)),node('span','play-caption',item.source === 'heard' ? '▶ 原音片段' : '🔊 電腦讀音'));
+    b.append(node('span','phrase-icon',item.icon),text);card.append(b);
+    if(item.source === 'heard')card.append(button('tts-btn','🔊 電腦讀音',()=>speakEnglish(item.en)));
+    grid.append(card);
   }
   if (!phrases.length) grid.append(node('p','','本集未有句子。'));
 }
@@ -272,7 +309,7 @@ function speakQuizWord() { if (currentQuizTarget) { playXyloTone(587.33); speakE
 function checkQuizAnswer(b, word) {
   if (!currentQuizTarget || quizAnswered) return;
   if (word === currentQuizTarget.word) {
-    quizAnswered = true; b.classList.add('correct'); playXyloTone(523.25); playXyloTone(659.25,0.1); playXyloTone(1046.5,0.2);
+    quizAnswered = true; recordProgress('quizWords',word); b.classList.add('correct'); playXyloTone(523.25); playXyloTone(659.25,0.1); playXyloTone(1046.5,0.2);
     speakEnglish(`Hooray! ${word}!`); const token = requestId;
     quizTimer = setTimeout(() => { if (token === requestId) nextQuizQuestion(); },1500);
   } else { b.classList.add('wrong'); playXyloTone(280); speakEnglish('Try again!'); }
@@ -282,15 +319,9 @@ function renderGame() {
   document.getElementById('gameInstructions').textContent = instructionsZh;
   document.getElementById('freezeGame').hidden = type !== 'freeze';
   const other = document.getElementById('otherGame'); other.hidden = type === 'freeze'; other.replaceChildren();
-  if (type === 'freeze') return;
-  const status = node('p','stage-box',type === 'hospital' ? '🐕 病人等緊你幫手！' : '🎯 撳動作，一齊練英文！'); other.append(status);
-  const templates = {
-    hospital:[['🩺 檢查','Check up','🩺 檢查好喇！'],['🩹 貼膠布','A plaster, please.','🩹 貼好膠布喇！'],['💚 休息','Time to rest.','💚 休息一下，好返啲喇！']],
-    balloon:[['🎈 拍氣球','Keep it up!','🎈 再拍一次！']], robot:[['🤖 行一步','Walk!','🤖 行前一步！']], shadow:[['🌳 搵樹蔭','Find the shade!','🌳 搵到樹蔭喇！']], generic:[['⭐ 一齊玩','Let’s play!','⭐ 做得好！']]
-  };
-  const allowed = templates[type];
-  // Config controls repetition only; content never becomes executable HTML or code.
-  const repeats = Number.isInteger(config.repeats) ? Math.max(1,Math.min(3,config.repeats)) : 1;
-  for (const [label, speech, result] of allowed) other.append(button('big-btn btn-unfreeze', label, () => { status.textContent = result; playXyloTone(659.25); speakEnglish(Array(repeats).fill(speech).join(' ')); }));
+  const token = requestId;
+  gameSession = BlueyGames.mount({type,config,host:other,freezeHost:document.getElementById('freezeGame'),onSpeak:speakEnglish,onTone:()=>playXyloTone(659.25),onComplete:()=>{if(token===requestId)recordProgress('game');}});
 }
+if (window.speechSynthesis) speechSynthesis.addEventListener('voiceschanged',updateVoiceStatus);
+updateVoiceStatus();
 selectEpisode('s101');
