@@ -1,5 +1,7 @@
 # V5 五集驗證結果
 
+後續更新：S101／S102 已上傳 main，新增實際 MP3 播放檢查後，瀏覽器共 21 個情境通過。實測長度不符及分段限制見 [AUDIO_CHECK.md](AUDIO_CHECK.md)。以下保留 QA2 匯入時的驗證紀錄。
+
 執行日期：2026-11-02。環境：Linux、Node.js 24.19.0、Python 3.12.14、Chromium 154、Playwright 1.62.1。所有下列測試在目前雲端實例執行；GitHub Actions workflow 已加入，但尚未取得遠端 runner 結果。
 
 ## 原始資料與 V4 基準
