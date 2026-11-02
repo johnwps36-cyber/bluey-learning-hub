@@ -1,0 +1,545 @@
+{
+  "id": "s101",
+  "titleEn": "The Magic Xylophone",
+  "titleZh": "神奇木琴",
+  "audio": "audio/s101.mp3",
+  "durationSec": null,
+  "reviewStatus": "needs_audio_verification",
+  "scenes": [
+    {
+      "icon": "🎶",
+      "labelZh": "主題曲開場",
+      "summaryZh": "主題曲開場",
+      "startSec": 0,
+      "endSec": 22
+    },
+    {
+      "icon": "🥁",
+      "labelZh": "打屁股鼓",
+      "summaryZh": "打屁股鼓",
+      "startSec": 22,
+      "endSec": 48
+    },
+    {
+      "icon": "🎹",
+      "labelZh": "發現神奇木琴",
+      "summaryZh": "發現神奇木琴",
+      "startSec": 48,
+      "endSec": 95
+    },
+    {
+      "icon": "👗",
+      "labelZh": "幫爸爸打扮",
+      "summaryZh": "幫爸爸打扮",
+      "startSec": 95,
+      "endSec": 165
+    },
+    {
+      "icon": "🏃",
+      "labelZh": "爭玩具與反擊",
+      "summaryZh": "爭玩具與反擊",
+      "startSec": 165,
+      "endSec": 250
+    },
+    {
+      "icon": "💦",
+      "labelZh": "輪流玩救爸爸",
+      "summaryZh": "輪流玩救爸爸",
+      "startSec": 250,
+      "endSec": 420
+    }
+  ],
+  "vocab": [
+    {
+      "cat": "toys",
+      "tag": "玩具",
+      "emoji": "🎹",
+      "word": "Magic Xylophone",
+      "zh": "神奇木琴",
+      "ex": "The magic xylophone!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "toys",
+      "tag": "物件",
+      "emoji": "🧺",
+      "word": "Toy basket",
+      "zh": "玩具籃",
+      "ex": "Tidy up the toy basket.",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "toys",
+      "tag": "樂器",
+      "emoji": "🥁",
+      "word": "Bongos",
+      "zh": "邦哥手鼓",
+      "ex": "Ooh, bongos!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "toys",
+      "tag": "花園",
+      "emoji": "💦",
+      "word": "Water hose",
+      "zh": "花園水喉",
+      "ex": "Get the water hose!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "toys",
+      "tag": "樂器",
+      "emoji": "🎶",
+      "word": "Piano",
+      "zh": "鋼琴",
+      "ex": "Dad plays the piano.",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "toys",
+      "tag": "工具",
+      "emoji": "🥢",
+      "word": "Stick",
+      "zh": "木琴敲擊棒",
+      "ex": "Point the stick!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "toys",
+      "tag": "花園",
+      "emoji": "🪴",
+      "word": "Plants",
+      "zh": "植物 / 花草",
+      "ex": "Water the plants.",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "toys",
+      "tag": "花園",
+      "emoji": "🚰",
+      "word": "Tap",
+      "zh": "水龍頭",
+      "ex": "Turn on the tap!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "actions",
+      "tag": "動作",
+      "emoji": "❄️",
+      "word": "Freeze",
+      "zh": "定格",
+      "ex": "Ding! Freeze!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "actions",
+      "tag": "動作",
+      "emoji": "☀️",
+      "word": "Unfreeze",
+      "zh": "解凍",
+      "ex": "Ding! Unfreeze!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "actions",
+      "tag": "家務",
+      "emoji": "🧹",
+      "word": "Tidy up",
+      "zh": "執拾",
+      "ex": "Please tidy up!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "actions",
+      "tag": "遊戲",
+      "emoji": "🤸",
+      "word": "Roly-poly",
+      "zh": "轆地沙",
+      "ex": "Look! Roly-poly!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "actions",
+      "tag": "動作",
+      "emoji": "💃",
+      "word": "Dance",
+      "zh": "跳舞",
+      "ex": "Make him dance!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "actions",
+      "tag": "動作",
+      "emoji": "🏃💨",
+      "word": "Run",
+      "zh": "快跑",
+      "ex": "Aaaah! Run!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "actions",
+      "tag": "動作",
+      "emoji": "🌊",
+      "word": "Spray",
+      "zh": "噴水",
+      "ex": "Spray Dad in the face!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "actions",
+      "tag": "動作",
+      "emoji": "🔨",
+      "word": "Hit",
+      "zh": "敲打",
+      "ex": "Hit the xylophone!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "actions",
+      "tag": "動作",
+      "emoji": "🦸‍♀️",
+      "word": "Save",
+      "zh": "拯救",
+      "ex": "We have to save him!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "body",
+      "tag": "身體",
+      "emoji": "🍑",
+      "word": "Bum",
+      "zh": "屁股",
+      "ex": "Stop playing bum bongos!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "body",
+      "tag": "身體",
+      "emoji": "☝️",
+      "word": "Finger",
+      "zh": "手指",
+      "ex": "Put his finger up!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "body",
+      "tag": "身體",
+      "emoji": "👃",
+      "word": "Nose",
+      "zh": "鼻哥",
+      "ex": "Finger up my nose!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "body",
+      "tag": "身體",
+      "emoji": "😆",
+      "word": "Face",
+      "zh": "塊面",
+      "ex": "Look at his face!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "body",
+      "tag": "動作",
+      "emoji": "👗",
+      "word": "Dress up",
+      "zh": "打扮",
+      "ex": "Let's dress him up!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "body",
+      "tag": "打扮",
+      "emoji": "🧣",
+      "word": "Boa",
+      "zh": "羽毛圍巾",
+      "ex": "Wearing a feather boa!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "body",
+      "tag": "角色",
+      "emoji": "👒",
+      "word": "Fancy lady",
+      "zh": "時髦女士",
+      "ex": "A fancy restaurant lady!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "turns",
+      "tag": "禮貌",
+      "emoji": "🔄",
+      "word": "Take turns",
+      "zh": "輪流玩",
+      "ex": "Let's take turns!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "turns",
+      "tag": "日常",
+      "emoji": "🙋‍♀️",
+      "word": "My turn",
+      "zh": "輪到我",
+      "ex": "It's my turn now!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "turns",
+      "tag": "日常",
+      "emoji": "👉",
+      "word": "Your turn",
+      "zh": "輪到你",
+      "ex": "Here, it's your turn!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "turns",
+      "tag": "禮貌",
+      "emoji": "🤝",
+      "word": "Share",
+      "zh": "分享",
+      "ex": "Sorry I didn't share.",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "turns",
+      "tag": "時間",
+      "emoji": "⏳",
+      "word": "For ages",
+      "zh": "好耐時間",
+      "ex": "You had it for ages!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "turns",
+      "tag": "感嘆",
+      "emoji": "🤢",
+      "word": "Yuck!",
+      "zh": "好核突",
+      "ex": "Yuck! Finger up my nose!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "turns",
+      "tag": "感嘆",
+      "emoji": "😮‍💨",
+      "word": "Phew!",
+      "zh": "好險",
+      "ex": "Phew! That was close!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "turns",
+      "tag": "感嘆",
+      "emoji": "🎉",
+      "word": "Hooray!",
+      "zh": "萬歲！",
+      "ex": "Hooray! We saved Dad!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    }
+  ],
+  "phrases": [
+    {
+      "icon": "🧺",
+      "en": "Can someone please tidy up this toy basket?",
+      "zh": "有冇人幫手執好玩具籃？",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "🥁",
+      "en": "Dad, stop playing bum bongos!",
+      "zh": "爸爸，唔好再拍屁股鼓！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "🤸",
+      "en": "Look at this! Roly-poly!",
+      "zh": "睇下呢個！轆地沙！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "🎹",
+      "en": "Hey! Isn't that the magic xylophone?",
+      "zh": "咦！嗰個咪神奇木琴？",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "✨",
+      "en": "Does it still work? Let's see!",
+      "zh": "仲有冇魔法呢？試下先！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "❄️",
+      "en": "Ding! Freeze! He is frozen!",
+      "zh": "叮！定格！佢被凍住咗！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "☀️",
+      "en": "Ding! Unfreeze!",
+      "zh": "叮！解除定格！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "👃",
+      "en": "Yuck! Why is my finger up my nose?",
+      "zh": "噁！點解手指喺鼻孔度？",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "👗",
+      "en": "Let's dress him up as a fancy lady!",
+      "zh": "幫佢打扮成時髦女士！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "🙋‍♀️",
+      "en": "Can I have a turn now, please?",
+      "zh": "請問而家輪到我玩未？",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "⏳",
+      "en": "But you have had it for ages!",
+      "zh": "但你已經霸住玩咗好耐！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "😈",
+      "en": "Aha! Who has got the xylophone now?",
+      "zh": "啊哈！而家木琴喺邊個度？",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "🤝",
+      "en": "I am sorry I didn't share. It is your turn!",
+      "zh": "對唔住我頭先冇分享！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "💦",
+      "en": "Uh oh! The hose is going to spray Dad!",
+      "zh": "弊！水喉要噴到爸爸喇！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "⚡",
+      "en": "Quick, Bingo! Hit the xylophone!",
+      "zh": "快啲呀 Bingo！敲木琴救爸爸！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "😮‍💨",
+      "en": "Phew! That was close! Thanks, kids!",
+      "zh": "呼！好險！唔該晒小朋友！",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    }
+  ],
+  "game": {
+    "type": "freeze",
+    "instructionsZh": "敲木琴，撳 FREEZE 定住爸爸，再撳 UNFREEZE 解凍。",
+    "config": {}
+  },
+  "qaNotes": [
+    "沿用 V4 原有 32 個生字、16 句示例及 6 個分段，未有 MP3 可校對。",
+    "source 暫標 practice，並非已核實原聲；時間軸（包括結尾 420 秒）全屬 V4 待校對資料。"
+  ]
+}

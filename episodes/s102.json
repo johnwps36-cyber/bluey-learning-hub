@@ -1,0 +1,84 @@
+{
+  "id": "s102",
+  "titleEn": "Hospital",
+  "titleZh": "醫院",
+  "audio": "audio/s102.mp3",
+  "durationSec": null,
+  "reviewStatus": "draft",
+  "scenes": [],
+  "vocab": [
+    {
+      "cat": "hospital",
+      "tag": "醫院",
+      "emoji": "🩺",
+      "word": "Doctor",
+      "zh": "醫生",
+      "ex": "The doctor can help.",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "hospital",
+      "tag": "醫院",
+      "emoji": "🐕",
+      "word": "Patient",
+      "zh": "病人",
+      "ex": "The patient can rest.",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "hospital",
+      "tag": "醫院",
+      "emoji": "🩹",
+      "word": "Plaster",
+      "zh": "膠布",
+      "ex": "A plaster, please.",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "cat": "hospital",
+      "tag": "醫院",
+      "emoji": "💚",
+      "word": "Rest",
+      "zh": "休息",
+      "ex": "Time to rest.",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    }
+  ],
+  "phrases": [
+    {
+      "icon": "🩺",
+      "en": "The doctor can help.",
+      "zh": "醫生可以幫手。",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    },
+    {
+      "icon": "💚",
+      "en": "Time to rest.",
+      "zh": "係時候休息喇。",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
+    }
+  ],
+  "game": {
+    "type": "hospital",
+    "instructionsZh": "扮醫生，幫病人檢查、貼膠布同休息。",
+    "config": {
+      "repeats": 1
+    }
+  },
+  "qaNotes": [
+    "S102 工程驗證用練習草稿，未提供或聽取本集 MP3，並非劇集原聲教材。",
+    "未填寫分段或時間戳；正式教材須經音訊分析及家長校對後替換。"
+  ]
+}
