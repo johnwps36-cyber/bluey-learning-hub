@@ -9,7 +9,7 @@
     {
       "icon": "🐺",
       "labelZh": "狼太太幾多點與影子國度規則",
-      "summaryZh": "玩完《狼太太幾多點》之後，Bluey、Coco 同 Snickers 開始玩「影子國度」：樹影係陸地，陽光係有鱷魚嘅海！",
+      "summaryZh": "玩完《狼太太幾多點》之後，Bluey、Coco 同 Snickers 開始玩「影子國度」：樹影係陸地，陽光係有鱷魚嘅海。",
       "startSec": 0,
       "endSec": 85
     },
@@ -51,7 +51,7 @@
       "zh": "影子 / 樹影",
       "ex": "This episode of Bluey is called Shadowlands.",
       "source": "heard",
-      "audioStartSec": 38,
+      "audioStartSec": 37,
       "audioEndSec": 42
     },
     {
@@ -62,7 +62,7 @@
       "zh": "陸地",
       "ex": "All the shadowy grassy bits are the land.",
       "source": "heard",
-      "audioStartSec": 45,
+      "audioStartSec": 44,
       "audioEndSec": 49
     },
     {
@@ -73,7 +73,7 @@
       "zh": "大海",
       "ex": "And all the bits in the sun is the sea.",
       "source": "heard",
-      "audioStartSec": 49,
+      "audioStartSec": 48,
       "audioEndSec": 52
     },
     {
@@ -84,7 +84,7 @@
       "zh": "鱷魚",
       "ex": "There's crocodiles in the sea!",
       "source": "heard",
-      "audioStartSec": 52,
+      "audioStartSec": 51,
       "audioEndSec": 55
     },
     {
@@ -95,7 +95,7 @@
       "zh": "野餐墊",
       "ex": "We have to get from here to the picnic blanket.",
       "source": "heard",
-      "audioStartSec": 63,
+      "audioStartSec": 62,
       "audioEndSec": 67
     },
     {
@@ -117,7 +117,7 @@
       "zh": "膊頭",
       "ex": "Now get on my shoulders!",
       "source": "heard",
-      "audioStartSec": 125,
+      "audioStartSec": 124,
       "audioEndSec": 128
     },
     {
@@ -128,7 +128,7 @@
       "zh": "巴士",
       "ex": "Look, a bus!",
       "source": "heard",
-      "audioStartSec": 182,
+      "audioStartSec": 181,
       "audioEndSec": 185
     },
     {
@@ -139,7 +139,7 @@
       "zh": "大風 / 起風",
       "ex": "Wait, it's getting windy!",
       "source": "heard",
-      "audioStartSec": 212,
+      "audioStartSec": 211,
       "audioEndSec": 215
     },
     {
@@ -150,7 +150,7 @@
       "zh": "紙杯蛋糕",
       "ex": "Who wants cupcakes?",
       "source": "heard",
-      "audioStartSec": 258,
+      "audioStartSec": 257,
       "audioEndSec": 262
     },
     {
@@ -161,7 +161,7 @@
       "zh": "彩色糖針",
       "ex": "There's blue icing and sprinkles!",
       "source": "heard",
-      "audioStartSec": 265,
+      "audioStartSec": 264,
       "audioEndSec": 269
     },
     {
@@ -170,10 +170,76 @@
       "emoji": "☁️",
       "word": "cloud",
       "zh": "雲",
-      "ex": "It's blowing the cloud towards the sun!",
+      "ex": "It's blowing the cloud!",
       "source": "heard",
-      "audioStartSec": 351,
+      "audioStartSec": 350,
       "audioEndSec": 356
+    },
+    {
+      "cat": "food",
+      "tag": "用膳時間",
+      "emoji": "🍽️",
+      "word": "dinner time",
+      "zh": "食晚飯時間",
+      "ex": "Dinner time! Got you!",
+      "source": "heard",
+      "audioStartSec": 18,
+      "audioEndSec": 22
+    },
+    {
+      "cat": "actions",
+      "tag": "身體動作",
+      "emoji": "🦘",
+      "word": "jump",
+      "zh": "跳",
+      "ex": "I can't jump that far!",
+      "source": "heard",
+      "audioStartSec": 103,
+      "audioEndSec": 107
+    },
+    {
+      "cat": "nature",
+      "tag": "自然環境",
+      "emoji": "🏞️",
+      "word": "river",
+      "zh": "河流",
+      "ex": "How are you gonna get across the river?",
+      "source": "heard",
+      "audioStartSec": 162,
+      "audioEndSec": 166
+    },
+    {
+      "cat": "nature",
+      "tag": "自然環境",
+      "emoji": "🌴",
+      "word": "island",
+      "zh": "島嶼 / 小島",
+      "ex": "We're trapped on a palm tree island!",
+      "source": "heard",
+      "audioStartSec": 241,
+      "audioEndSec": 245
+    },
+    {
+      "cat": "feelings",
+      "tag": "生理感受",
+      "emoji": "😋",
+      "word": "hungry",
+      "zh": "肚餓",
+      "ex": "Those little critters must be hungry.",
+      "source": "heard",
+      "audioStartSec": 248,
+      "audioEndSec": 252
+    },
+    {
+      "cat": "actions",
+      "tag": "緊急動作",
+      "emoji": "🏃💨",
+      "word": "hurry up",
+      "zh": "快啲 / 趕快",
+      "ex": "Hurry up, Snickers!",
+      "source": "heard",
+      "audioStartSec": 367,
+      "audioEndSec": 371
     }
   ],
   "phrases": [
@@ -183,22 +249,22 @@
       "zh": "狼太太，而家幾多點呀？",
       "source": "heard",
       "audioStartSec": 1,
-      "audioEndSec": 4
+      "audioEndSec": 5
     },
     {
       "icon": "🐊",
       "en": "You can't touch the water, or you get bitten by a crocodile!",
       "zh": "你唔可以掂到啲水㗎，如果唔係會被鱷魚咬㗎！",
       "source": "heard",
-      "audioStartSec": 55,
+      "audioStartSec": 54,
       "audioEndSec": 59
     },
     {
       "icon": "📏",
-      "en": "You can't just change the rules, Coco!",
-      "zh": "Coco，你唔可以隨便改遊戲規則㗎！",
+      "en": "You can't change the rules, Coco!",
+      "zh": "Coco，你唔可以改遊戲規則㗎！",
       "source": "heard",
-      "audioStartSec": 173,
+      "audioStartSec": 172,
       "audioEndSec": 176
     },
     {
@@ -206,8 +272,8 @@
       "en": "Look, a bus! Are you ready, Bluey?",
       "zh": "睇下，有架巴士呀！Bluey 你準備好未？",
       "source": "heard",
-      "audioStartSec": 182,
-      "audioEndSec": 187
+      "audioStartSec": 181,
+      "audioEndSec": 188
     },
     {
       "icon": "🏝️",
@@ -222,13 +288,13 @@
       "en": "Who wants cupcakes?",
       "zh": "邊個想食紙杯蛋糕呀？",
       "source": "heard",
-      "audioStartSec": 258,
+      "audioStartSec": 257,
       "audioEndSec": 262
     },
     {
       "icon": "☁️",
-      "en": "The wind is blowing the cloud towards the sun!",
-      "zh": "啲風吹緊嚿雲過去遮住個太陽呀！",
+      "en": "Look, it's blowing the cloud! It's heading towards the sun!",
+      "zh": "睇下，啲風吹緊嚿雲呀！嚿雲飄緊過去遮住個太陽呀！",
       "source": "heard",
       "audioStartSec": 349,
       "audioEndSec": 356
@@ -238,7 +304,7 @@
       "en": "That's why you can't change the rules! Because the rules make it fun!",
       "zh": "所以話唔可以隨便改規則囉！因為有規則先至好玩㗎嘛！",
       "source": "heard",
-      "audioStartSec": 391,
+      "audioStartSec": 390,
       "audioEndSec": 397
     },
     {
@@ -264,7 +330,8 @@
     }
   },
   "qaNotes": [
-    "已根據實際上傳之 s105_2.mp3 核對時間戳。",
-    "劇中開場與結尾玩嘅傳統兒童遊戲為 'What's the time, Mr/Mrs Wolf?'（狼先生/狼太太幾多點）。"
+    "已確認 s105_2.mp3 與 s105.mp3 為完全相同之音訊版本（長度 438 秒），單純重新命名不影響時間軸。",
+    "已將 349–356 秒處對白修正為原聲兩姊妹接力說出的 'Look, it's blowing the cloud! It's heading towards the sun!'。",
+    "已補充原聲出現之 dinner time、jump、river、island、hungry、hurry up，使總生字量達至 18 個（符合 15–25 個規範）。"
   ]
 }

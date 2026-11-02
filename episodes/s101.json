@@ -63,10 +63,10 @@
       "emoji": "🎹",
       "word": "xylophone",
       "zh": "木琴",
-      "ex": "Isn't that the magic xylophone?",
+      "ex": "The magic xylophone!",
       "source": "heard",
-      "audioStartSec": 52,
-      "audioEndSec": 55
+      "audioStartSec": 66,
+      "audioEndSec": 70
     },
     {
       "cat": "actions",
@@ -76,7 +76,7 @@
       "zh": "定格 / 唔准郁",
       "ex": "Freeze!",
       "source": "heard",
-      "audioStartSec": 63,
+      "audioStartSec": 62,
       "audioEndSec": 66
     },
     {
@@ -87,8 +87,8 @@
       "zh": "解凍 / 恢復活動",
       "ex": "Unfreeze!",
       "source": "heard",
-      "audioStartSec": 83,
-      "audioEndSec": 85
+      "audioStartSec": 82,
+      "audioEndSec": 86
     },
     {
       "cat": "body",
@@ -98,7 +98,7 @@
       "zh": "屁股",
       "ex": "You can be the bum bongos.",
       "source": "heard",
-      "audioStartSec": 33,
+      "audioStartSec": 32,
       "audioEndSec": 36
     },
     {
@@ -109,7 +109,7 @@
       "zh": "邦哥鼓",
       "ex": "You can be the bum bongos.",
       "source": "heard",
-      "audioStartSec": 33,
+      "audioStartSec": 32,
       "audioEndSec": 36
     },
     {
@@ -120,7 +120,7 @@
       "zh": "鼻哥",
       "ex": "How did I get fingers up my nose?",
       "source": "heard",
-      "audioStartSec": 90,
+      "audioStartSec": 88,
       "audioEndSec": 93
     },
     {
@@ -129,9 +129,9 @@
       "emoji": "☝️",
       "word": "finger",
       "zh": "手指",
-      "ex": "Fingers up my nose.",
+      "ex": "How did I get fingers up my nose?",
       "source": "heard",
-      "audioStartSec": 91,
+      "audioStartSec": 88,
       "audioEndSec": 93
     },
     {
@@ -142,8 +142,8 @@
       "zh": "輪候 / 次序",
       "ex": "No, it's still my turn.",
       "source": "heard",
-      "audioStartSec": 26,
-      "audioEndSec": 28
+      "audioStartSec": 25,
+      "audioEndSec": 29
     },
     {
       "cat": "turns",
@@ -153,7 +153,7 @@
       "zh": "輪流玩",
       "ex": "Taking turns can be difficult.",
       "source": "heard",
-      "audioStartSec": 29,
+      "audioStartSec": 28,
       "audioEndSec": 32
     },
     {
@@ -164,8 +164,8 @@
       "zh": "彩色筆 / 氈筆",
       "ex": "Let's get the pens!",
       "source": "heard",
-      "audioStartSec": 99,
-      "audioEndSec": 102
+      "audioStartSec": 98,
+      "audioEndSec": 103
     },
     {
       "cat": "body",
@@ -176,7 +176,7 @@
       "ex": "What a splendid moustache you have.",
       "source": "heard",
       "audioStartSec": 104,
-      "audioEndSec": 108
+      "audioEndSec": 109
     },
     {
       "cat": "toys",
@@ -186,8 +186,8 @@
       "zh": "毛公仔",
       "ex": "Let's get the teddies.",
       "source": "heard",
-      "audioStartSec": 133,
-      "audioEndSec": 136
+      "audioStartSec": 132,
+      "audioEndSec": 137
     },
     {
       "cat": "actions",
@@ -197,8 +197,8 @@
       "zh": "跑",
       "ex": "He runs really fast when he's mad.",
       "source": "heard",
-      "audioStartSec": 204,
-      "audioEndSec": 207
+      "audioStartSec": 203,
+      "audioEndSec": 208
     },
     {
       "cat": "toys",
@@ -208,7 +208,7 @@
       "zh": "水喉膠管",
       "ex": "Dad's gone to get the hose!",
       "source": "heard",
-      "audioStartSec": 285,
+      "audioStartSec": 284,
       "audioEndSec": 289
     },
     {
@@ -219,7 +219,7 @@
       "zh": "花園地精泥偶",
       "ex": "Look at this lovely new garden gnome.",
       "source": "heard",
-      "audioStartSec": 260,
+      "audioStartSec": 259,
       "audioEndSec": 265
     },
     {
@@ -230,8 +230,8 @@
       "zh": "眨眼",
       "ex": "Blink two times if yes.",
       "source": "heard",
-      "audioStartSec": 315,
-      "audioEndSec": 318
+      "audioStartSec": 314,
+      "audioEndSec": 319
     },
     {
       "cat": "turns",
@@ -241,8 +241,8 @@
       "zh": "應承 / 承諾",
       "ex": "If you promise you will let me have turns too.",
       "source": "heard",
-      "audioStartSec": 308,
-      "audioEndSec": 313
+      "audioStartSec": 307,
+      "audioEndSec": 314
     },
     {
       "cat": "actions",
@@ -262,7 +262,7 @@
       "en": "Taking turns can be difficult.",
       "zh": "要輪流玩真係唔容易㗎。",
       "source": "heard",
-      "audioStartSec": 29,
+      "audioStartSec": 28,
       "audioEndSec": 32
     },
     {
@@ -270,7 +270,7 @@
       "en": "The magic xylophone!",
       "zh": "係神奇木琴呀！",
       "source": "heard",
-      "audioStartSec": 67,
+      "audioStartSec": 66,
       "audioEndSec": 70
     },
     {
@@ -278,23 +278,23 @@
       "en": "Freeze!",
       "zh": "定格唔准郁！",
       "source": "heard",
-      "audioStartSec": 63,
-      "audioEndSec": 65
+      "audioStartSec": 62,
+      "audioEndSec": 66
     },
     {
       "icon": "☀️",
       "en": "Unfreeze!",
       "zh": "解凍郁得返！",
       "source": "heard",
-      "audioStartSec": 83,
-      "audioEndSec": 85
+      "audioStartSec": 82,
+      "audioEndSec": 86
     },
     {
       "icon": "👃",
       "en": "How did I get fingers up my nose?",
       "zh": "點解我隻手指會插咗入鼻哥入面㗎？",
       "source": "heard",
-      "audioStartSec": 90,
+      "audioStartSec": 88,
       "audioEndSec": 93
     },
     {
@@ -303,14 +303,14 @@
       "zh": "哇，你條鬍鬚真係好靚好有型。",
       "source": "heard",
       "audioStartSec": 104,
-      "audioEndSec": 108
+      "audioEndSec": 109
     },
     {
       "icon": "🔄",
       "en": "Bluey, you're taking all the turns freezing.",
       "zh": "Bluey，你霸晒啲定格人哋嘅輪次喇。",
       "source": "heard",
-      "audioStartSec": 127,
+      "audioStartSec": 126,
       "audioEndSec": 131
     },
     {
@@ -318,7 +318,7 @@
       "en": "If you don't take turns with people, people won't take turns with you.",
       "zh": "如果你唔同人輪流玩，其他人第時都唔會同你輪流玩㗎喇。",
       "source": "heard",
-      "audioStartSec": 166,
+      "audioStartSec": 165,
       "audioEndSec": 172
     },
     {
@@ -326,8 +326,8 @@
       "en": "Blink two times if yes.",
       "zh": "如果同意嘅話就眨兩下眼啦。",
       "source": "heard",
-      "audioStartSec": 315,
-      "audioEndSec": 318
+      "audioStartSec": 314,
+      "audioEndSec": 319
     },
     {
       "icon": "🙋‍♀️",
@@ -352,8 +352,9 @@
     }
   },
   "qaNotes": [
-    "音訊對話有多處背景音樂及重疊笑聲，秒數已按主對白發音時間截取整數秒。",
-    "00:33 處 Bandit 說的 'bum bongos' 及 00:67 處的 'magic xylophone' 咬字帶有幼童語氣。",
+    "音訊對話有多處背景音樂及重疊笑聲，秒數已按主對白發音時間截取整數秒並預留緩衝避免截斷。",
+    "00:33 處 Bandit 說的 'bum bongos' 及 01:07 處的 'magic xylophone' 咬字帶有幼童語氣（已修正先前時間格式筆誤）。",
+    "原 vocab['xylophone'] 例句 'Isn't that the magic xylophone?' 並未在 s101.mp3 原聲中出現，已改為實際於 66-70 秒聽到的 'The magic xylophone!'。",
     "練習句（practice）如 'Can I have a turn, please?' 及 'share' 係按集數主題延伸設計，故維持 null 時間標記。"
   ]
 }

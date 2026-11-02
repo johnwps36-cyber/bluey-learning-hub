@@ -51,7 +51,7 @@
       "zh": "氣球",
       "ex": "Morning, last balloon!",
       "source": "heard",
-      "audioStartSec": 12,
+      "audioStartSec": 11,
       "audioEndSec": 15
     },
     {
@@ -62,7 +62,7 @@
       "zh": "顛氣球遊戲",
       "ex": "This episode of Bluey is called Keepy Uppy.",
       "source": "heard",
-      "audioStartSec": 49,
+      "audioStartSec": 48,
       "audioEndSec": 53
     },
     {
@@ -73,7 +73,7 @@
       "zh": "地面 / 地下",
       "ex": "Can't let it touch the ground!",
       "source": "heard",
-      "audioStartSec": 57,
+      "audioStartSec": 56,
       "audioEndSec": 60
     },
     {
@@ -84,8 +84,8 @@
       "zh": "早餐（澳洲口語）",
       "ex": "I'm gonna cook brekkie, kids.",
       "source": "heard",
-      "audioStartSec": 94,
-      "audioEndSec": 97
+      "audioStartSec": 93,
+      "audioEndSec": 98
     },
     {
       "cat": "role",
@@ -95,7 +95,7 @@
       "zh": "專家 / 高手",
       "ex": "I'm a Keepy Uppy expert!",
       "source": "heard",
-      "audioStartSec": 115,
+      "audioStartSec": 114,
       "audioEndSec": 118
     },
     {
@@ -106,8 +106,8 @@
       "zh": "報紙",
       "ex": "I can't, I'm a newspaper!",
       "source": "heard",
-      "audioStartSec": 145,
-      "audioEndSec": 148
+      "audioStartSec": 144,
+      "audioEndSec": 149
     },
     {
       "cat": "daily",
@@ -117,8 +117,8 @@
       "zh": "風扇",
       "ex": "I'll just turn on this fan.",
       "source": "heard",
-      "audioStartSec": 195,
-      "audioEndSec": 198
+      "audioStartSec": 194,
+      "audioEndSec": 199
     },
     {
       "cat": "nature",
@@ -128,7 +128,7 @@
       "zh": "樹葉",
       "ex": "There's leaves everywhere!",
       "source": "heard",
-      "audioStartSec": 203,
+      "audioStartSec": 202,
       "audioEndSec": 206
     },
     {
@@ -139,8 +139,8 @@
       "zh": "執好收埋",
       "ex": "If you tidied them all away.",
       "source": "heard",
-      "audioStartSec": 227,
-      "audioEndSec": 230
+      "audioStartSec": 226,
+      "audioEndSec": 231
     },
     {
       "cat": "nature",
@@ -150,7 +150,7 @@
       "zh": "草地",
       "ex": "Balloons pop if they touch grass!",
       "source": "heard",
-      "audioStartSec": 270,
+      "audioStartSec": 269,
       "audioEndSec": 274
     },
     {
@@ -161,7 +161,7 @@
       "zh": "爆開 / 啪一聲爆咗",
       "ex": "Oh, my balloon! It's popped.",
       "source": "heard",
-      "audioStartSec": 337,
+      "audioStartSec": 336,
       "audioEndSec": 342
     },
     {
@@ -172,8 +172,74 @@
       "zh": "吹脹（氣球）",
       "ex": "Blow up the Daddy balloon!",
       "source": "heard",
-      "audioStartSec": 389,
-      "audioEndSec": 392
+      "audioStartSec": 388,
+      "audioEndSec": 393
+    },
+    {
+      "cat": "animals",
+      "tag": "寵物角色",
+      "emoji": "🐦",
+      "word": "pet bird",
+      "zh": "寵物小鳥",
+      "ex": "This is my pet bird.",
+      "source": "heard",
+      "audioStartSec": 23,
+      "audioEndSec": 27
+    },
+    {
+      "cat": "turns",
+      "tag": "遊戲概念",
+      "emoji": "💡",
+      "word": "strategy",
+      "zh": "策略 / 計仔",
+      "ex": "Hey, nice strategy, balloon girls!",
+      "source": "heard",
+      "audioStartSec": 110,
+      "audioEndSec": 115
+    },
+    {
+      "cat": "food",
+      "tag": "日常飲品",
+      "emoji": "🧃",
+      "word": "orange juice",
+      "zh": "橙汁",
+      "ex": "Oh look, lovely orange juice.",
+      "source": "heard",
+      "audioStartSec": 166,
+      "audioEndSec": 171
+    },
+    {
+      "cat": "actions",
+      "tag": "遊戲動作",
+      "emoji": "🤲",
+      "word": "catch",
+      "zh": "接住",
+      "ex": "It's my last balloon, catch it!",
+      "source": "heard",
+      "audioStartSec": 276,
+      "audioEndSec": 281
+    },
+    {
+      "cat": "nature",
+      "tag": "戶外位置",
+      "emoji": "🏡",
+      "word": "yard",
+      "zh": "花園 / 院子",
+      "ex": "It's going into Lucky's yard!",
+      "source": "heard",
+      "audioStartSec": 285,
+      "audioEndSec": 289
+    },
+    {
+      "cat": "actions",
+      "tag": "遊戲動作",
+      "emoji": "👆",
+      "word": "tap",
+      "zh": "輕輕拍",
+      "ex": "Tap the balloon gently!",
+      "source": "practice",
+      "audioStartSec": null,
+      "audioEndSec": null
     }
   ],
   "phrases": [
@@ -182,7 +248,7 @@
       "en": "You have to keep the balloon in the air and can't let it touch the ground.",
       "zh": "你要將個氣球拍喺半空，唔可以畀佢掂到地下㗎。",
       "source": "heard",
-      "audioStartSec": 55,
+      "audioStartSec": 54,
       "audioEndSec": 60
     },
     {
@@ -190,15 +256,15 @@
       "en": "I'm gonna cook brekkie, kids.",
       "zh": "小朋友，我去煮早餐喇。",
       "source": "heard",
-      "audioStartSec": 94,
-      "audioEndSec": 97
+      "audioStartSec": 93,
+      "audioEndSec": 98
     },
     {
       "icon": "🏆",
       "en": "I'm a Keepy Uppy expert!",
       "zh": "我係顛氣球專家呀！",
       "source": "heard",
-      "audioStartSec": 115,
+      "audioStartSec": 114,
       "audioEndSec": 118
     },
     {
@@ -206,7 +272,7 @@
       "en": "Can you make it hard again?",
       "zh": "你可唔可以整到個遊戲難玩返啲呀？",
       "source": "heard",
-      "audioStartSec": 120,
+      "audioStartSec": 119,
       "audioEndSec": 123
     },
     {
@@ -214,15 +280,15 @@
       "en": "I'll just turn on this fan.",
       "zh": "等我開著呢把風扇先。",
       "source": "heard",
-      "audioStartSec": 195,
-      "audioEndSec": 198
+      "audioStartSec": 194,
+      "audioEndSec": 199
     },
     {
       "icon": "🌱",
       "en": "Balloons pop if they touch grass!",
       "zh": "氣球一掂到草地就會爆㗎！",
       "source": "heard",
-      "audioStartSec": 270,
+      "audioStartSec": 269,
       "audioEndSec": 274
     },
     {
@@ -230,16 +296,16 @@
       "en": "That was my last balloon.",
       "zh": "嗰個係我最後一個氣球嚟㗎。",
       "source": "heard",
-      "audioStartSec": 345,
-      "audioEndSec": 348
+      "audioStartSec": 344,
+      "audioEndSec": 349
     },
     {
       "icon": "💨",
       "en": "Blow up the Daddy balloon!",
       "zh": "快啲吹脹個爸爸大氣球啦！",
       "source": "heard",
-      "audioStartSec": 389,
-      "audioEndSec": 392
+      "audioStartSec": 388,
+      "audioEndSec": 393
     },
     {
       "icon": "🙌",
@@ -260,7 +326,8 @@
     }
   },
   "qaNotes": [
-    "已根據實際上傳之 s103_2.mp3 核對時間戳。",
-    "00:94 處媽媽使用了典型澳洲口語 'brekkie'（即 breakfast 早餐）。"
+    "已確認 s103_2.mp3 與 s103.mp3 為完全相同之音訊版本（長度 438 秒），單純重新命名不影響時間軸。",
+    "01:34（94秒）處媽媽使用了典型澳洲口語 'brekkie'（即 breakfast 早餐，已修正先前時間格式筆誤）。",
+    "已補充原聲出現之 pet bird、strategy、orange juice、catch、yard 及練習字 tap，使總生字量達至 18 個（符合 15–25 個規範）。"
   ]
 }

@@ -1,30 +1,48 @@
-# Bluey V5 — S101–S105 Data QA
+# Bluey V5 — Second-round Gemini JSON QA (S101–S105)
 
-**Scope:** Five Gemini-produced JSON uploads; latest supplied `s101(1).json` used as `episodes/s101.json`. No MP3 files were provided for independent acoustic verification. No changes made to the source content of the five JSONs.
+## Result: STRUCTURAL PASS — AUDIO NOT INDEPENDENTLY VERIFIED
 
-## Structural verification
+These are the revised five episode JSONs supplied in the latest upload. They are **not** the older versions included in the first handoff pack. Structural checks were run on the files and the project schema; no MP3 audio was available for independent waveform/dialogue verification. All five `reviewStatus` values remain `draft`.
 
-| Episode | Title | Scenes | Vocabulary | Phrases | Game | Review status | Schema |
-|---|---|---:|---:|---:|---|---|---|
-| s101 | The Magic Xylophone | 7 | 18 | 10 | freeze | draft | PASS |
-| s102 | Hospital | 6 | 16 | 10 | hospital | draft | PASS |
-| s103 | Keepy Uppy | 5 | 12 | 9 | balloon | draft | PASS |
-| s104 | Daddy Robot | 5 | 12 | 9 | robot | draft | PASS |
-| s105 | Shadowlands | 5 | 12 | 9 | shadow | draft | PASS |
+| Episode | Scenes | Vocab | Phrases | AI cite markers removed | Newly added vocab since first pack |
+|---|---:|---:|---:|---:|---|
+| s101 | 7 | 18 | 10 | 21 | 0 |
+| s102 | 6 | 16 | 10 | 18 | 0 |
+| s103 | 5 | 18 | 9 | 17 | 6 |
+| s104 | 5 | 18 | 9 | 17 | 6 |
+| s105 | 5 | 18 | 9 | 17 | 6 |
+| **TOTAL** | **28** | **88** | **47** | **90** | **18** |
 
-**Totals:** 28 scenes, 70 vocabulary cards, 47 phrases. Verified JSON parses and conforms to included JSON schema using `jsonschema`. Episode ID and `audio/s1xx.mp3` paths match; scenes have consistent consecutive ranges; `heard` items include bounded time ranges; `practice` items use null times. No duplicate vocabulary words in an episode and no structural timestamp errors detected.
+## Cleanup applied
 
-## Non-blocking observations
+- Removed AI-style citation markers such as `[cite: 3]` from story summaries, Chinese phrase translations, game instructions and QA notes. **In addition, three QA notes had their references to earlier malformed `mm:ss` typos rewritten in ordinary language (no change to any numeric timestamp).**
+- Kept the Gemini-revised `audioStartSec`/`audioEndSec` values, all scenes, vocab, phrases, game configurations and `draft` statuses intact.
+- Kept JSON paths `audio/s101.mp3`–`audio/s105.mp3` for GitHub Pages.
+- The user confirmed the target MP3s are the same files previously supplied to Gemini, renamed. We did not compare file hashes or media durations in this handoff.
+- The validator now fails on any future embedded AI `[cite: N]` artifacts.
 
-1. **S103, S104 and S105** each have 12 vocab cards, whereas the original Gemini content brief requested 15–25. Not a data format error; avoid adding invented audio vocabulary merely to reach a number.
-2. **QA note timestamps need formatting fixes:** S101 says `00:67`, S102 says `01:92`, and S103 says `00:94`. Those are not valid `mm:ss` representations. `00:67` and `00:94` may mean absolute second counts 67 and 94 (01:07 and 01:34); `01:92` is ambiguous and **must not be converted without checking the intended timestamp**. The numeric `audioStartSec` / `audioEndSec` values themselves pass structural checks. **Do not assume QA note times match the audio without checking.**
-3. The S102–S105 QA notes refer to source files such as `s102_2.mp3`, but the JSON references `audio/s102.mp3`, etc. Ensure the exact same audio edition and beginning offset are used when renaming/uploading; otherwise all timestamps can drift.
-4. Gemini claims in its notes to have checked some audio. This report **does not independently confirm** dialogue text or timestamps against the audio; every episode correctly remains in `draft` state.
-5. The durations are 439 s for S101 and 438 s for S102–S105 **as declared by Gemini**. Check actual GitHub MP3 file durations before enabling clip playback. A validator cannot infer true duration without inspecting audio.
+## Newly added vocabulary
 
-## Developer handoff
+- **s101**: No new terms (previous 18 terms retained).
+- **s102**: No new terms (previous 18 terms retained).
+- **s103**: pet bird, strategy, orange juice, catch, yard, tap
+- **s104**: master, order, sprayer, banjo, fix, secret
+- **s105**: dinner time, jump, river, island, hungry, hurry up
 
-- Keep JSON data as-is. Show `draft` content, but distinguish `heard` clip buttons from `practice` TTS and don't present content as verified.
-- When audio segment playback isn't confirmed, always offer TTS as fallback. Confirm the loaded audio metadata duration before seeking to a timestamp.
-- Do not trust `reviewStatus` for automatic truth claims; move an episode to `reviewed` only after independent verification.
-- Run `python scripts/validate_episodes.py` in CI and locally before every new upload of an episode.
+## Remaining acceptance items (must be checked in live app)
+
+1. **Actual MP3 metadata:** compare declared 438/439 seconds to uploaded GitHub MP3s; ensure each sought clip is inside actual duration.
+2. **Audio-content quality:** sample/check `source: heard` lines against the real clip; the text and times reflect Gemini output, not independent audit.
+3. **Runtime iPad Safari:** no autoplay, audio selection through a real tap, TTS fallback, and correct segment stop on `timeupdate`/seek.
+4. **Dynamic categories:** do not leave V4's S101-only filter category buttons fixed across episodes.
+5. **Unfinished episodes:** S106–S152 may stream MP3s when present, but must not display stale S101–S105 teaching content.
+6. **Security and correctness:** use relative audio URLs; dynamic text must be inserted using safe DOM APIs (`textContent`) rather than concatenated `innerHTML` with inline `onclick`.
+7. **Source distinction:** heard clips refer to MP3, practice uses TTS, `reviewStatus` remains `draft` until validation.
+
+## Verification command
+
+```bash
+python scripts/validate_episodes.py
+```
+
+This checks format, JSON schema when `jsonschema` is installed, time ranges, game types and stray citation markers. It cannot assess speech accuracy without audio input.

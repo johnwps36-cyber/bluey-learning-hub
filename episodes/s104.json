@@ -51,8 +51,8 @@
       "zh": "執拾好 / 執屋",
       "ex": "All right kids, time to tidy up.",
       "source": "heard",
-      "audioStartSec": 1,
-      "audioEndSec": 4
+      "audioStartSec": 0,
+      "audioEndSec": 5
     },
     {
       "cat": "toys",
@@ -62,7 +62,7 @@
       "zh": "機械人",
       "ex": "Let's get Daddy Robot to do it.",
       "source": "heard",
-      "audioStartSec": 15,
+      "audioStartSec": 14,
       "audioEndSec": 18
     },
     {
@@ -73,8 +73,8 @@
       "zh": "玩具房 / 遊戲室",
       "ex": "Come with us to the playroom.",
       "source": "heard",
-      "audioStartSec": 35,
-      "audioEndSec": 38
+      "audioStartSec": 34,
+      "audioEndSec": 39
     },
     {
       "cat": "actions",
@@ -84,7 +84,7 @@
       "zh": "抱起 / 孭起",
       "ex": "Actually, carry us to the playroom.",
       "source": "heard",
-      "audioStartSec": 40,
+      "audioStartSec": 39,
       "audioEndSec": 44
     },
     {
@@ -95,7 +95,7 @@
       "zh": "有轆大垃圾桶",
       "ex": "To the wheelie bin!",
       "source": "heard",
-      "audioStartSec": 115,
+      "audioStartSec": 114,
       "audioEndSec": 118
     },
     {
@@ -106,8 +106,8 @@
       "zh": "吸塵機",
       "ex": "Come here, vacuum cleaner.",
       "source": "heard",
-      "audioStartSec": 173,
-      "audioEndSec": 176
+      "audioStartSec": 172,
+      "audioEndSec": 177
     },
     {
       "cat": "daily",
@@ -117,8 +117,8 @@
       "zh": "要洗或要摺嘅衫",
       "ex": "Yes, you are laundry.",
       "source": "heard",
-      "audioStartSec": 199,
-      "audioEndSec": 202
+      "audioStartSec": 198,
+      "audioEndSec": 203
     },
     {
       "cat": "actions",
@@ -129,7 +129,7 @@
       "ex": "Fold, fold, fold!",
       "source": "heard",
       "audioStartSec": 205,
-      "audioEndSec": 209
+      "audioEndSec": 210
     },
     {
       "cat": "animals",
@@ -140,7 +140,7 @@
       "ex": "Oh no, a guinea pig has escaped.",
       "source": "heard",
       "audioStartSec": 213,
-      "audioEndSec": 217
+      "audioEndSec": 218
     },
     {
       "cat": "actions",
@@ -150,8 +150,8 @@
       "zh": "熄機 / 關機",
       "ex": "You have to push his nose to turn him off!",
       "source": "heard",
-      "audioStartSec": 227,
-      "audioEndSec": 230
+      "audioStartSec": 226,
+      "audioEndSec": 231
     },
     {
       "cat": "daily",
@@ -161,7 +161,7 @@
       "zh": "螺絲批",
       "ex": "Screwdriver! Please fix him.",
       "source": "heard",
-      "audioStartSec": 308,
+      "audioStartSec": 307,
       "audioEndSec": 313
     },
     {
@@ -172,8 +172,74 @@
       "zh": "休息放鬆",
       "ex": "We order you to relax, Daddy Robot.",
       "source": "heard",
-      "audioStartSec": 391,
-      "audioEndSec": 395
+      "audioStartSec": 390,
+      "audioEndSec": 396
+    },
+    {
+      "cat": "role",
+      "tag": "角色稱呼",
+      "emoji": "👑",
+      "word": "master",
+      "zh": "小主人",
+      "ex": "Yes, master.",
+      "source": "heard",
+      "audioStartSec": 28,
+      "audioEndSec": 31
+    },
+    {
+      "cat": "actions",
+      "tag": "指令動作",
+      "emoji": "📢",
+      "word": "order",
+      "zh": "命令 / 指令",
+      "ex": "We order you to tidy up the playroom.",
+      "source": "heard",
+      "audioStartSec": 57,
+      "audioEndSec": 62
+    },
+    {
+      "cat": "daily",
+      "tag": "清潔工具",
+      "emoji": "💦",
+      "word": "sprayer",
+      "zh": "噴水壺",
+      "ex": "Quick Mum, we need the sprayer!",
+      "source": "heard",
+      "audioStartSec": 146,
+      "audioEndSec": 150
+    },
+    {
+      "cat": "toys",
+      "tag": "樂器",
+      "emoji": "🪕",
+      "word": "banjo",
+      "zh": "班卓琴",
+      "ex": "It's a banjo!",
+      "source": "heard",
+      "audioStartSec": 185,
+      "audioEndSec": 189
+    },
+    {
+      "cat": "actions",
+      "tag": "修理動作",
+      "emoji": "🛠️",
+      "word": "fix",
+      "zh": "修理 / 整返好",
+      "ex": "Please fix him.",
+      "source": "heard",
+      "audioStartSec": 310,
+      "audioEndSec": 314
+    },
+    {
+      "cat": "turns",
+      "tag": "社交對話",
+      "emoji": "🤫",
+      "word": "secret",
+      "zh": "秘密",
+      "ex": "I'll tell you a secret.",
+      "source": "heard",
+      "audioStartSec": 343,
+      "audioEndSec": 347
     }
   ],
   "phrases": [
@@ -182,8 +248,8 @@
       "en": "All right kids, time to tidy up.",
       "zh": "好啦小朋友，係時候執好啲玩具喇。",
       "source": "heard",
-      "audioStartSec": 1,
-      "audioEndSec": 4
+      "audioStartSec": 0,
+      "audioEndSec": 5
     },
     {
       "icon": "🤖",
@@ -198,7 +264,7 @@
       "en": "We order you to tidy up the playroom.",
       "zh": "我哋命令你去執好間玩具房。",
       "source": "heard",
-      "audioStartSec": 58,
+      "audioStartSec": 57,
       "audioEndSec": 62
     },
     {
@@ -206,7 +272,7 @@
       "en": "If I throw you in wheelie bin, playroom will always be tidy.",
       "zh": "如果我將你哋掉入大垃圾桶，玩具房就會永遠都咁整齊。",
       "source": "heard",
-      "audioStartSec": 122,
+      "audioStartSec": 121,
       "audioEndSec": 128
     },
     {
@@ -214,7 +280,7 @@
       "en": "He's malfunctioning!",
       "zh": "佢發生故障失控呀！",
       "source": "heard",
-      "audioStartSec": 160,
+      "audioStartSec": 159,
       "audioEndSec": 163
     },
     {
@@ -222,24 +288,24 @@
       "en": "You have to push his nose to turn him off!",
       "zh": "你要撳佢個鼻哥先可以熄咗佢部機㗎！",
       "source": "heard",
-      "audioStartSec": 227,
-      "audioEndSec": 230
+      "audioStartSec": 226,
+      "audioEndSec": 231
     },
     {
       "icon": "🧀",
       "en": "Cheese and crackers!",
       "zh": "芝士同餅乾！（天呀！）",
       "source": "heard",
-      "audioStartSec": 248,
-      "audioEndSec": 251
+      "audioStartSec": 247,
+      "audioEndSec": 252
     },
     {
       "icon": "🛋️",
       "en": "We order you to relax, Daddy Robot.",
       "zh": "機械人爸爸，我哋命令你好好休息放鬆下。",
       "source": "heard",
-      "audioStartSec": 391,
-      "audioEndSec": 395
+      "audioStartSec": 390,
+      "audioEndSec": 396
     },
     {
       "icon": "🧹",
@@ -265,7 +331,8 @@
     }
   },
   "qaNotes": [
-    "已根據實際上傳之 s104_2.mp3 核對時間戳。",
-    "02:48 及 04:08 處 Bandit 說了經典澳洲家庭感嘆詞 'Cheese and crackers!'。"
+    "已確認 s104_2.mp3 與 s104.mp3 為完全相同之音訊版本（長度 438 秒），單純重新命名不影響時間軸。",
+    "04:08（248秒）及 06:48（408秒）處 Bandit 說了經典澳洲家庭感嘆詞 'Cheese and crackers!'。",
+    "已補充原聲出現之 master、order、sprayer、banjo、fix、secret，使總生字量達至 18 個（符合 15–25 個規範）。"
   ]
 }
