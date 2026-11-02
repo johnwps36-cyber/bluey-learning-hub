@@ -90,7 +90,7 @@ wav.write('RIFF'); wav.writeUInt32LE(wav.length-8,4); wav.write('WAVEfmt ',8);wa
   await p.route('**/episodes/s102.json',r=>r.fulfill({status:404}));await p.selectOption('#epSelect','s102');await p.waitForFunction(()=>document.querySelector('#episodeStatus').textContent.includes('教材準備中'));assert.match(await p.locator('audio').getAttribute('src'),/s102/);
  });
  await check('late fetch cannot overwrite newer episode',async p=>{
-  await loaded(p);await p.route('**/episodes/s102.json',async r=>{await new Promise(resolve=>setTimeout(resolve,350));await r.fulfill({json:data.s102}).catch(()=>{})});await p.selectOption('#epSelect','s102');await select(p,'s103');await p.waitForTimeout(600);assert.match(await p.locator('.header-title').textContent(),/S103/);assert.equal(await p.locator('.vocab-card').count(),12);
+  await loaded(p);await p.route('**/episodes/s102.json',async r=>{await new Promise(resolve=>setTimeout(resolve,350));await r.fulfill({json:data.s102}).catch(()=>{})});await p.selectOption('#epSelect','s102');await select(p,'s103');await p.waitForTimeout(600);assert.match(await p.locator('.header-title').textContent(),/S103/);assert.equal(await p.locator('.vocab-card').count(),data.s103.vocab.length);
  });
  await check('malformed JSON, schema errors, HTTP 503 and offline fetch have visible errors',async p=>{
   await loaded(p);for(const body of ['{','{}']){await p.route('**/episodes/s102.json',r=>r.fulfill({contentType:'application/json',body}));await p.selectOption('#epSelect','s102');await p.waitForFunction(()=>document.querySelector('#episodeStatus').textContent.includes('載入失敗'));assert.equal(await p.locator('.vocab-card').count(),0);await select(p,'s101');}

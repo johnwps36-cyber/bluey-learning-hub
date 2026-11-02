@@ -4,26 +4,28 @@
 
 ## 原始資料與 V4 基準
 
-五份 JSON、schema、原附 Python 驗證腳本及參考 V4 檔案由 `bluey_v5_codex_ready.zip` 原樣匯入，SHA-256 記錄於 `tests/source-hashes.json`。測試核對全部檔案 bytes，五集教材內容保持不變，reviewStatus 全為 draft。原 root V4 與附件 reference 相同，V4 CSS 經換行正規化後保留於 styles.css 開頭；新功能以額外樣式擴充。
+五份 JSON、schema、原附 Python 驗證腳本及參考 V4 檔案由 `bluey_v5_codex_ready_QA2.zip` 原樣匯入，SHA-256 記錄於 `tests/source-hashes.json`。測試核對全部檔案 bytes，五集教材內容保持不變，reviewStatus 全為 draft。原 root V4 與附件 reference 相同，V4 CSS 經換行正規化後保留於 styles.css 開頭；新功能以額外樣式擴充。
 
 | 集數 | 分段 | 生字 | 句子 | 狀態 |
 | --- | ---: | ---: | ---: | --- |
 | S101 | 7 | 18 | 10 | draft |
 | S102 | 6 | 16 | 10 | draft |
-| S103 | 5 | 12 | 9 | draft |
-| S104 | 5 | 12 | 9 | draft |
-| S105 | 5 | 12 | 9 | draft |
-| 合計 | 28 | 70 | 47 | 全部未獨立核實音訊 |
+| S103 | 5 | 18 | 9 | draft |
+| S104 | 5 | 18 | 9 | draft |
+| S105 | 5 | 18 | 9 | draft |
+| 合計 | 28 | 88 | 47 | 全部未獨立核實音訊 |
 
 ## 自動驗證結果
 
-- `python3 scripts/validate_episodes.py`：**0 errors、6 warnings**；使用 jsonschema 4.26.0 的 Draft202012Validator 完整驗證。
+- `python3 scripts/validate_episodes.py`：**0 errors、0 warnings**；使用 jsonschema 4.26.0 的 Draft202012Validator 完整驗證。
 - `node scripts/validate-episodes.cjs`：五集全部通過 schema 關鍵字與跨欄位檢查。
-- `node --test --test-reporter=spec tests/validation.test.cjs`：**20 tests、20 passed、0 failed、0 skipped**。包含來源 hashes、V4 CSS／原檔基準、schema／時間邊界、重複卡片及 localStorage 的正常、損壞、權限拒絕、容量不足情況。
+- `node --test --test-reporter=spec tests/validation.test.cjs tests/qa2.test.cjs`：**23 tests、23 passed、0 failed、0 skipped**。包含來源 hashes、V4 CSS／原檔基準、schema／時間邊界、重複卡片及 localStorage 的正常、損壞、權限拒絕、容量不足情況。
 - `tests/browser.cjs`：**20 個 Chromium 瀏覽器情境全部通過**；每個情境均檢查沒有未處理的 pageerror。經 `/bluey-learning-hub/` 子路徑載入，觸控 viewport 起始 390×844。
 - `git diff --check`：通過。CI YAML 可解析；Playwright 1.62.1 的 registry 版本已確認存在。
 
-原始腳本的六個提示全部保留：S101 `00:67`、S102 `01:92`、S103 `00:94` 非標準 mm:ss；S103、S104、S105 各有 12 張生字卡，少於原建議數量。沒有為消除提示而修改教材。原始判讀限制見 [QA_REPORT.md](QA_REPORT.md)。
+QA2 本次驗證沒有提示或錯誤；第一輪的異常時間文字與生字數量提示已由供應方新版資料處理。新增三項 Node 測試核對 QA2 的 28／88／47 總數及 draft 狀態、無生成式引用標記，以及原附 Python checker 在沒有 jsonschema 的標準庫模式下，確實拒絕巢狀 `[cite: N]` 並以非零狀態結束。全部原始 QA2 檔案維持原 bytes。
+
+原始 [QA_REPORT.md](QA_REPORT.md) 的 S102 表格列出 16 個詞彙，但「Newly added vocabulary」段落寫 previous 18；本次以實際 JSON 的 16 為準，不修改來源報告。結構驗證不能確認對白／原聲時間準確。
 
 ## 瀏覽器情境
 
@@ -65,7 +67,7 @@
 
 沒有實體 iPad 或 Safari 可用。Chromium 的觸控 viewport、模擬播放拒絕及聲線缺失測試，不能當作實機 Safari 驗收。原附「先手動驗證 iPad Safari 再驗收」尚未完成，因此本報告只表示開發與自動測試通過。
 
-本次未設定、合併或發布 GitHub Pages，也未確認 production URL。Git push 可用；GitHub API／GraphQL 仍回傳 Forbidden，未能在本次工作階段代建 PR。分支為 `feat/bluey-v5-episodes`，可用 [PR 建立頁](https://github.com/johnwps36-cyber/bluey-learning-hub/pull/new/feat/bluey-v5-episodes) 審核提交；正文已備於 [PULL_REQUEST.md](PULL_REQUEST.md)。
+本次未設定、合併或發布 GitHub Pages，也未確認 production URL。Git push 可用；GitHub API／GraphQL 仍回傳 Forbidden，未能在本次工作階段代建 PR。PR #1 的五集版已合併 main；本次 QA2 更新分支為 `chore/bluey-qa2-data`，可用 [PR 建立頁](https://github.com/johnwps36-cyber/bluey-learning-hub/pull/new/chore/bluey-qa2-data) 審核提交；正文已備於 [PULL_REQUEST.md](PULL_REQUEST.md)。
 
 ## iPad Safari 手動驗收清單
 
