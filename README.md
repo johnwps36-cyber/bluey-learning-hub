@@ -1,83 +1,117 @@
 # Bluey Learning Hub V5
 
-沿用 V4 可愛介面與香港繁體中文的 Vanilla HTML/CSS/JavaScript 靜態網站。先完成 S101／S102 垂直切片，沒有框架、後端、API key 或付費服務。原始 `bluey v4 s1.html.txt` 保留作回歸基準。
+沿用 V4 可愛介面與香港繁體中文的 Vanilla HTML/CSS/JavaScript 靜態網站，支援 S101–S105 的原始教材及五款遊戲。沒有框架、後端、API key 或付費服務。
 
-## 本地開啟
+## 開啟及部署
 
-需要 Python 3；網站本身無需安裝 npm 套件。在 repository 根目錄執行：
+在 repository 根目錄執行：
 
 ```sh
 python3 -m http.server 8000
 ```
 
-以瀏覽器開啟該 server 的 `index.html`。請經 HTTP 開啟；直接雙擊檔案的 `file:` 模式不能可靠地 fetch JSON。先撳聲音啟動按鈕，再撳播放器 ▶。播放按鈕由使用者主動操作，避免依賴 Safari 自動播放。
+以瀏覽器經 HTTP 開啟這個 server，入口是 `index.html`；不要直接雙擊用 `file:` 載入，否則不能可靠地 fetch JSON。先撳聲音啟動按鈕，再撳播放器 ▶；切集後由使用者主動播放，避免依賴 Safari 自動播放。原聲片段及電腦讀音亦由點擊觸發。
+
+GitHub Pages 部署：
+
+1. 審核 PR 並合併到 `main`。
+2. 將你有權使用的錄音放入 `audio/s101.mp3` 至 `audio/s152.mp3`。本次附件沒有 MP3，先上傳 S101–S105；檔名及大小寫必須一致。
+3. Repository → **Settings → Pages → Deploy from a branch → main → /(root) → Save**。
+4. 等待 Pages deployment 成功，再以實體 iPad Safari 完成 [手動驗收清單](docs/TEST_RESULTS.md#ipad-safari-手動驗收清單)。
+
+單一目標網站 URL：**https://johnwps36-cyber.github.io/bluey-learning-hub/**
+
+這是預期部署地址；本次未改 Pages 設定、未合併或發布，也未證實該 URL 已上線。音訊、JSON、CSS 及 JavaScript 全部使用同站相對路徑，支援 repository 子路徑。沒有要求 iPad 每次手動選本機 MP3。
+
+## 原始教材保持不變
+
+最新來源是 `bluey_v5_codex_ready.zip`；`docs/CODEX_START_HERE.md` 及 `docs/QA_REPORT.md` 按原檔保存。五份 `episodes/s101.json`–`s105.json`、schema、原附 Python 驗證腳本及 V4 參考檔都按原始 bytes 匯入，沒有改寫、補字或更改 reviewStatus。`tests/source-hashes.json` 記錄 SHA-256，測試會核對來源完整性。早期 S101／S102 練習資料已由最新供應資料替換；歷史可於 Git 提交中查看。
+
+| 集數 | 教材名 | 分段 | 生字 | 句子 | 遊戲 |
+| --- | --- | ---: | ---: | ---: | --- |
+| S101 | The Magic Xylophone | 7 | 18 | 10 | freeze |
+| S102 | Hospital | 6 | 16 | 10 | hospital |
+| S103 | Keepy Uppy | 5 | 12 | 9 | balloon |
+| S104 | Daddy Robot | 5 | 12 | 9 | robot |
+| S105 | Shadowlands | 5 | 12 | 9 | shadow |
+
+合計 28 分段、70 生字、47 句，全部維持 `draft`。來源聲稱曾核對部分音訊，本次沒有 MP3 可獨立確認；UI 不會將 `heard` 標籤當作已獨立核實。原 QA 的 `00:67`、`01:92`、`00:94` 保持原文，尤其 `01:92` 不會擅自換算。S103–S105 各有 12 張生字卡，不會為湊數而添加內容。
+
+全 52 集均可選。S106–S152 未有 JSON 時顯示「教材準備中」，仍可播放本集 MP3；不會沿用上一集資料。音檔 404、JSON 404、HTTP／網絡／格式錯誤均有提示。
+
+## 互動與遊戲
+
+保留 V4 木琴音效、0.65／0.8／1.0 倍速、退後 5 秒、分段停止、閃卡、分類、四選項測驗、句子點讀與 freeze 舞台。
+
+- `heard` 生字／句子提供原音及獨立電腦讀音按鈕；原音失敗或尚待 QA 時，可直接選電腦讀音。`practice` 只使用裝置 TTS。
+- 原音片段必須先取得實際 metadata，且完整起迄時間均在音檔長度內。越界會停止並提示，不會偷偷截短；資料標示時長與實際長度不同亦會提醒，不能據此判斷對白已核實。
+- 沒有 TTS API／英文聲線時會顯示提示，仍可使用播放器及其他互動。英語聲線優先 en-AU，再 en-GB／en-US，最後系統可用英文聲線。
+- 切集立即停止舊播放器及 TTS、清除音效、片段、測驗計時器、遊戲動畫及橋樑計時器，並取消舊 fetch／忽略過期回應。
+
+五個遊戲各有成功流程及重玩：
+
+| 類型 | 玩法 | 主要 config |
+| --- | --- | --- |
+| freeze | 完成指定次數的定格＋解凍，再輪到下一位 | `turnLimit`；保留 V4 合成木琴音效，沒有新增外部音效素材 |
+| hospital | 照 X 光、玩具針、用芝士逐隻引出肚內動物 | `patientName`, `tools`, `bellyItems` |
+| balloon | 開始後拍五下，不能跌到地面；可開風扇，失敗可重試 | `gravity`, `windEnabled`；紅氣球對應本次資料 |
+| robot | 跟指令操作，失控時按紅鼻哥掣，再完成餘下指令 | `commands`, `malfunctionMode`, `offSwitch` |
+| shadow | 沿樹影前進，等巴士／雲開啟四秒影子橋，避陽光到野餐墊 | `movingBridges`；安全區、危險區及目標對應本次來源設定 |
+
+`generic` 保留簡單共用完成練習。遊戲程式不會修改教材 JSON。
+
+## 學習進度
+
+使用 localStorage key `bluey-learning-progress-v1`，按集數保存點讀過的生字、答對過的不同生字及遊戲過關次數，重新整理仍保留。星星分別表示有點讀、有答對及有遊戲過關；不是對語言能力的評估。資料只保存在本機瀏覽器，沒有帳戶或跨裝置同步。儲存被停用／容量不足時退回本次使用的記憶體，並在介面說明；不會阻止學習。
 
 ## 目錄
 
-- `index.html`, `styles.css`, `app.js`：由 V4 漸進抽出的版面、樣式及互動。
-- `episode.schema.json`：附件提供的原始 JSON Schema 2020-12 契約，未修改。
-- `episode-validator.js`：瀏覽器／Node 共用檢查，支援目前 schema 使用的欄位規則及跨欄位檢查。
-- `episodes/s101.json`：V4 原有 32 生字、16 句、6 分段，內容保留，標記待音訊校對。
-- `episodes/s102.json`：4 生字、2 句的工程驗證用練習草稿，hospital 最小遊戲；不是經原音分析的正式教材。
-- `audio/s101.mp3` … `audio/s152.mp3`：放入你有權使用的錄音；本次附件及 checkout 均未包含錄音。
-- `scripts/validate-episodes.cjs`, `tests/`：資料檢查、V4 對照及瀏覽器回歸測試。
-- `docs/`：原始交接指令、Gemini 教材製作指引、驗證結果及 iPad 手測清單。
+- `index.html`, `styles.css`, `app.js`：原版面、樣式與按集數載入／播放邏輯。
+- `games.js`, `progress.js`：遊戲生命週期及按集數儲存進度。
+- `episodes/`, `episode.schema.json`：原始五集資料及契約。
+- `episode-validator.js`：瀏覽器／Node 共用 schema 欄位及跨欄位檢查。
+- `scripts/validate_episodes.py`：原附零依賴驗證腳本；有 jsonschema 時亦完整驗證 JSON Schema 2020-12。
+- `scripts/validate-episodes.cjs`, `tests/`：資料檢查、來源 bytes、進度及瀏覽器回歸。
+- `reference/bluey_v4_s101.html.txt`：附件的 V4 原檔，與 root 原始檔相同；原始 CSS 亦保留於 styles.css 開頭。
+- `docs/`：最新交接文件／原始 QA 報告、測試結果、PR 說明與截圖。`CODEX_HANDOFF.md` 及 `GEMINI_EPISODE_BRIEF.md` 是早期參考文件。
 
-## 新增／替換教材
+## 驗證
 
-1. 按 `docs/GEMINI_EPISODE_BRIEF.md` 分析實際 MP3，不要以劇情記憶填寫原聲或時間。
-2. 每集儲存成 `episodes/s1NN.json`，符合 schema，`id` 與檔名一致，`audio` 為 `audio/s1NN.mp3`。全 52 集選單固定可選。
-3. `practice` 的時間欄位必須為 null，UI 會標「練習」，使用裝置 TTS。只有核實聽到的文字才標 `heard`；有可靠起迄時間則點讀原音，沒有時間則用 TTS。
-4. `durationSec: null` 表示長度未知，並不代表時間已確認。S101 的 V4 分段含 420 秒結尾，原樣保留待校對；已知長度時驗證器會拒絕越界資料，播放器亦會按實際長度限制片段。
-5. scenes 必須整數秒、依時間排序、不重疊、起點小於終點。生字／句子不得重複。空陣列可接受並有空狀態。
-6. 遊戲由 `game.type` 決定。`freeze` 保留 V4 木琴；`hospital` 提供檢查、貼膠布、休息。其餘 balloon／robot／shadow／generic 是簡單共用動作模板，沒有聲稱完成各集獨立玩法。`config.repeats` 可設 1–3，其他參數暫不使用。
-7. 執行資料驗證及測試，再經 PR 審核。不要將密鑰或 token 放進網站／Git。
-
-教材 JSON 404 時顯示「教材準備中」，音訊仍由同站相對路徑載入；其他 HTTP／解析／schema 錯誤會明確顯示。缺音檔或網絡失敗亦有提示。切集立即停止舊音訊及 TTS、清除振盪器、計時器、片段、舊題目和 UI，取消舊 fetch，並忽略過期回應。
-
-## 測試
-
-資料及回歸檢查只需 Node.js 20+：
+需要 Python 3、Node.js 20+：
 
 ```sh
+python3 scripts/validate_episodes.py
 node scripts/validate-episodes.cjs
 node --test tests/validation.test.cjs
 ```
 
-瀏覽器測試需要 Playwright 與 Chromium。這個雲端環境已有兩者，可使用已設定的 Node module 路徑。其他機器可將測試工具裝在 checkout 外：
+完整 schema 驗證可安裝 `jsonschema==4.26.0`；沒有時原附 Python 腳本會清楚列出僅執行標準庫檢查。GitHub Actions 同時執行完整資料檢查、Node 測試及瀏覽器測試。
+
+瀏覽器測試需要 Playwright 與 Chromium。可在 checkout 外安裝測試工具：
 
 ```sh
 npm install --prefix /tmp/bluey-test-tools --no-package-lock playwright@1.62.1
-# 如未有 Chromium，可用 Playwright 安裝，再把 executable 路徑傳給 CHROMIUM_PATH：
 /tmp/bluey-test-tools/node_modules/.bin/playwright install chromium
 ```
 
-從 `/workspace` 啟動測試 server（測試會經 repository 子路徑載入，驗證 GitHub Pages 路徑相容性）：
+從 repository 的父目錄啟動 server，以測試 GitHub Pages 子路徑：
 
 ```sh
-python3 -m http.server 8001 --bind 127.0.0.1 --directory /workspace
+python3 -m http.server 8001 --bind 127.0.0.1
 ```
 
-在 repository 根目錄另開終端執行：
+在 repository 根目錄另開終端：
 
 ```sh
 NODE_PATH=/tmp/bluey-test-tools/node_modules \
-CHROMIUM_PATH=/path/to/chromium \
 BASE_URL=http://127.0.0.1:8001/bluey-learning-hub/ \
 node tests/browser.cjs
 ```
 
-測試 server 須先啟動。其他路徑用 `BASE_URL` 調整，保留末尾 `/`。瀏覽器測試的播放／seek 使用記憶體生成的 30 秒無聲 WAV（含 byte-range 回應），只測控制行為，絕不是劇集錄音；不會提交假 MP3。完整結果及未執行的 iPad／實際原音檢查見 [TEST_RESULTS.md](docs/TEST_RESULTS.md)。
+雲端預裝 Playwright 的 module 路徑為 `/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules`。瀏覽器優先 `CHROMIUM_PATH`，其次系統 `/usr/bin/chromium`，否則用 Playwright 安裝的 Chromium。`BASE_URL` 保留末尾 `/`。
 
-## GitHub Pages 部署
+測試使用生成的 30 秒無聲 WAV 和 byte-range 回應驗證控制及越界處理，不是劇集錄音；不會提交假 MP3。截圖輸出至忽略的 `test-results/`，本次審核截圖保存在 `docs/screenshots/`。完整證據及未執行項目見 [TEST_RESULTS.md](docs/TEST_RESULTS.md)。
 
-1. 審核並合併 PR 到 `main`。
-2. 上傳合法授權的 MP3 到 `audio/`，先確認 `s101.mp3`、`s102.mp3`。檔名大小寫要完全一致。
-3. GitHub repository → **Settings → Pages → Deploy from a branch → main → /(root) → Save**。
-4. 等待 GitHub Pages deployment 成功，再以 iPad Safari 開啟網站，完成 [手測清單](docs/TEST_RESULTS.md#ipad-safari-手動驗收清單)。
+新增教材時依 schema 檢查 id／檔名／音檔路徑、時間、來源標記及重複內容；先分析實際錄音再標 heard。不要自動產生其餘 47 集作上線前提。密鑰及 token 不可放入前端或 Git。
 
-單一目標網站 URL：**https://johnwps36-cyber.github.io/bluey-learning-hub/**
-
-這是預期部署地址；本次未修改 Pages 設定、合併或發布，也未證實該 URL 已上線。程式使用 `./audio/`、`./episodes/` 及相對資源路徑，支援上述 repository 子路徑。
-
-回退方式：將 Pages 指向上一個已驗證的 main 版本，或以新的 PR revert 本次功能提交。保留的 V4 檔案可作資料核對。
+回退可經新的 PR revert 本次相關提交；原始 V4 及歷史提交仍保留可供核對。
