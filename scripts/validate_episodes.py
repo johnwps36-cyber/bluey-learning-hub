@@ -80,6 +80,16 @@ for path in sorted(EPISODES.glob("*.json")):
     if len(ep['vocab']) < 15:
         warnings.append(f"{code}: {len(ep['vocab'])} vocab cards, below suggested 15-25; not a deployment blocker")
     if ep['game']['type'] not in ALLOWED_GAME_TYPES: errors.append(f"{code}: unsupported game type")
+    def check_for_citations(obj, location=''):
+        if isinstance(obj, dict):
+            for key, value in obj.items():
+                check_for_citations(value, f'{location}.{key}' if location else key)
+        elif isinstance(obj, list):
+            for j, value in enumerate(obj):
+                check_for_citations(value, f'{location}[{j}]')
+        elif isinstance(obj, str) and re.search(r'\[cite\s*:\s*\d+\]', obj, re.I):
+            errors.append(f'{code}: residual AI citation marker in {location}')
+    check_for_citations(ep)
     for note in ep['qaNotes']:
         for raw_m,raw_s in re.findall(r'(?<!\d)(\d{2}):(\d{2})(?!\d)', note):
             if int(raw_s) >= 60: warnings.append(f"{code}: nonstandard mm:ss '{raw_m}:{raw_s}' in qaNotes")

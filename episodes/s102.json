@@ -58,7 +58,7 @@
       "zh": "醫院",
       "ex": "This episode of Bluey is called Hospital.",
       "source": "heard",
-      "audioStartSec": 26,
+      "audioStartSec": 25,
       "audioEndSec": 30
     },
     {
@@ -69,7 +69,7 @@
       "zh": "醫生",
       "ex": "Hello! I'm the doctor!",
       "source": "heard",
-      "audioStartSec": 64,
+      "audioStartSec": 63,
       "audioEndSec": 67
     },
     {
@@ -80,7 +80,7 @@
       "zh": "護士",
       "ex": "No, I'm the nurse.",
       "source": "heard",
-      "audioStartSec": 35,
+      "audioStartSec": 34,
       "audioEndSec": 38
     },
     {
@@ -91,8 +91,8 @@
       "zh": "針筒 / 打針",
       "ex": "Why did you give me a needle?",
       "source": "heard",
-      "audioStartSec": 75,
-      "audioEndSec": 78
+      "audioStartSec": 74,
+      "audioEndSec": 79
     },
     {
       "cat": "actions",
@@ -102,8 +102,8 @@
       "zh": "拮一下（打針聲）",
       "ex": "Sting! Ouch!",
       "source": "heard",
-      "audioStartSec": 68,
-      "audioEndSec": 70
+      "audioStartSec": 67,
+      "audioEndSec": 71
     },
     {
       "cat": "body",
@@ -113,7 +113,7 @@
       "zh": "肚腩 / 肚仔",
       "ex": "Well, my belly hurts.",
       "source": "heard",
-      "audioStartSec": 84,
+      "audioStartSec": 83,
       "audioEndSec": 87
     },
     {
@@ -124,8 +124,8 @@
       "zh": "X光檢查",
       "ex": "Time for your X-ray!",
       "source": "heard",
-      "audioStartSec": 108,
-      "audioEndSec": 111
+      "audioStartSec": 107,
+      "audioEndSec": 112
     },
     {
       "cat": "medical",
@@ -135,7 +135,7 @@
       "zh": "膠布",
       "ex": "I'll just get this plaster off.",
       "source": "heard",
-      "audioStartSec": 135,
+      "audioStartSec": 134,
       "audioEndSec": 138
     },
     {
@@ -146,7 +146,7 @@
       "zh": "貓仔",
       "ex": "You have a cat in your belly.",
       "source": "heard",
-      "audioStartSec": 152,
+      "audioStartSec": 151,
       "audioEndSec": 155
     },
     {
@@ -157,7 +157,7 @@
       "zh": "肚臍",
       "ex": "Probably through your belly button.",
       "source": "heard",
-      "audioStartSec": 162,
+      "audioStartSec": 161,
       "audioEndSec": 165
     },
     {
@@ -168,7 +168,7 @@
       "zh": "做手術",
       "ex": "We'll have to operate.",
       "source": "heard",
-      "audioStartSec": 173,
+      "audioStartSec": 172,
       "audioEndSec": 176
     },
     {
@@ -179,7 +179,7 @@
       "zh": "八爪魚",
       "ex": "That's not a cat, that's an octopus!",
       "source": "heard",
-      "audioStartSec": 225,
+      "audioStartSec": 224,
       "audioEndSec": 229
     },
     {
@@ -190,7 +190,7 @@
       "zh": "病人",
       "ex": "Now I've got other patients.",
       "source": "heard",
-      "audioStartSec": 286,
+      "audioStartSec": 285,
       "audioEndSec": 289
     },
     {
@@ -201,8 +201,8 @@
       "zh": "老鼠",
       "ex": "I think he swallowed a mouse.",
       "source": "heard",
-      "audioStartSec": 351,
-      "audioEndSec": 354
+      "audioStartSec": 350,
+      "audioEndSec": 355
     },
     {
       "cat": "food",
@@ -212,7 +212,7 @@
       "zh": "芝士",
       "ex": "What if we lure the mouse out with some cheese?",
       "source": "heard",
-      "audioStartSec": 362,
+      "audioStartSec": 361,
       "audioEndSec": 367
     },
     {
@@ -223,7 +223,7 @@
       "zh": "緊張",
       "ex": "There's no need to be nervous.",
       "source": "heard",
-      "audioStartSec": 61,
+      "audioStartSec": 60,
       "audioEndSec": 64
     }
   ],
@@ -233,15 +233,15 @@
       "en": "Please lie here.",
       "zh": "唔該喺呢度訓低啦。",
       "source": "heard",
-      "audioStartSec": 31,
-      "audioEndSec": 33
+      "audioStartSec": 30,
+      "audioEndSec": 34
     },
     {
       "icon": "💉",
       "en": "Sting! Oh, brave boy!",
       "zh": "拮一下！噢，真係勇敢嘅乖仔！",
       "source": "heard",
-      "audioStartSec": 68,
+      "audioStartSec": 67,
       "audioEndSec": 72
     },
     {
@@ -249,7 +249,7 @@
       "en": "Now, what seems to be the matter?",
       "zh": "好啦，請問你邊度唔舒服呀？",
       "source": "heard",
-      "audioStartSec": 73,
+      "audioStartSec": 72,
       "audioEndSec": 76
     },
     {
@@ -257,7 +257,7 @@
       "en": "Well, my belly hurts.",
       "zh": "唔⋯⋯我個肚好痛呀。",
       "source": "heard",
-      "audioStartSec": 84,
+      "audioStartSec": 83,
       "audioEndSec": 87
     },
     {
@@ -265,15 +265,15 @@
       "en": "Time for your X-ray!",
       "zh": "到你照 X 光嘅時間喇！",
       "source": "heard",
-      "audioStartSec": 108,
-      "audioEndSec": 111
+      "audioStartSec": 107,
+      "audioEndSec": 112
     },
     {
       "icon": "🐱",
       "en": "You have a cat in your belly.",
       "zh": "你個肚入面有隻貓呀。",
       "source": "heard",
-      "audioStartSec": 152,
+      "audioStartSec": 151,
       "audioEndSec": 155
     },
     {
@@ -281,7 +281,7 @@
       "en": "Go to sleep, big Telemachus.",
       "zh": "快啲訓覺啦，大隻佬 Telemachus。",
       "source": "heard",
-      "audioStartSec": 190,
+      "audioStartSec": 189,
       "audioEndSec": 195
     },
     {
@@ -289,7 +289,7 @@
       "en": "What if we lure the mouse out with some cheese?",
       "zh": "不如我哋用啲芝士引隻老鼠出嚟啦？",
       "source": "heard",
-      "audioStartSec": 362,
+      "audioStartSec": 361,
       "audioEndSec": 367
     },
     {
@@ -297,8 +297,8 @@
       "en": "I feel all better!",
       "zh": "我覺得好返晒喇！",
       "source": "heard",
-      "audioStartSec": 389,
-      "audioEndSec": 391
+      "audioStartSec": 388,
+      "audioEndSec": 392
     },
     {
       "icon": "🩺",
@@ -327,7 +327,7 @@
     }
   },
   "qaNotes": [
-    "已根據實際上傳之 s102_2.mp3 核對時間戳。",
-    "爸爸在劇中的病人化名為 Telemachus（發音約在 00:40 及 01:92）。"
+    "已確認 s102_2.mp3 與 s102.mp3 為完全相同之音訊版本（長度 438 秒），單純重新命名不影響時間軸。",
+    "爸爸在劇中的病人化名為 Telemachus，發音分別位於 00:40（40秒）及 03:12（192秒，已修正先前秒數換算筆誤）。"
   ]
 }

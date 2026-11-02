@@ -1,8 +1,8 @@
-# Codex task — Upgrade Bluey V4 to V5 using these FIVE episode JSON files
+# Codex task — Upgrade Bluey V4 to V5 using five second-round revised and cleaned episode JSON files
 
 ## Inputs
 - `reference/bluey_v4_s101.html.txt`: existing working S101 V4 single-file source. Treat it as the functional/visual baseline.
-- `episodes/s101.json` through `episodes/s105.json`: provided Gemini content; **do not replace/rewrite**.
+- `episodes/s101.json` through `episodes/s105.json`: second-round Gemini-revised content (AI citation artifacts only have been removed); **do not replace/rewrite**.
 - `episode.schema.json`: canonical data contract.
 - `QA_REPORT.md`: structural validation results and limits.
 - `scripts/validate_episodes.py`: repeatable zero-dependency data checker; uses `jsonschema` additionally if installed.
@@ -27,3 +27,10 @@ Produce a **static, framework-free** GitHub Pages app with an editable HTML/CSS/
 - Compare output against V4 to avoid unintentionally losing core behaviors.
 - Do **not** overwrite five supplied JSONs or auto-generate 47 missing episode datasets as a prerequisite.
 - Run `python scripts/validate_episodes.py`, and manually verify iPad Safari before acceptance.
+
+## QA2 update (latest files)
+- This ZIP **supersedes** `bluey_v5_codex_ready.zip` (first-round data). The revised five files have been included in `episodes/`.
+- There are 88 vocab cards and 47 phrases, across 28 story segments. Each of S103, S104, S105 now contains 18 vocab cards.
+- 90 stray generated citation markers were removed from user-facing text and QA notes; please do not reintroduce them.
+- Gemini changed numerous `heard` timestamps. Do not replace them with previous versions; leave reviewStatus as `draft` until real MP3 audio verification.
+- The JSON handoff deliberately includes no MP3s. User supplies `audio/s101.mp3` ... etc on GitHub.

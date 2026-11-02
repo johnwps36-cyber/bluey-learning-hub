@@ -25,17 +25,17 @@ GitHub Pages 部署：
 
 ## 原始教材保持不變
 
-最新來源是 `bluey_v5_codex_ready.zip`；`docs/CODEX_START_HERE.md` 及 `docs/QA_REPORT.md` 按原檔保存。五份 `episodes/s101.json`–`s105.json`、schema、原附 Python 驗證腳本及 V4 參考檔都按原始 bytes 匯入，沒有改寫、補字或更改 reviewStatus。`tests/source-hashes.json` 記錄 SHA-256，測試會核對來源完整性。早期 S101／S102 練習資料已由最新供應資料替換；歷史可於 Git 提交中查看。
+最新來源是 `bluey_v5_codex_ready_QA2.zip`；`docs/CODEX_START_HERE.md` 及 `docs/QA_REPORT.md` 按原檔保存。五份 `episodes/s101.json`–`s105.json`、schema、原附 Python 驗證腳本及 V4 參考檔都按原始 bytes 匯入，沒有改寫、補字或更改 reviewStatus。`tests/source-hashes.json` 記錄 SHA-256，測試會核對來源完整性。QA2 已取代 PR #1 合併的第一輪教材；歷史可於 Git 提交中查看。
 
 | 集數 | 教材名 | 分段 | 生字 | 句子 | 遊戲 |
 | --- | --- | ---: | ---: | ---: | --- |
 | S101 | The Magic Xylophone | 7 | 18 | 10 | freeze |
 | S102 | Hospital | 6 | 16 | 10 | hospital |
-| S103 | Keepy Uppy | 5 | 12 | 9 | balloon |
-| S104 | Daddy Robot | 5 | 12 | 9 | robot |
-| S105 | Shadowlands | 5 | 12 | 9 | shadow |
+| S103 | Keepy Uppy | 5 | 18 | 9 | balloon |
+| S104 | Daddy Robot | 5 | 18 | 9 | robot |
+| S105 | Shadowlands | 5 | 18 | 9 | shadow |
 
-合計 28 分段、70 生字、47 句，全部維持 `draft`。來源聲稱曾核對部分音訊，本次沒有 MP3 可獨立確認；UI 不會將 `heard` 標籤當作已獨立核實。原 QA 的 `00:67`、`01:92`、`00:94` 保持原文，尤其 `01:92` 不會擅自換算。S103–S105 各有 12 張生字卡，不會為湊數而添加內容。
+合計 28 分段、88 生字、47 句，全部維持 `draft`。來源聲稱曾核對部分音訊，本次沒有 MP3 可獨立確認；UI 不會將 `heard` 標籤當作已獨立核實。QA2 更新了原聲時間戳，S103–S105 各增加六個詞彙，並以一般文字重寫先前有異常時間格式的 QA 註記。這些都是供應資料的修訂，本次沒有再改寫。來源報告記錄已清理生成式引用標記；新版驗證腳本會拒絕任何殘留的 `[cite: N]`。本次檢查為 0 errors、0 warnings。QA2 的原始修訂清單見 [CHANGELOG_QA2.md](docs/CHANGELOG_QA2.md)。
 
 全 52 集均可選。S106–S152 未有 JSON 時顯示「教材準備中」，仍可播放本集 MP3；不會沿用上一集資料。音檔 404、JSON 404、HTTP／網絡／格式錯誤均有提示。
 
@@ -82,7 +82,7 @@ GitHub Pages 部署：
 ```sh
 python3 scripts/validate_episodes.py
 node scripts/validate-episodes.cjs
-node --test tests/validation.test.cjs
+node --test tests/validation.test.cjs tests/qa2.test.cjs
 ```
 
 完整 schema 驗證可安裝 `jsonschema==4.26.0`；沒有時原附 Python 腳本會清楚列出僅執行標準庫檢查。GitHub Actions 同時執行完整資料檢查、Node 測試及瀏覽器測試。
