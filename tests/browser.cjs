@@ -36,7 +36,7 @@ wav.write('RIFF'); wav.writeUInt32LE(wav.length-8,4); wav.write('WAVEfmt ',8);wa
   await p.locator('#otherGame button').first().click();assert.match(await p.locator('#otherGame .stage-box').textContent(),/檢查好/);
   await p.evaluate(()=>{const b=[...document.querySelectorAll('.quiz-opt')].find(b=>b.textContent.includes(currentQuizTarget.word));b.click()});assert.equal(await p.locator('.quiz-opt.correct').count(),1);
   await p.selectOption('#epSelect','s101');await p.waitForFunction(()=>document.querySelectorAll('.vocab-card').length===32);
-  await p.waitForTimeout(1600);assert.equal(await p.locator('.quiz-opt').count(),4);assert.match(await p.locator('.header-title').textContent(),/S101/);
+  const targetAfterSwitch = await p.locator('#quizTargetWord').textContent();await p.waitForTimeout(1600);assert.equal(await p.locator('#quizTargetWord').textContent(),targetAfterSwitch);assert.equal(await p.locator('.quiz-opt').count(),4);assert.match(await p.locator('.header-title').textContent(),/S101/);
  });
  await check('all 50 missing episodes clear S101 data; S102 JSON 404 remains audio-selectable',async p=>{
   await loaded(p);
@@ -51,6 +51,10 @@ wav.write('RIFF'); wav.writeUInt32LE(wav.length-8,4); wav.write('WAVEfmt ',8);wa
   await loaded(p);
   for(const body of ['{','{}']){await p.route('**/episodes/s102.json',r=>r.fulfill({contentType:'application/json',body}));await p.selectOption('#epSelect','s102');await p.waitForFunction(()=>document.querySelector('#episodeStatus').textContent.includes('載入失敗'));assert.equal(await p.locator('.vocab-card').count(),0);await p.selectOption('#epSelect','s101');await p.waitForFunction(()=>document.querySelectorAll('.vocab-card').length===32)}
   await p.route('**/episodes/s102.json',r=>r.fulfill({status:503}));await p.selectOption('#epSelect','s102');await p.waitForFunction(()=>document.querySelector('#episodeStatus').textContent.includes('503'));
+ });
+ await check('schema download errors can recover on reselect',async p=>{
+  await p.route('**/episode.schema.json',r=>r.fulfill({status:503}));await p.goto(base);await p.waitForFunction(()=>document.querySelector('#episodeStatus').textContent.includes('載入失敗'));
+  assert.equal(await p.locator('.vocab-card').count(),0);await p.unroute('**/episode.schema.json');await p.selectOption('#epSelect','s102');await p.waitForFunction(()=>document.querySelectorAll('.vocab-card').length===4);
  });
  await check('HTML, quotes, long text and empty arrays render safely',async p=>{
   const evil=structuredClone(s102);evil.vocab[0].word=`<img src=x onerror="window.pwned=true">'`+'Long'.repeat(80);evil.vocab[0].ex='" onclick="alert(1)';evil.phrases[0].en='<script>window.pwned=true</script>';

@@ -7,7 +7,7 @@
 - `node scripts/validate-episodes.cjs`：S101／S102 兩份資料通過 schema 欄位及跨欄位檢查。
 - Python `jsonschema` 4.26.0、Draft202012Validator：原始 schema 本身及兩份 JSON 通過正式 JSON Schema 2020-12 驗證。
 - `node --test tests/validation.test.cjs`：16 tests，16 passed，0 failed／skipped。包含從 V4 直接抽取資料的對照、原始 32／16／6 保留、缺欄位、額外欄位、路徑與 id、越界／重疊／反向時間、重複卡片、source、practice／heard timestamps、未知遊戲及空陣列。
-- `tests/browser.cjs`：10 個瀏覽器情境全部通過，所有情境無 pageerror。經 `/bluey-learning-hub/` 子路徑載入。
+- `tests/browser.cjs`：11 個瀏覽器情境全部通過，所有情境無 pageerror。經 `/bluey-learning-hub/` 子路徑載入。
 
 瀏覽器情境：
 
@@ -16,11 +16,12 @@
 3. 實際逐一選取 S103–S152：教材準備中、無 S101 卡片或遊戲、音檔 src 正確。另模擬 S102 JSON 404。
 4. 延遲 S102 回應再切到 S103，不會被舊教材覆蓋。
 5. JSON 語法錯誤、schema 錯誤及 HTTP 503 有可理解提示，舊教材已清除。
-6. HTML 標記、引號、超長字詞以文字顯示，沒有 HTML 注入、窄屏溢出；空資料不使測驗崩潰。
-7. 真實缺音檔 404 顯示提示。
-8. 生成的無聲 WAV 測試原生播放／暫停、0.65／0.8／1.0 速度、退後 5 秒、片段停止／重播、切集停止舊播放。測試提供 byte ranges 才能準確模擬媒體 seek。
-9. 帶已核實來源標籤及時間的測試資料走原音片段播放。
-10. 重新整理、320px 窄屏、768×1024 直向、1024×768 橫向均無橫向溢出。
+6. schema 下載失敗時顯示錯誤；網絡恢復後重新選集可重試成功。
+7. HTML 標記、引號、超長字詞以文字顯示，沒有 HTML 注入、窄屏溢出；空資料不使測驗崩潰。
+8. 真實缺音檔 404 顯示提示。
+9. 生成的無聲 WAV 測試原生播放／暫停、0.65／0.8／1.0 速度、退後 5 秒、片段停止／重播、切集停止舊播放。測試提供 byte ranges 才能準確模擬媒體 seek。
+10. 帶已核實來源標籤及時間的測試資料走原音片段播放。
+11. 重新整理、320px 窄屏、768×1024 直向、1024×768 橫向均無橫向溢出。
 
 ## 限制與未執行項目
 

@@ -106,11 +106,14 @@ const player = document.getElementById('mainPlayer');
 const epSelect = document.getElementById('epSelect');
 let episode = null, vocabList = [], phrases = [], requestId = 0, controller = null;
 let quizTimer = null, quizAnswered = false, selectedRate = 0.8, activeVoices = [];
-const schemaPromise = fetch('./episode.schema.json').then(r => {
-  if (!r.ok) throw new Error('資料格式載入失敗');
-  return r.json();
-});
-schemaPromise.catch(() => {}); // The selected episode surfaces schema/network errors below.
+let schemaPromise = null;
+function getSchema() {
+  if (!schemaPromise) schemaPromise = fetch('./episode.schema.json').then(r => {
+    if (!r.ok) throw new Error('資料格式載入失敗');
+    return r.json();
+  }).catch(error => { schemaPromise = null; throw error; });
+  return schemaPromise;
+}
 function node(tag, className, text) {
   const el = document.createElement(tag);
   if (className) el.className = className;
@@ -159,7 +162,7 @@ async function selectEpisode(id) {
     if (response.status === 404) { document.getElementById('episodeStatus').textContent = '教材準備中；仍可撳播放器播放本集音檔。'; return; }
     if (!response.ok) throw new Error(`教材下載失敗 (${response.status})`);
     const data = await response.json();
-    const schema = await schemaPromise;
+    const schema = await getSchema();
     if (token !== requestId) return;
     const errors = validateEpisode(data, schema, id);
     if (errors.length) throw new Error('教材格式不正確，請先校對 JSON。');
