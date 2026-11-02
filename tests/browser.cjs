@@ -105,8 +105,8 @@ wav.write('RIFF'); wav.writeUInt32LE(wav.length-8,4); wav.write('WAVEfmt ',8);wa
   await p.route('**/episodes/s102.json',r=>r.fulfill({json:evil}));await loaded(p);await select(p,'s102');assert.equal(await p.locator('#vocabGrid img, #phraseGrid script, #otherGame img').count(),0);await p.locator('.vocab-card .card-main').first().click();assert.equal(await p.evaluate(()=>window.pwned),undefined);assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await p.route('**/episodes/s102.json',r=>r.fulfill({json:{...data.s102,vocab:[],phrases:[],scenes:[]}}));await p.reload();await ready(p,'s101');await p.selectOption('#epSelect','s102');await p.waitForFunction(()=>document.querySelector('#quizTargetWord').textContent==='本集未有題目');
  });
- await check('missing real media gives a TTS alternative without claiming verified audio',async p=>{
-  await stubSpeech(p);await loaded(p);await p.waitForFunction(()=>document.querySelector('#mp3StatusBadge').textContent.includes('未能載入'));await p.locator('.vocab-card .card-main').first().click();assert.match(await p.locator('#mediaNotice').textContent(),/電腦讀音/);
+ await check('missing media response gives a TTS alternative without claiming verified audio',async p=>{
+  await p.route('**/audio/*.mp3',r=>r.fulfill({status:404}));await stubSpeech(p);await loaded(p);await p.waitForFunction(()=>document.querySelector('#mp3StatusBadge').textContent.includes('未能載入'));await p.locator('.vocab-card .card-main').first().click();assert.match(await p.locator('#mediaNotice').textContent(),/電腦讀音/);
   await p.locator('.vocab-card .tts-btn').first().click();assert.equal(await p.evaluate(()=>window.__spoken.length),1);assert.match(await p.locator('.source-label').first().textContent(),/未獨立核實/);
  });
  await check('synthetic media native play/pause, speed, rewind, clip stop/replay and switching',async p=>{
@@ -140,6 +140,15 @@ wav.write('RIFF'); wav.writeUInt32LE(wav.length-8,4); wav.write('WAVEfmt ',8);wa
  await check('empty voice list has an honest fallback message',async p=>{
   await p.addInitScript(()=>{speechSynthesis.getVoices=()=>[];speechSynthesis.speak=()=>{};});await loaded(p);await p.locator('.vocab-card .tts-btn').first().click();assert.match(await p.locator('#voiceStatus').textContent(),/暫未列出英文聲線/);
  });
+ await check('uploaded S101/S102 MP3s load, play, seek and reject overlong scenes',async p=>{
+  await loaded(p);await p.locator('#unlockBanner').click();
+  for(const [id,duration] of [['s101',382.616],['s102',395.154]]){
+   await select(p,id);await p.waitForFunction(({id,duration})=>{const a=document.querySelector('audio');return a.readyState>0&&a.currentSrc.endsWith(`/audio/${id}.mp3`)&&Math.abs(a.duration-duration)<1;},{id,duration});
+   await p.evaluate(()=>player.play());await p.waitForFunction(()=>document.querySelector('audio').currentTime>0.1);
+   await p.evaluate(()=>{player.pause();playClip(1,1.3);});await p.waitForFunction(()=>document.querySelector('audio').paused&&document.querySelector('audio').currentTime>=1.3);assert.equal(await p.evaluate(()=>clipStopTime),null);
+   await p.locator('.scene-btn').last().click();assert.equal(await p.evaluate(()=>clipStopTime),null);assert.match(await p.locator('#mediaNotice').textContent(),/超出實際長度/);assert(await p.locator('audio').evaluate(a=>a.paused));
+  }
+ });
  await check('reload, iPad widths, all games and screenshot evidence',async p=>{
   await loaded(p);fs.mkdirSync('test-results',{recursive:true});
   for(const viewport of [{width:320,height:700},{width:1024,height:768},{width:768,height:1024}]){
@@ -148,6 +157,6 @@ wav.write('RIFF'); wav.writeUInt32LE(wav.length-8,4); wav.write('WAVEfmt ',8);wa
   await p.reload();await ready(p,'s101');await p.screenshot({path:'test-results/s101.png',fullPage:true});await p.screenshot({path:'test-results/s101-overview.png'});await p.locator('#gameCard').screenshot({path:'test-results/s101-game.png'});
   for(const id of ['s102','s103','s104','s105']){await select(p,id);await p.locator('#gameCard').screenshot({path:`test-results/${id}-game.png`});}
  });
- console.log(`${count} browser scenarios passed. Synthetic WAV fixtures only; no actual episode MP3 or physical iPad Safari verification.`);
+ console.log(`${count} browser scenarios passed. Synthetic fixtures plus uploaded S101/S102 MP3 playback verified; dialogue/timestamps and physical iPad Safari remain unverified.`);
  } finally {await browser.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});

@@ -15,13 +15,15 @@ python3 -m http.server 8000
 GitHub Pages 部署：
 
 1. 審核 PR 並合併到 `main`。
-2. 將你有權使用的錄音放入 `audio/s101.mp3` 至 `audio/s152.mp3`。本次附件沒有 MP3，先上傳 S101–S105；檔名及大小寫必須一致。
+2. 將你有權使用的錄音放入 `audio/s101.mp3` 至 `audio/s152.mp3`。教材附件沒有 MP3；S101／S102 已另外上傳至 main，S103–S105 待提供。檔名及大小寫必須一致。
 3. Repository → **Settings → Pages → Deploy from a branch → main → /(root) → Save**。
 4. 等待 Pages deployment 成功，再以實體 iPad Safari 完成 [手動驗收清單](docs/TEST_RESULTS.md#ipad-safari-手動驗收清單)。
 
 單一目標網站 URL：**https://johnwps36-cyber.github.io/bluey-learning-hub/**
 
 這是預期部署地址；本次未改 Pages 設定、未合併或發布，也未證實該 URL 已上線。音訊、JSON、CSS 及 JavaScript 全部使用同站相對路徑，支援 repository 子路徑。沒有要求 iPad 每次手動選本機 MP3。
+
+S101／S102 的實際音檔已通過雲端瀏覽器播放測試，但長度比教材標示短，兩集最後一個故事分段需另行校對。原始 JSON 未修改。詳見 [音檔檢查結果](docs/AUDIO_CHECK.md)。
 
 ## 原始教材保持不變
 
